@@ -1,0 +1,16 @@
+2025/12/04-11:07:00.605 6cc8 Recovering log #4
+2025/12/04-11:07:00.614 6cc8 Delete type=0 #4
+2025/12/04-11:07:00.615 6cc8 Delete type=3 #2
+2025/12/04-12:11:48.300 46a4 Level-0 table #9: started
+2025/12/04-12:11:48.307 46a4 Level-0 table #9: 42990 bytes OK
+2025/12/04-12:11:48.309 46a4 Delete type=0 #7
+2025/12/04-12:11:48.314 46a4 Manual compaction at level-0 from '!actors!VBTtG9kjHNQstG0a' @ 72057594037927935 : 1 .. '!folders!xmXOrBADA4LyJOGl' @ 0 : 0; will stop at (end)
+2025/12/04-12:11:48.323 46a4 Manual compaction at level-1 from '!actors!VBTtG9kjHNQstG0a' @ 72057594037927935 : 1 .. '!folders!xmXOrBADA4LyJOGl' @ 0 : 0; will stop at '!actors.items.effects!mmCarrionCrawler.mmParalyzingTent.5ReKSrBu11ume7GP' @ 3222 : 1
+2025/12/04-12:11:48.323 46a4 Compacting 1@1 + 1@2 files
+2025/12/04-12:11:48.423 46a4 Generated table #10@1: 1330 keys, 2124779 bytes
+2025/12/04-12:11:48.490 46a4 Generated table #11@1: 1860 keys, 1278584 bytes
+2025/12/04-12:11:48.490 46a4 Compacted 1@1 + 1@2 files => 3403363 bytes
+2025/12/04-12:11:48.493 46a4 compacted to: files[ 0 0 2 0 0 0 0 ]
+2025/12/04-12:11:48.493 46a4 Delete type=2 #5
+2025/12/04-12:11:48.495 46a4 Delete type=2 #9
+2025/12/04-12:11:48.499 46a4 Manual compaction at level-1 from '!actors.items.effects!mmCarrionCrawler.mmParalyzingTent.5ReKSrBu11ume7GP' @ 3222 : 1 .. '!folders!xmXOrBADA4LyJOGl' @ 0 : 0; will stop at (end)

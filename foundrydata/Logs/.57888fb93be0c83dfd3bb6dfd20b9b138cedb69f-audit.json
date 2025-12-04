@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 5
+    },
+    "auditLog": "C:\\Users\\rapha\\Documents\\Depo\\foundryVTT\\foundrydata\\Logs\\.57888fb93be0c83dfd3bb6dfd20b9b138cedb69f-audit.json",
+    "files": [
+        {
+            "date": 1764841714046,
+            "name": "C:\\Users\\rapha\\Documents\\Depo\\foundryVTT\\foundrydata\\Logs\\debug.2025-12-04.log",
+            "hash": "2f26a1e4ccc04df2a9a965055c6635297eb2afc1c5624ea1244412e60009e692"
+        }
+    ],
+    "hashType": "sha256"
+}

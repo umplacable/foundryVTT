@@ -1,0 +1,8 @@
+2025/12/04-11:07:00.470 4ecc Recovering log #4
+2025/12/04-11:07:00.480 4ecc Delete type=0 #4
+2025/12/04-11:07:00.481 4ecc Delete type=3 #2
+2025/12/04-12:11:48.149 46a4 Level-0 table #9: started
+2025/12/04-12:11:48.149 46a4 Level-0 table #9: 0 bytes OK
+2025/12/04-12:11:48.152 46a4 Delete type=0 #7
+2025/12/04-12:11:48.161 46a4 Manual compaction at level-0 from '!folders!2Bw096HjE0HyGMwM' @ 72057594037927935 : 1 .. '!items.effects!phbsptStonecunni.SAbuNo2AO3XXtkdv' @ 0 : 0; will stop at (end)
+2025/12/04-12:11:48.206 46a4 Manual compaction at level-1 from '!folders!2Bw096HjE0HyGMwM' @ 72057594037927935 : 1 .. '!items.effects!phbsptStonecunni.SAbuNo2AO3XXtkdv' @ 0 : 0; will stop at (end)

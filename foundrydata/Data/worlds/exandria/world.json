@@ -1,0 +1,17 @@
+{
+  "title": "Exandria",
+  "id": "exandria",
+  "system": "dnd5e",
+  "background": "https://umplacable.github.io/music/Exandria.jpg",
+  "joinTheme": "default",
+  "coreVersion": "13.351",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "systemVersion": "5.2.1",
+  "lastPlayed": "Thu Dec 04 2025 12:11:48 GMT+0100 (heure normale d’Europe centrale)",
+  "playtime": 3879,
+  "description": "",
+  "flags": {}
+}

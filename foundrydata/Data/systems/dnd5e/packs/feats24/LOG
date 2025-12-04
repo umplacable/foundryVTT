@@ -1,0 +1,8 @@
+2025/12/04-11:07:00.492 6cc8 Recovering log #4
+2025/12/04-11:07:00.501 6cc8 Delete type=0 #4
+2025/12/04-11:07:00.502 6cc8 Delete type=3 #2
+2025/12/04-12:11:48.206 46a4 Level-0 table #9: started
+2025/12/04-12:11:48.207 46a4 Level-0 table #9: 0 bytes OK
+2025/12/04-12:11:48.211 46a4 Delete type=0 #7
+2025/12/04-12:11:48.222 46a4 Manual compaction at level-0 from '!folders!7zo2bljGLQY3uwXI' @ 72057594037927935 : 1 .. '!items.effects!phbftAlert000000.uvZy4Zzi0oPd54qs' @ 0 : 0; will stop at (end)
+2025/12/04-12:11:48.231 46a4 Manual compaction at level-1 from '!folders!7zo2bljGLQY3uwXI' @ 72057594037927935 : 1 .. '!items.effects!phbftAlert000000.uvZy4Zzi0oPd54qs' @ 0 : 0; will stop at (end)
