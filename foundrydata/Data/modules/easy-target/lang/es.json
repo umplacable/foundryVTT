@@ -1,0 +1,9 @@
+{
+	"I18N.LANGUAGE": "Español",
+	"I18N.MAINTAINERS": "@Viriato139ac#0342",
+  
+	"EASYTGT.ReleaseBehaviour": "Modo de Selección",
+	"EASYTGT.ReleaseBehaviourHint": "Este ajuste determina cómo se comporta Easy Target cuando se seleccionan varios iconos. El modo 'Adición' marcará a todos los iconos sobre los que se haga clic sin deseleccionar nada, teniendo que volver a hacer clic sobre un icono para desmarcarlo. El modo 'Estándar' se ajusta más al comportamiento normal de Foundry en el que todos los iconos que estuviesen seleccionados se desmarcarán cuando haga clic en uno nuevo, debiendo pulsar mayús a la vez que se selecciona para marcar varios iconos a la vez.",
+	"EASYTGT.Standard": "Estándar",
+	"EASYTGT.Sticky": "Adición"
+}

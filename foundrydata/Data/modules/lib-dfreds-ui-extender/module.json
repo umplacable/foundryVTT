@@ -1,0 +1,47 @@
+{
+    "id": "lib-dfreds-ui-extender",
+    "title": "Lib: DFreds UI Extender",
+    "description": "A FoundryVTT library that adds easy ways to extend the base Foundry UI.",
+    "version": "2.2.0",
+    "compatibility": {
+        "minimum": 13,
+        "verified": 13
+    },
+    "esmodules": [
+        "lib-dfreds-ui-extender.mjs"
+    ],
+    "scripts": [],
+    "styles": [
+        "styles/lib-dfreds-ui-extender.css"
+    ],
+    "packs": [],
+    "packFolders": [],
+    "relationships": {
+        "systems": [],
+        "requires": []
+    },
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "authors": [
+        {
+            "name": "DFreds",
+            "url": "https://github.com/DFreds",
+            "discord": "DFreds#1238"
+        }
+    ],
+    "socket": false,
+    "url": "https://github.com/DFreds/lib-dfreds-ui-extender",
+    "manifest": "https://github.com/DFreds/lib-dfreds-ui-extender/releases/latest/download/module.json",
+    "download": "https://github.com/DFreds/lib-dfreds-ui-extender/releases/download/v2.2.0/lib-dfreds-ui-extender.zip",
+    "license": "https://github.com/DFreds/lib-dfreds-ui-extender/blob/main/LICENSE",
+    "readme": "https://github.com/DFreds/lib-dfreds-ui-extender/blob/main/README.md",
+    "bugs": "https://github.com/DFreds/lib-dfreds-ui-extender/issues",
+    "changelog": "https://github.com/DFreds/lib-dfreds-ui-extender/releases",
+    "library": true,
+    "media": []
+}

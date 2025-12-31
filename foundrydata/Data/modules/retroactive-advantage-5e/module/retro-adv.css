@@ -1,0 +1,21 @@
+.retro-adv {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+
+  & button {
+    flex: 1;
+    font-size: 9px;
+    height: 1.3rem;
+
+    &:disabled {
+      background: linear-gradient(to right, var(--dnd5e-color-hd-1), var(--dnd5e-color-hd-2));
+      color: white;
+    }
+  }
+}
+
+.message-content > .retro-adv {
+  margin-bottom: 0.375rem;
+}

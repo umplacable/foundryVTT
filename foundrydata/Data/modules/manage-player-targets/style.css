@@ -1,0 +1,41 @@
+#token-hud .palette[data-palette="manage-player-targets.targets"] {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    min-width: 140px;
+    padding: 3px;
+    gap: 3px;
+    text-align: left;
+    font-size: var(--font-size-13);
+    color: var(--control-icon-color);
+
+    >a {
+        flex: 1;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        padding: 3px;
+        gap: 4px;
+        white-space: nowrap;
+
+        &::before {
+            content: "";
+            display: block;
+            box-sizing: border-box;
+            width: 1em;
+            height: 1em;
+            background: var(--user-color);
+            border: 1px solid var(--user-border);
+            border-radius: 100%;
+        }
+
+        &:hover {
+            color: var(--control-hover-icon-color);
+            border-color: var(--control-hover-border-color);
+        }
+
+        &.active {
+            color: var(--control-active-icon-color);
+            border-color: var(--control-active-border-color);
+        }
+    }
+}

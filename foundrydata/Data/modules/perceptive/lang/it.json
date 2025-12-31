@@ -1,0 +1,1010 @@
+{
+	"perceptive" : {
+		"Titles" : {
+			"perceptive"			  : "Percettivo",
+			"LockPeekSettings"  : "Impostazioni Sbirciare",
+			"DoorMoveSettings"	: "Impostazioni Movimento Porta",
+			"SpottingSettings"	: "Impostazioni Individuazione Invisibile",
+			"ClientSettings"		: "Impostazioni Client",
+			"PeekLock"			    : "Sbirciare",
+			"Basic"				      : "Base",
+			"SpottingInfos"	: {
+				"Title"			  : "Individuare Informazioni",
+				"PP"			    : "Calcola percezione passiva: {pValue}",
+				"Spottedby"		: "Individuato da: {pNames}",
+				"LightModifier"		: "Modificatore CD Percezione Illuminazione: {pValue}",
+				"LightRollBehaviour"	: "Modificatore comportamento tiro percezione illuminazione: {pBehaviour}",
+				"VisionLevel" : {
+					"name"			  : "Livello Visione: {pLevel}",
+					"value0"			: "Visione Base",
+					"value1"			: "Visione Crepuscolare",
+					"value2"			: "Scurovisione",
+					"value3"			: "Scurovisione (totale)"
+				},
+				"LightLevel" : {
+					"name"			: "Livello Illuminazione: {pLevel}",
+					"value0"		: "Oscurità",
+					"value1"		: "Fioca",
+					"value2"		: "Intensa"
+				},
+				"LingeringAP"		: "Persistenza Percezione Attiva",
+				"PassiveDC"		: "CD Percezione Passiva",
+				"ActiveDC"		: "CD Percezione Attiva"
+			},
+			"SpottingConfirm" : {
+				"name"					: "Conferma Individuazione",
+				"content"				: "Giocatore <b>{pPlayer}</b> ha tirato un <b>{pResult}</b> su {pSkillName} che gli permette <b>{pSpotters}</b> nella scena <b>{pScene}</b> di individuare <b>{pDoors}</b> porte segrete e questi token nascosti: <br>",
+				"defaultSkill"	: "Percezione",
+				"forcecontent"	: "Giocatore <b>{pPlayer}</b> ha richiesto <b>{pSpotters}</b> nella scena <b>{pScene}</b> per individuare <b>{pDoors}</b> porte segrete e questi token nascosti <b>senza</b> tiro percezione: <br>",
+				"Behaviour"			: "con un tiro <b>{pBehaviour}</b> di <b>{pResult}</b>"
+			},
+			"StartStealthing"	: "Inizia Furtività",
+			"StopStealthing"	: "Termina Furtività",
+			"GMuiandcontrol"	: "Interfaccia utente e controllo DM",
+			"SightRange"		: "Campo Visivo",
+			"RulesAutomation"	: "Regole & Automazioni",
+			"RollFormulas"		: "Tiri & Formule",
+			"Effects"		: "Effetti",
+			"Illumination"		: "Illuminazione",
+			"Sound"			: "Suoni",
+			"SoundnImages"		: "Suoni & Immagini",
+			"Tile"			: "Tile",
+			"Triggers"		: "Triggers",
+			"ResetSpottedby"	: "Reset \"individuato da\"",
+			"with"			: "con",
+			"VisionChannels"	: "Canali Visivi",
+			"OpenVCMenu"		: "Apri Menu Canali Visivi"
+		},
+		
+		"ChatMessage" : {
+			"SpottingReport" : {
+				"content"				: "Sei riuscito a individuare <b>{pDoors}</b> porte segrete e questi token nascosti:",
+				"unknown"				: "???"
+			},
+			"LostLingeringAP" 			: "{pName} ha perso la percezione attiva persistente",
+			"Peeking"				: "{pName} ha provato a sbirciare dalla serratura",
+			"PeekingSuccess" : {
+				"default"			: "{pName} riesce a sbirciare dalla serratura",
+				"crit"			: "{pName} riesce a sbirciare perfettamente dalla serratura"
+			},
+			"PeekingFail" : {
+				"default"			: "{pName} fallisce nello sbirciare dalla serratura",
+				"crit"			: "{pName} fallisce malamente nello sbirciare dalla serratura"
+			}
+		},
+		
+		"Warnings" : {
+			"MacroSeekDeactivatet" 	: "Questa macro non è attualmente disponibile, vedere l'impostazione \"Comportamento di utilizzo della macro Percezione\""
+		},
+		
+		"Popups" : {
+			"GamePaused"				: "Gioco in Pausa",
+			"OutofRange"				: "Fuori Portata",
+			"CantbePeeked"			: "Non può essere sbirciato",
+			"DoorisLocked"			: "Bloccato",
+			"CantbeMoved"				: "Non può essere mosso",
+			"GainedLingeringAP"	: "Percezione attiva persistente acquisita",
+			"RemovedLingeringAP": "Percezione attiva persistente persa"
+		},
+		
+		"Settings" : {
+			"SplitInteractionDistances" : {
+				"name"					: "Dividi le distanze delle interazioni",
+				"descrp"				: "Se le distanze di interazione per lo sbirciare dalla serratura e lo spostamento della porta devono essere divise"
+			},
+			
+			"InteractionDistance" : {
+		"name": "Distanza massima di interazione",
+		"descrp": "Distanza massima alla quale i giocatori possono interagire con gli oggetti (-1 per illimitata)"
+	},
+
+	"UseArmsreachDistance": {
+		"name": "Usa la distanza di Portata del Braccio",
+		"descrp": "Utilizza la distanza di Portata del Braccio come distanza massima di interazione"
+	},
+
+	"DFredsEffectsIntegration": {
+		"name": "Integrazione con DFreds Convenient Effects",
+		"descrp": "Usa gli effetti di DFreds Convenient Effects"
+	},
+
+	"CPREffectsIntegration": {
+		"name": "Integrazione con Chris's Premades",
+		"descrp": "Usa gli effetti di Chris's Premades"
+	},
+
+	"Vision5eIntegration": {
+		"name": "Integrazione con Vision 5e",
+		"descrp": "Adatta alle regole di Vision 5e"
+	},
+
+	"StealthyIntegration": {
+		"name": "Integrazione con Stealthy",
+		"descrp": "Le CD di Furtività saranno sincronizzate tra Perceptive e Stealthy"
+	},
+
+	"Peekablebydefault": {
+		"name": "Sbirciare bloccato per impostazione predefinita",
+		"descrp": "Se le porte possono essere sbirciate quando bloccate per impostazione predefinita"
+	},
+
+	"LockpeekstandardSize": {
+		"name": "Dimensione standard dello spiraglio",
+		"descrp": "Dimensione standard dello spiraglio usato per sbirciare attraverso una serratura rispetto alla dimensione della porta (0-1)"
+	},
+
+	"LockpeekstandardPosition": {
+		"name": "Posizione standard dello spiraglio",
+		"descrp": "Posizione standard dello spiraglio usato per sbirciare attraverso una serratura rispetto alla dimensione della porta (0-1)"
+	},
+
+	"StopPeekonMove": {
+		"name": "Interrompi sbirciata al movimento",
+		"descrp": "Interrompe lo sbirciare attraverso la serratura non appena il token si muove, anche se è ancora entro la distanza di interazione"
+	},
+
+	"PeekingDistance": {
+		"name": "Distanza di sbirciata",
+		"descrp": "Distanza massima alla quale i giocatori possono sbirciare attraverso le serrature (-1 per illimitata)"
+	},
+
+	"GMConfirmPeeking": {
+		"name": "Conferma sbirciata del DM",
+		"descrp": "Se il DM deve confermare ogni azione di sbirciata"
+	},
+
+	"PeekingFormula": {
+		"name": "Formula per sbirciare",
+		"descrp": "Formula usata per sbirciare attraverso le serrature (lasciare vuoto per disattivare)"
+	},
+
+	"PeekingDefaultDC": {
+		"name": "CD predefinita per sbirciare",
+		"descrp": "CD predefinita per sbirciare attraverso le nuove pareti create"
+	},
+	
+	"DoorstandardMove": {
+		"name": "Tipo di movimento standard della porta",
+		"descrp": "Il tipo di movimento standard delle porte",
+		"options": {
+			"none": "Nessun movimento (porta normale)",
+			"swing": "Porta a battente",
+			"slide": "Porta scorrevole"
+		}
+	},
+
+	"PreventNormalOpenbydefault": {
+		"name": "Impedisci l'apertura normale per impostazione predefinita",
+		"descrp": "L'impostazione predefinita per cui le porte a battente o scorrevoli possono essere aperte con un clic sinistro"
+	},
+
+	"DoorstandardHinge": {
+		"name": "Posizione standard del cardine della porta",
+		"descrp": "La posizione in cui si trova il cardine della porta",
+		"options": {
+			"0": "Sinistra",
+			"1": "Destra",
+			"2": "Centro"
+		}
+	},
+
+	"DoorstandardSwingSpeed": {
+		"name": "Velocità di apertura standard",
+		"descrp": "La velocità di apertura standard delle porte in gradi°"
+	},
+
+	"DoorStandardSwingRange": {
+		"name": "Ampiezza di apertura standard",
+		"descrp": "L'ampiezza in cui le porte possono aprirsi in gradi° ({min}:{max}, lascia vuoto per nessun limite)"
+	},
+
+	"DoorstandardSlideSpeed": {
+		"name": "Velocità di scorrimento standard",
+		"descrp": "La velocità di scorrimento standard delle porte in frazioni della loro dimensione (0-1)"
+	},
+
+	"MovingDistance": {
+		"name": "Distanza di movimento della porta",
+		"descrp": "Distanza massima su cui i giocatori possono spostare le porte (-1 per illimitata)"
+	},
+
+	"ActivateSpotting": {
+		"name": "Attiva la funzione Individua Invisibili",
+		"descrp": "Se la funzione Individua Invisibili deve essere attivata (disattivare per migliorare le prestazioni)"
+	},
+
+	"SpottingRange": {
+		"name": "Raggio di individuazione",
+		"descrp": "Raggio massimo in cui i token e le porte possono essere individuati (-1 per illimitato)"
+	},
+
+	"SpottingConeRange": {
+		"name": "Ampiezza del cono di individuazione",
+		"descrp": "Un ulteriore raggio di individuazione applicato in un cono di 90° davanti ai token (0 per migliorare le prestazioni)"
+	},
+
+	"ApplyRange": {
+		"name": "Applica intervalli",
+		"descrp": "Per quali controlli gli intervalli devono essere applicati",
+		"options": {
+			"never": "mai",
+			"always": "sempre",
+			"activeonly": "solo controlli attivi",
+			"passiveonly": "solo controlli passivi",
+			"incombatonly": "solo in combattimento (entrambi i controlli)",
+			"outcombatonly": "solo fuori combattimento (entrambi i controlli)"
+		}
+	},
+			
+	"UseBordertoBorderRange": {
+		"name": "Usa distanza da bordo a bordo",
+		"descrp": "Se le distanze di visione devono essere calcolate dai bordi dei token invece che dal loro centro"
+	},
+
+	"StandardVisionDirection": {
+		"name": "Direzione visione standard",
+		"descrp": "La direzione utilizzata per i coni di visione, misurata per i token non ruotati",
+		"options": {
+			"bottom": "basso",
+			"left": "sinistra",
+			"top": "alto",
+			"right": "destra"
+		}
+	},
+
+	"RangePDCModifier": {
+		"name": "Modificatore CD percezione distanza",
+		"descrp": "Modificatore della CD di percezione basato sulla distanza dall'oggetto individuabile (incremento CD/incremento distanza, 0/0 per disattivare)"
+	},
+
+	"Range3DCalculation": {
+		"name": "Calcolo distanza in 3D",
+		"descrp": "Se la distanza di visione deve essere calcolata in 3D (invece che in 2D)"
+	},
+
+	"UsePf2eRules": {
+		"name": "Usa regole Pf2e",
+		"descrp": "Se devono essere usate le regole di Pf2e, inclusa la differenziazione tra nascondersi e muoversi furtivamente e le rispettive regole"
+	},
+
+	"AutoRerollPPDConMove": {
+		"name": "Ritiro automatico CD furtività in movimento",
+		"descrp": "Se la CD di furtività deve essere ritirata quando un token si muove (può essere bloccato per token)"
+	},
+
+	"AutomateTokenSpottable": {
+		"name": "Automatizza visibilità token",
+		"descrp": "L'impostazione \"Può essere individuato\" dei token verrà automaticamente aggiornata quando viene rilevato un cambiamento nella furtività"
+	},
+
+	"CritMethod": {
+		"name": "Sistema di critico",
+		"descrp": "Il metodo con cui vengono determinati i tiri critici",
+		"options": {
+			"noCrit": "Nessun critico",
+			"natCrit": "Nat 1/20",
+			"natCritpm10": "Nat 1/20 & ±10 dalla CD [es. Pf2e]"
+		}
+	},
+
+	"SimulatePlayerVision": {
+		"name": "Prospettiva giocatore",
+		"descrp": "Se i DM devono usare la stessa formula di individuazione dei giocatori per i token nascosti (solo per i token)"
+	},
+
+	"PassivePerceptionFormula": {
+		"name": "Formula percezione passiva",
+		"descrp": "Formula della percezione passiva del sistema (es. \"10 + @actor.system.abilities.wis.mod + @actor.system.skills.prc.value\", aiuto disponibile sulla pagina GitHub di questo modulo)"
+	},
+			
+	"PassivePerceptionProficiencyPath" : {
+		"name": "Percorso di competenza della percezione passiva",
+		"descrp": "Percorso verso il percorso di competenza passiva dall'attore (normalmente il valore predefinito dovrebbe essere sufficiente)"
+	},
+			
+	"ActivePerceptionProficiencyPath" : {
+		"name": "Percorso di competenza nella percezione attiva",
+		"descrp": "Percorso verso il percorso di competenza attiva dall'attore (normalmente il valore predefinito dovrebbe essere sufficiente)"
+	},
+
+	"PerceptionKeyWord": {
+		"name": "Parola chiave percezione",
+		"descrp": "Parola chiave per riconoscere i tiri di percezione (una stringa presente nel testo descrittivo dei tiri di percezione)"
+	},
+
+	"StealthKeyWord": {
+		"name": "Parola chiave furtività",
+		"descrp": "Parola chiave per riconoscere i tiri di furtività (una stringa presente nel testo descrittivo dei tiri di furtività)"
+	},
+
+	"AutoStealthDCbehaviour": {
+		"name": "Comportamento automatico furtività",
+		"descrp": "Cosa deve accadere quando viene effettuato un tiro di furtività",
+		"options": {
+			"off": "niente",
+			"both": "Imposta CD percezione attiva e passiva",
+			"activeonly": "Imposta solo CD percezione attiva"
+		}
+	},
+
+	"applySystemStealthEffect": {
+		"name": "Applica effetti furtività di sistema",
+		"descrp": "Se gli effetti di furtività dipendenti dal sistema devono essere applicati quando viene effettuato un tiro di furtività"
+	},
+
+	"usePerceptiveStealthEffect": {
+		"name": "Usa furtività di Perceptive",
+		"descrp": "Se deve essere usato l'effetto di furtività di Perceptive"
+	},
+
+	"PerceptiveStealthFriendliesvisible": {
+		"name": "Token amici furtivi visibili",
+		"descrp": "I token amici saranno visibili agli altri token amici, anche se stanno usando la furtività di Perceptive"
+	},
+
+	"syncEffectswithPerceptiveStealth": {
+		"name": "Sincronizza rimozione furtività di Perceptive",
+		"descrp": "Rimuovere la furtività di Perceptive da un token rimuoverà anche gli effetti furtivi impostati e viceversa"
+	},
+			
+	"customStealthEffects": {
+		"name": "Effetti furtività personalizzati",
+		"descrp": "Effetti aggiuntivi applicati quando un token tira su furtività (Nomi o ID, separati con \";\")"
+	},
+			
+	"customPerceptionEffect" : {
+		"name": "Effetti percezione personalizzati",
+		"descrp": "Effetti aggiuntivi che vengono applicati quando un token tira su percezione (nomi o ID, separati da \";\")"				
+	},
+			
+	"resetSpottedbyMovedefault": {
+		"name": "Reset individuazione su movimento del token per impostazione predefinita",
+		"descrp": "Se gli osservatori attivi di un token nascosto devono essere azzerati al suo movimento"
+	},
+
+	"IlluminationPDCModifier": {
+		"name": "Modificatori CD percezione illuminazione",
+		"descrp": "Modificatori applicati alle CD di percezione per diversi livelli di luce (Darkness, Dim Light, and Bright light, \"0,0,0\" per nessun modificatore)"
+	},
+
+	"UseIlluminationPDCModifierforAP": {
+		"name": "Usa modificatori CD percezione illuminazione per percezione attiva",
+		"descrp": "Se i tiri di percezione attiva devono usare il modificatore di illuminazione per individuare"
+	},
+
+	"IlluminationAPDCBehaviour": {
+		"name": "Comportamento percezione illuminazione",
+		"descrp": "Comportamento dei tiri di percezione per diversi livelli di luce (Luce fioca, luce intensa, \"=,=\" per comportamento predefinito, parole chiave valide: advantage, adv, +, normal, =, disadvantage, disadv, -)"
+	},
+
+	"Light3Dcalc": {
+		"name": "Calcolo illuminazione 3D",
+		"descrp": "Se l'illuminazione del token deve essere calcolata in 3D (anziché in 2D)"
+	},
+
+	"GMSpotconfirmDialog": {
+		"name": "Conferma individuazione DM",
+		"descrp": "Se un tiro di percezione deve generare un dialogo per il DM in cui l'individuazione deve essere confermata"
+	},
+
+	"GMSpotconfirmDialogbehaviour": {
+		"name": "Comportamento conferma individuazione DM",
+		"descrp": "Per quali utenti un tiro di percezione deve generare un dialogo per il DM per confermare l'individuazione",
+		"options": {
+			"off": "disattivato",
+			"playersonly": "solo giocatori",
+			"always": "per tutti"
+		}
+	},
+
+	"ShowfailuresinGMconfirm": {
+		"name": "Mostra fallimenti nella conferma DM",
+		"descrp": "Mostra i token per cui il tiro di percezione è fallito come voci non selezionate nel dialogo di conferma DM"
+	},
+
+	"MakeSpottedTokensVisible": {
+		"name": "Rendi visibili i token individuati",
+		"descrp": "Se i token individuati attivamente o passivamente devono essere resi visibili per tutti",
+		"options": {
+			"never": "mai",
+			"always": "sempre",
+			"incombatonly": "solo in combattimento",
+			"outcombatonly": "solo fuori combattimento"
+		}
+	},
+
+	"RevealAllies": {
+		"name": "Rendi visibili i token alleati",
+		"descrp": "Se i token alleati individuati attivamente o passivamente devono essere resi visibili (funziona solo con l'impostazione sopra)",
+		"options": {
+			"never": "mai",
+			"always": "sempre",
+			"incombatonly": "solo in combattimento",
+			"outcombatonly": "solo fuori combattimento"
+		}
+	},
+
+	"LingeringAP": {
+		"name": "Persistenza percezione attiva",
+		"descrp": "Se la percezione attiva lanciata deve persistere dopo il tiro fino alla rimozione manuale",
+		"options": {
+			"off": "disattivato",
+			"always": "sempre",
+			"outofcombatonly": "solo fuori combattimento"
+		}
+	},
+
+	"LingeringAPRadius": {
+		"name": "Raggio percezione attiva persistente",
+		"descrp": "Il raggio misurato dal punto del tiro originale in cui la percezione attiva rimane (-1 per illimitato)"
+	},
+
+	"LingeringAPDuration": {
+		"name": "Durata percezione attiva persistente",
+		"descrp": "La durata per cui la percezione attiva rimane in secondi (-1 per illimitato)"
+	},
+
+	"RevealSpottedDooronClick": {
+		"name": "Rendi visibile porta individuata al clic",
+		"descrp": "Se le porte invisibili individuate devono diventare porte normali quando cliccate"
+	},
+
+	"disableSpottableMATTTiles": {
+		"name": "Disabilita tile invisibili MATT",
+		"descrp": "Se i tile individuabili che non sono stati individuati devono diventare inattivi per gli scopi MATT"
+	},	
+			
+			"ForceInvertIgnoreRollKey": {
+		"name": "Forza inversione tasto \"Ignora Tiro\"",
+		"descrp": "Inverte il tasto \"Ignora Tiro\" per tutti i giocatori e rimuove l'impostazione client"
+	},
+
+	"GMReciveInformationWhisper": {
+		"name": "Il DM riceve messaggi informativi",
+		"descrp": "Se il DM deve ricevere messaggi sussurrati con aggiornamenti dai giocatori"
+	},
+
+	"onlyMacroSeek": {
+		"name": "Percezione solo con Macro",
+		"descrp": "Se devono essere considerati solo i tiri di percezione effettuati con le macro di Perceptive"
+	},
+
+	"MacroSeekBehaviour": {
+		"name": "Comportamento utilizzo macro percezione",
+		"descrp": "In quali condizioni devono essere considerati solo i tiri di percezione effettuati con le macro di Perceptive",
+		"options": {
+			"never": "mai",
+			"incombatonly": "solo in combattimento",
+			"always": "sempre"
+		}
+	},
+
+	"SpottedSound": {
+		"name": "Suono individuazione",
+		"descrp": "Suono riprodotto quando un token controllato viene individuato (percorso del file audio)"
+	},
+
+	"SpottedSoundVolume": {
+		"name": "Volume suono individuazione",
+		"descrp": "Volume del suono riprodotto quando un token viene individuato"
+	},
+
+	"SpotterImagePing": {
+		"name": "Immagine segnalazione individuazione",
+		"descrp": "L'immagine utilizzata per segnalare gli osservatori di oggetti nascosti"
+	},
+
+	"SpotterImagePingDuration": {
+		"name": "Durata immagine segnalazione individuazione",
+		"descrp": "Durata per cui l'immagine della segnalazione dell'osservatore persiste (in secondi)"
+	},
+
+	"ActivateVCs": {
+		"name": "Attiva Canali Visivi",
+		"descrp": "Se la funzione Canali Visivi di Perceptive deve essere attiva"
+	},
+
+	"SimulateVCPlayerVision": {
+		"name": "Simula visione giocatore",
+		"descrp": "Se la visione del giocatore basata sui Canali Visivi deve essere mostrata per il token selezionato"
+	},
+
+	"VCRange3DCalc": {
+		"name": "Intervallo 3D Canali Visivi",
+		"descrp": "Se l'intervallo dei Canali Visivi deve essere calcolato in 3D"
+	},
+
+	"ShowVCIDs": {
+		"name": "Mostra ID Canali Visivi",
+		"descrp": "Se gli ID interni dei Canali Visivi devono essere visualizzati nel menu"
+	},
+
+	"vRequiredOrBehaviour": {
+		"name": "Usa modalità OR logico",
+		"descrp": "Se i Canali Visivi richiesti devono operare con un OR logico invece di un AND logico"
+	},
+
+	"showPerceptiveWalls": {
+		"name": "Mostra Muri Perceptive [DEBUG]",
+		"descrp": "Se i Muri Perceptive devono essere visibili nel livello muri (solo per debug)"
+	},
+
+	"recreatePerceptiveWalls": {
+		"name": "Ricrea Muri Perceptive al caricamento scena [DEBUG]",
+		"descrp": "Se i Muri Perceptive devono essere ricreati al ricaricamento di una scena (solo per debug)"
+	},
+
+	"followTokens": {
+		"name": "Segui token",
+		"descrp": "Se la telecamera deve seguire il token selezionato quando si muove"
+	},
+
+	"followonControl": {
+		"name": "Segui alla selezione",
+		"descrp": "Se la telecamera deve cambiare non appena un token viene selezionato"
+	},
+
+	"MessagePopUps": {
+		"name": "Popup messaggi",
+		"descrp": "Se devono essere mostrati popup per il movimento delle porte e lo sbirciare attraverso le serrature"
+	},
+
+	"moveDoorControls": {
+		"name": "Muovi controlli porta",
+		"descrp": "Se i controlli della porta devono spostarsi con i muri mobili"
+	},
+
+	"SpeedDoorMovefactor": {
+		"name": "Fattore velocità movimento porta",
+		"descrp": "Fattore di velocità quando si muovono le porte con alt+rotellina del mouse"
+	},
+
+	"IlluminationIconPosition": {
+		"name": "Posizione indicatore illuminazione",
+		"descrp": "Dove deve essere posizionato l'indicatore di illuminazione sull'HUD del token",
+		"options": {
+			"none": "nessuna",
+			"left": "sinistra",
+			"right": "destra"
+		}
+	},
+
+	"LingeringAPIconPosition": {
+		"name": "Posizione indicatore percezione attiva",
+		"descrp": "Dove deve essere posizionato l'indicatore della percezione attiva persistente sull'HUD del token",
+		"options": {
+			"none": "nessuna",
+			"left": "sinistra",
+			"right": "destra"
+		}
+	},
+
+	"PDCInputPosition": {
+		"name": "Posizione input CD percezione",
+		"descrp": "Dove deve essere posizionato l'indicatore della CD percezione sull'HUD del token",
+		"options": {
+			"none": "nessuna",
+			"left": "sinistra",
+			"right": "destra"
+		}
+	},
+
+	"SpottingPingDuration": {
+		"name": "Durata segnalazione individuazione",
+		"descrp": "Per quanto tempo devono essere segnalati gli oggetti individuati con un tiro di percezione attiva (in secondi, 0 per disattivare la segnalazione)"
+	},
+			
+"WhisperPerceptionResult" : {
+	"name" 					: "Mostra i risultati della percezione",
+	"descrp" 				: "Se i risultati dei tiri di percezione del giocatore devono essere mostrati nella chat"
+},
+
+"WhisperLingeringAPremoval" : {
+	"name" 					: "Notifica sulla rimozione dell'AP residuo",
+	"descrp" 				: "Se una notifica deve essere mostrata nella chat quando la percezione attiva residua viene rimossa"
+},
+
+"InvertIgnoreRollKey" : {
+	"name" 					: "Inverti il tasto \"Ignora tiro\"",
+	"descrp" 				: "Se i tiri devono essere riconosciuti SOLO quando il tasto impostato viene premuto"
+},
+
+"SpottedTokenTransparency" : {
+	"name" 					: "Trasparenza dei token nascosti",
+	"descrp" 				: "La trasparenza dei token nascosti"
+}
+},
+
+"Keys" : {
+	"PeekLock" : {
+		"name" 					: "Sbircia"
+	},
+
+	"MoveDoorLeft" : {
+		"name" 					: "Sposta porta a sinistra"
+	},
+
+	"MoveDoorRight" : {
+		"name" 					: "Sposta porta a destra"
+	},
+
+	"ToggleTokenFollowing" : {
+		"name" 					: "Attiva/disattiva seguimento dei token"
+	},
+
+	"IgnoreRoll" : {
+		"name" 					: "Ignora tiro",
+		"descrp"				: "Tieni premuto questo tasto per impedire a Perceptive di riconoscerlo ai fini dei tiri di Furtività o Percezione. (può essere invertito)"
+	},
+
+	"resetStealthSelected" : {
+		"name" 					: "Rimuovi furtività dai token selezionati",
+		"descrp"				: "Rimuove i dati/e gli effetti relativi alla furtività dai token selezionati"
+	},
+
+	"MousePeekLock" : {
+		"name" 					: "Sbircia con il mouse",
+		"descrp"				: "Tieni premuto questo tasto mentre clicchi con il tasto destro per guardare attraverso il lucchetto cliccato"
+	},
+
+	"MouseMoveDoor" : {
+		"name" 					: "Sposta porta con il mouse",
+		"descrp"				: "Tieni premuto questo tasto mentre scorri per muovere la porta sotto il cursore (può essere lasciato vuoto)"
+	},
+
+	"MouseMoveDoorFast" : {
+		"name" 					: "Sposta porta velocemente con il mouse",
+		"descrp"				: "Tieni premuto questo tasto mentre scorri per muovere rapidamente la porta sotto il cursore"
+	},
+
+	"EditHoveredDoor" : {
+		"name" 					: "Modifica rapida della porta",
+		"descrp"				: "Apri le impostazioni della porta sotto il cursore"
+	}
+},
+
+"SheetSettings" : {
+	"canbeLockpeekedFlag" : {
+		"name" 					: "Può essere guardato attraverso il lucchetto",
+		"descrp"				: "Se questo lucchetto può essere guardato attraverso da un giocatore"
+	},
+
+	"PeekingDCFlag" : {
+		"name" 					: "Difficoltà per spioncino",
+		"descrp"				: "La classe di difficoltà per guardare attraverso questo lucchetto (0 per disabilitare i tiri)"
+	},
+
+	"LockPeekSizeFlag" : {
+		"name" 					: "Dimensione dello spioncino",
+		"descrp"				: "La dimensione della fessura utilizzata quando si guarda attraverso un lucchetto, relativa alla dimensione della porta (0-1)"
+	},
+
+	"LockPeekPositionFlag" : {
+		"name" 					: "Posizione dello spioncino",
+		"descrp"				: "La posizione della fessura utilizzata quando si guarda attraverso un lucchetto, relativa alla dimensione della porta (0-1)"
+	},
+
+	"DoorMovementFlag" : {
+		"name" 					: "Tipo di movimento porta",
+		"descrp"				: "Il tipo di movimento standard di questa porta",
+		"options" : {
+			"none"				: "Nessun movimento (porta normale)",
+			"swing"				: "Porta a battente",
+			"slide"				: "Porta scorrevole"
+		}
+	},
+
+	"PreventNormalOpenFlag" : {
+		"name" 					: "Impedisci apertura normale",
+		"descrp"				: "Se questa porta può ancora essere aperta con un clic sinistro (solo per porte mobili)"
+	},
+
+	"DoorHingePositionFlag" : {
+		"name" 					: "Posizione della cerniera della porta",
+		"descrp"				: "La posizione in cui è situata la cerniera della porta",
+		"options" : {
+			"0"					: "Sinistra",
+			"1"					: "Destra",
+			"2"					: "Centro"
+		}
+	},
+
+	"DoorSwingSpeedFlag" : {
+		"name" 					: "Velocità di apertura a battente",
+		"descrp"				: "La velocità di apertura della porta in gradi°"
+	},
+
+	"DoorSwingRangeFlag" : {
+		"name" 					: "Gamma di apertura a battente",
+		"descrp"				: "Intervallo in cui questa porta può aprirsi in gradi° (min-max)"
+	},		
+
+			"DoorSlideSpeedFlag" : {
+    "name" 					: "Velocità di scorrimento",
+    "descrp"				: "La velocità di scorrimento della porta in frazioni della dimensione della porta (0-1)"
+},
+
+"PerceptiveStealthingFlag" : {
+    "name" 					: "È in stealth percettivo",
+    "descrp"				: "Se questo token ha l'effetto stealth \"percettivo\""
+},
+
+"canbeSpottedFlag" : {
+    "name" 					: "Può essere individuato",
+    "descrp"				: "Se questa porta può essere individuata con la percezione (passiva o attiva)"
+},
+
+"RevealwhenSpottedFlag" : {
+    "name" 					: "Rivelare quando individuato",
+    "descrp"				: "Se questo oggetto deve essere rivelato quando viene individuato (sovrascrive le impostazioni di gioco quando attivo)"
+},
+
+"PPDCFlag" : {
+    "name" 				: "CD Percezione passiva",
+    "descrp"				: "CD per essere individuato con percezione passiva (-1 per impossibile)"
+},
+		
+"PPPLFlag" : {
+    "name" 				: "Livello di competenza della percezione passiva",
+    "descrp" : {
+	"dnd5e"				: "Competenza richiesta per individuare questo oggetto (Nessuna competenza: 0, Competenza normale: 1, Mezza competenza: 0,5, Maestria: 2)",
+	"pf2e"				: "Competenza richiesta per individuare questo oggetto (Non addestrato: 0, Addestrato: 1, Esperto: 2, Maestro: 3, Leggendario: 4)"
+	}
+},
+		
+"APDCFlag" : {
+    "name" 				: "CD Percezione attiva",
+    "descrp"				: "CD per essere individuato con percezione attiva (-1 per impossibile, vuoto per sincronizzare con percezione passiva)"
+},
+
+"APPLFlag" : {
+    "name" 				: "Livello di competenza nella percezione attiva",
+    "descrp" : {
+	"dnd5e"				: "Competenza richiesta per individuare questo oggetto (Nessuna competenza: 0, Competenza normale: 1, Mezza competenza: 0,5, Maestria: 2)",
+	"pf2e"				: "Competenza richiesta per individuare questo oggetto (Non addestrato: 0, Addestrato: 1, Esperto: 2, Maestro: 3, Leggendario: 4)"
+	}
+},
+			
+"SpottingRangeFlag" : {
+    "name"				: "Distanza di individuazione",
+    "descrp"				: "Distanza personalizzata oltre la quale questo oggetto può essere individuato (sovrascrive le impostazioni globali, -1 per disabilitare)"
+},
+
+"otherSkillADCsFlag" : {
+    "openButtonname"		: "Altre CD di abilità attive",
+    "confirmButtonname"		: "Conferma",
+    "Title"					: "Altre CD di abilità attive",
+    "name"					: "Le CD di individuazione attiva per altre abilità (-1 per impossibile):",
+    "entry"					: "CD per i tiri di {pSkill}"
+},
+
+"SpottingMessageFlag" : {
+    "name"					: "Messaggio di individuazione",
+    "descrp"				: "Messaggio sussurrato all'individuatore di questo oggetto"
+},
+
+"LockPPDCFlag" : {
+    "name" 				: "CD Percezione passiva della serratura",
+    "descrp"				: "Impedisce che la CD di percezione passiva di questo token venga rielaborata durante il movimento"
+},
+
+"resetSpottedbyMoveFlag" : {
+    "name"				: "Resetta individuato al movimento del token",
+    "descrp"				: "Se gli individuatori attivi di un token nascosto devono essere resettati durante il suo movimento"
+},
+
+"StealthEffectsFlag" : {
+    "name"				: "Effetti di furtività",
+    "descrp"				: "Ulteriori effetti di furtività applicati a questo token durante il tiro di furtività (nomi o ID, separati da \";\")"
+},
+
+"OverrideWorldSEffectsFlag" : {
+    "name"				: "Sovrascrivi effetti di furtività globali",
+    "descrp"				: "Se gli effetti di furtività di questo token devono sovrascrivere gli effetti di furtività globali"
+},
+
+"SceneBrightEndFlag" : {
+    "name"				: "Limite di luminosità",
+    "descrp"				: "Un livello di oscurità della scena inferiore a questo valore sarà considerato luminoso per questa scena"
+},
+
+"SceneDimEndFlag" : {
+    "name"				: "Limite di oscurità",
+    "descrp"				: "Un livello di oscurità della scena inferiore a questo valore sarà considerato poco illuminato per questa scena"
+},
+
+"TilePerceptiveNameFlag" : {
+    "name"				: "Nome della tessera",
+    "descrp"				: "Nome utilizzato da Perceptive per questa tessera (ad esempio, Dialoghi)"
+},
+
+"MATTTriggerTileFlag" : {
+    "name" 				: "ID tessera attivata",
+    "descrp"				: "L'ID della tessera attivata dalle azioni Lock & Key qui sotto (puoi usare diverse uscite)"
+},
+
+"MATTTriggerConditionsFlag" : {
+    "NewlySpotted.name"		: "Su appena individuato",
+    "options" : {
+        "never"				: "mai",
+        "always"			: "sempre",
+        "active"			: "attivo",
+        "passive"			: "passivo"
+    }
+  }
+},
+
+"vision-channels-window" : {
+    "buttons" : {
+        "OpenVCMenu" : {
+            "name"				: "Apri Canali di Visione"
+        },
+        "confirm" : {
+            "name"				: "Conferma"
+        },
+        "add" : {
+            "name"				: "Aggiungi canale"
+        }
+    },
+    "titles" : {
+        "VisionChannels"		: "Canali di Visione"
+    },
+    "entries" : {
+        "titles" : {
+            "Name"				: "Nome",
+            "RequiredtoSee"		: "Necessario per vedere",
+            "SeethroughWalls"	: "Vedere attraverso le pareti",
+            "Range"				: "Distanza",
+            "RangeFormula"		: "Formula della distanza",
+            "RangeMin"			: "Distanza minima",
+            "Color"				: "Colore",
+            "EffectFilter" : {
+                "name"			: "Filtro effetto",
+                "options" : {
+                    "off"		: "spento",
+                    "outline"   : "contorno",
+                    "outline_waves" : "contorno e onde",
+                    "glow"		: "bagliore",
+                    "TMfog"		: "nebbia",
+                    "TMelectric": "elettricità",
+                    "TMtransform": "spirale",
+                    "TMflood"	: "allagamento",
+                    "TMadjustment" : "sfocatura",
+                    "TMblur"	: "sfocatura"
+                }
+            },
+            "EffectFilterColor" : "Colore Filtro Effetto",
+            "Transparency"		: "Trasparenza",
+            "defaultReceiver"	: "Ricevi predefinito",
+            "VCID"				: "ID Interno",
+            "Emits"				: "Emette",
+            "Receives"			: "Riceve",
+            "ReceiveFiltered"	: "Filtra ricezioni",
+            "ReceiveRange"		: "Distanza personalizzata",
+            "CalculatedRange"	: "Distanza calcolata",
+            "ReceiveRangeMin"	: "Distanza minima personalizzata",
+            "Sight"				: "Vista",
+            "Movement"			: "Movimento"
+        }
+    }
+},
+
+"PeekingConfirm" : {
+    "name" 						: "Conferma Sguardo",
+    "descrp" 					: "L'utente {pUserName} vuole guardare una porta, confermi?"
+},
+
+"monks-active-tiles" : {
+    "filters" : {
+        "name"						: "Filtro",
+        
+        "filter-spotted-by" : {
+            "name"					: "Filtra oggetti individuati da",
+            "descrp"				: "<span class=\"filter-style\">Filtra</span> <span class=\"entity-style\">{pEntities}</span> {pFilterCondition} da <span class=\"entity-style\">{pSpotters}</span>",
+            "settings" : {
+                "spotters" : {
+                    "name" 			: "Individuatori"
+                },
+                "filterCondition" : {
+                    "name"			: "Filtra se",
+                    "options" : {
+                        "spotted"	: "è stato individuato",
+                        "notspotted": "non è stato individuato"
+                    }
+                }
+            }
+        },
+        
+        "filter-has-spotted" : {
+            "name"					: "Filtra token che hanno individuato",
+            "descrp"				: "<span class=\"filter-style\">Filtra</span> <span class=\"entity-style\">{pEntities}</span> {pFilterCondition} <span class=\"entity-style\">{pSpotted}</span>",
+            "settings" : {
+                "spotted" : {
+                    "name" 			: "Individuato"
+                },
+                "filterCondition" : {
+                    "name"			: "Filtra se",
+                    "options" : {
+                        "spotted"	: "ha individuato",
+                        "notspotted": "non ha individuato"
+                    }
+                }
+            }
+        }
+    },
+    
+    "actions" : {
+        "spot-object" : {
+            "name"					: "Individua oggetto",
+            "descrp"				: "<span class=\"logic-style\">{pname}</span> <span class=\"entity-style\">{pTargets}</span> con <span class=\"entity-style\">{pEntities}</span>",
+            "settings" : {
+                "target" : {
+                    "name"			: "Obiettivo"
+                }
+            }
+        },
+
+        "give-VC" : {
+            "name"					: "Dai canale di visione",
+            "descrp"				: "<span class=\"logic-style\">{pname}</span> <span class=\"value-style\">{pChannel}</span> a <span class=\"entity-style\">{pEntities}</span> come <span class=\"value-style\">{pType}</span>",
+            "settings" : {
+                "channelid" : {
+                    "name"			: "Canale"
+                },
+                "type" : {
+                    "name"			: "Dai come",
+                    "options" : {
+                        "Emits"		: "Emette",
+                        "Receives"	: "Riceve",
+                        "Sight"		: "Vista (solo pareti)",
+                        "Movement"	: "Movimento (solo pareti)"
+                    }
+                }
+            }
+        },
+
+        "remove-VC" : {
+            "name"					: "Rimuovi canale di visione",
+            "descrp"				: "<span class=\"logic-style\">{pname}</span> <span class=\"value-style\">{pChannel}</span> da <span class=\"entity-style\">{pEntities}</span> come <span class=\"value-style\">{pType}</span>",
+            "settings" : {
+                "channelid" : {
+                    "name"			: "Canale"
+                },
+                "type" : {
+                    "name"			: "Rimuovi come",
+                    "options" : {
+                        "Emits"		: "Emette",
+                        "Receives"	: "Riceve",
+                        "Sight"		: "Vista (solo pareti)",
+                        "Movement"	: "Movimento (solo pareti)"
+                    }
+                }
+            }
+        },
+
+        "reset-Spottedby" : {
+            "name"					: "Resetta \"individuato da\"",
+            "descrp"				: "<span class=\"logic-style\">{pname}</span> di <span class=\"entity-style\">{pEntities}</span>"
+        },
+
+        "set-canbeSpotted" : {
+            "name"					: "Imposta \"può essere individuato\"",
+            "descrp" : {
+                "value"				: "<span class=\"logic-style\">{pname}</span> di <span class=\"entity-style\">{pEntities}</span> a <span class=\"value-style\">{pvalue}</span>",
+                "toggle"			: "<span class=\"logic-style\">Attiva/disattiva \"può essere individuato\"</span> di <span class=\"entity-style\">{pEntities}</span>"
+            },
+            "settings" : {
+                "setto" : {
+                    "name"  		: "Imposta a",
+                    "options" : {
+                        "true"		: "Vero",
+                        "false"		: "Falso",
+                        "toggle"	: "Commutare valore"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,155 @@
+{
+  "id": "token-action-hud-core",
+  "title": "Token Action HUD Core",
+  "description": "Token Action HUD is a repositionable HUD of actions for a selected token",
+  "authors": [
+    {
+      "name": "Larkinabout",
+      "url": "https://github.com/Larkinabout",
+      "flags": {}
+    },
+    {
+      "name": "Drental",
+      "flags": {}
+    },
+    {
+      "name": "^ and stick",
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/Larkinabout/fvtt-token-action-hud-core",
+  "version": "2.0.16",
+  "compatibility": {
+    "minimum": "12.331",
+    "verified": "13.345"
+  },
+  "esmodules": [
+    "dist/token-action-hud-core.min.mjs"
+  ],
+  "styles": [
+    {
+      "src": "styles/token-action-hud.css"
+    },
+    {
+      "src": "styles/tah-custom.css"
+    },
+    {
+      "src": "styles/tah-docked-left.css"
+    },
+    {
+      "src": "styles/tah-docked-left-v13.css"
+    },
+    {
+      "src": "styles/tah-docked-right.css"
+    },
+    {
+      "src": "styles/tah-docked-right-v13.css"
+    },
+    {
+      "src": "styles/tah-foundry-vtt-dark.css"
+    },
+    {
+      "src": "styles/tah-foundry-vtt-dark-compact.css"
+    },
+    {
+      "src": "styles/tah-foundry-vtt-light.css"
+    },
+    {
+      "src": "styles/tah-high-contrast.css"
+    },
+    {
+      "src": "styles/tah-pathfinder.css"
+    },
+    {
+      "src": "styles/lib/tagify/tagify.css"
+    },
+    {
+      "src": "styles/lib/dragsort/dragsort.css"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json",
+      "flags": {}
+    },
+    {
+      "lang": "ko",
+      "name": "Korean",
+      "path": "languages/ko.json",
+      "flags": {}
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "languages/br.json",
+      "flags": {}
+    },
+    {
+      "lang": "es",
+      "name": "Spanish",
+      "path": "languages/es.json",
+      "flags": {}
+    },
+    {
+      "lang": "fr",
+      "name": "French",
+      "path": "languages/fr.json",
+      "flags": {}
+    },
+    {
+      "lang": "pl",
+      "name": "Polish",
+      "path": "languages/pl.json",
+      "flags": {}
+    },
+    {
+      "lang": "ja",
+      "name": "日本語",
+      "path": "languages/ja.json",
+      "flags": {}
+    },
+    {
+      "lang": "cn",
+      "name": "中文",
+      "path": "languages/cn.json",
+      "flags": {}
+    },
+    {
+      "lang": "it",
+      "name": "italiano",
+      "path": "languages/it.json",
+      "flags": {}
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "languages/de.json",
+      "flags": {}
+    }
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "socketlib",
+        "type": "module",
+        "compatibility": {}
+      }
+    ],
+    "flags": {
+      "optional": [
+        {
+          "id": "color-picker",
+          "reason": "To enable color pickers in the module settings"
+        }
+      ]
+    }
+  },
+  "socket": true,
+  "manifest": "https://github.com/Larkinabout/fvtt-token-action-hud-core/releases/latest/download/module.json",
+  "download": "https://github.com/Larkinabout/fvtt-token-action-hud-core/releases/download/2.0.16/module.zip",
+  "library": true,
+  "persistentStorage": true,
+  "flags": {}
+}

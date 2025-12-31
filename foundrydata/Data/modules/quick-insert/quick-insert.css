@@ -1,0 +1,593 @@
+body {
+  --qiFilterAccent: #454159;
+  --qiItemHoverColor: #99944e29;
+  --qiItemSelectedColor: #99944e29;
+  --qiItemSelectedHoverColor: #99944e3d;
+  --qiActionColor: var(--color-text-primary);
+  --qiActionBgEmphasis: #0004;
+  --qiActionBgEmphasisStrong: #0006;
+  --qiBackground: #dddddde3;
+  --qiBorderColor: #493a50;
+  --qiBorderColorFocused: #624670;
+}
+.theme-dark {
+  --qiItemHoverColor: #9979b924;
+  --qiItemSelectedColor: #b3a0c624;
+  --qiItemSelectedHoverColor: #9979b924;
+  --qiActionColor: var(--color-text-light-highlight);
+  --qiActionBgEmphasis: #fff4;
+  --qiActionBgEmphasisStrong: #fff6;
+  --qiBackground: #302831e3;
+}
+
+#qi-search-appv3 {
+  position: absolute;
+  display: flex;
+  width: 300px;
+  min-width: 276px;
+  height: calc(50vh + var(--input-height));
+  align-items: flex-end;
+  z-index: calc(var(--z-index-tooltip) - 1);
+  bottom: calc(50vh - var(--input-height) - 6px);
+  left: calc(50vw - 150px);
+  overflow: visible;
+  --result-icon-size: 25px;
+  transition: opacity 250ms ease-out;
+  pointer-events: none;
+}
+
+#qi-search-appv3.dragging {
+  opacity: 0.8;
+}
+
+.density-compact {
+  --result-icon-size: 25px;
+  --result-row-height: 25px;
+  --input-height: 30px;
+}
+
+.density-comfortable {
+  --result-icon-size: 25px;
+  --result-row-height: 33px;
+  --input-height: 30px;
+  font-size: var(--font-size-16);
+}
+
+.density-spacious {
+  --result-icon-size: 45px;
+  --result-row-height: 53px;
+  --input-height: 40px;
+  font-size: var(--font-size-16);
+}
+
+#qi-search-appv3.density-comfortable {
+  width: 400px;
+  left: calc(50vw - 200px);
+}
+#qi-search-appv3.density-spacious {
+  width: 450px;
+  left: calc(50vw - 225px);
+}
+
+.quick-insert-context {
+  border: 2px #f00 solid !important;
+}
+
+ul.quick-insert-result {
+  overflow-y: auto;
+  color: var(--color-text-primary);
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-insert-result li {
+  flex-shrink: 0;
+  padding: 0;
+  display: block;
+  margin: 0 !important;
+  background-color: transparent !important;
+  border: none;
+  overflow: clip;
+}
+
+.quick-insert-result li.no-icon-result a {
+  min-height: var(--result-icon-size);
+}
+
+.quick-insert-result li a {
+  background: transparent;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  align-items: center;
+  height: var(--result-row-height);
+  transition: scale 100ms ease-in-out;
+}
+
+.quick-insert-result li a:active {
+  scale: 0.99;
+}
+
+.quick-insert-result.density-comfortable li {
+  padding: 1px 4px;
+}
+
+.quick-insert-result.density-comfortable li:first-child {
+  padding-top: 4px;
+}
+
+.quick-insert-result.density-comfortable li a {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.quick-insert-result.density-spacious li {
+  padding: 4px 6px;
+}
+.quick-insert-result.density-spacious li a {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.quick-insert-result li a strong {
+  background: #0000001c;
+  font-weight: normal;
+  border-radius: 5px;
+}
+
+.quick-insert-result li img {
+  border: none;
+  display: inline-block;
+}
+.quick-insert-result li img.doc-image {
+  width: var(--result-icon-size);
+  height: var(--result-icon-size);
+  max-width: var(--result-icon-size);
+  flex-basis: var(--result-icon-size);
+  background: #0002;
+  border-radius: 0;
+  flex-shrink: 0;
+  margin-right: 2px;
+}
+.quick-insert-result.density-comfortable li a i.entity-icon,
+.quick-insert-result.density-comfortable li img.doc-image {
+  border-radius: 4px;
+  margin: 4px;
+}
+.quick-insert-result.density-spacious li a i.entity-icon,
+.quick-insert-result.density-spacious li img.doc-image {
+  border-radius: 6px;
+  margin: 4px 0 4px 6px;
+}
+
+.quick-insert-result li a i.entity-icon {
+  margin-right: 2px;
+  color: #f0f0e0;
+  width: var(--result-icon-size);
+  height: var(--result-icon-size);
+  flex-basis: var(--result-icon-size);
+  flex-shrink: 0;
+  background: #0002;
+  font-size: 105%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-insert-result.density-comfortable li a i.entity-icon {
+  border-radius: 6px;
+}
+
+.quick-insert-result.density-spacious li a i.entity-icon {
+  border-radius: 6px;
+}
+
+.quick-insert-result li span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0.2em 0.4em;
+}
+
+.quick-insert-result li a > span {
+  overflow: hidden;
+}
+
+.quick-insert-result li span.title {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 30%;
+  max-width: calc(100% - 75px);
+}
+
+.quick-insert-result li span.sub {
+  color: #666;
+  text-align: end;
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding-left: 0;
+}
+
+.quick-insert-result li .location-icon {
+  color: #666;
+  margin-right: 0.4em;
+}
+
+.quick-insert-result li .two-line-item {
+  flex-grow: 1;
+  padding: 0 6px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.quick-insert-result li .two-line-item span {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.quick-insert-result li .two-line-item span.sub {
+  text-align: start;
+  font-size: 90%;
+}
+
+.quick-insert-result li a:hover {
+  background: none;
+}
+
+.quick-insert-result li a .action-icons {
+  flex-shrink: 0;
+  padding-left: 0;
+  padding-right: 0.2em;
+  display: flex;
+  gap: 0.2em;
+  overflow: visible;
+}
+
+.density-spacious .quick-insert-result li a .action-icons {
+  padding-right: 0.3em;
+}
+
+.quick-insert-result li:hover a .sub,
+.quick-insert-result li.search-selected a .sub {
+  flex-shrink: 9999;
+}
+
+.quick-insert-result li a i.action-icon {
+  opacity: 0.75;
+  color: var(--qiActionColor);
+  width: 1.6em;
+  height: 1.6em;
+  flex-shrink: 0;
+  font-size: 90%;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: transparent;
+  opacity: 0.6;
+}
+
+.quick-insert-result li a:hover i.action-icon,
+.quick-insert-result li.search-selected a i.action-icon {
+  background: #0002;
+  display: flex;
+  opacity: 1;
+}
+
+.quick-insert-result li a i.action-icon img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.system-dnd5e.theme-light .quick-insert-result li a i.action-icon img {
+  filter: invert(1);
+}
+
+.quick-insert-result.density-comfortable li a i.action-icon {
+  font-size: 100%;
+}
+.quick-insert-result.density-spacious li a i.action-icon {
+  font-size: 110%;
+}
+
+.quick-insert-result li a i.action-icon.selected,
+.quick-insert-result li a i.action-icon:hover {
+  background: var(--qiActionBgEmphasis);
+  outline: 1px solid #0000001c;
+}
+
+.quick-insert-result li a i.action-icon.selected:hover {
+  background: var(--qiActionBgEmphasisStrong);
+}
+
+.quick-insert-result .search-selected a {
+  background: var(--qiItemSelectedColor);
+  text-shadow: none;
+}
+.quick-insert-result li a:hover {
+  background: var(--qiItemHoverColor);
+  text-shadow: none;
+}
+
+.quick-insert-result .search-selected a:hover {
+  background: var(--qiItemSelectedHoverColor);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Filter editor dialog */
+
+.new-filter-name {
+  display: flex;
+  line-height: 24px;
+  background: var(--qiFilterAccent);
+  color: #f0f0e0;
+  border-radius: 2px;
+  padding: 0 4px;
+  margin-bottom: 6px;
+}
+
+.new-filter-name input {
+  background: none;
+  color: #f0f0e0;
+  padding: 0;
+  border: none;
+  box-shadow: none !important;
+}
+.new-filter-name input:invalid {
+  border: 1px solid red;
+}
+.new-filter-name input::placeholder {
+  color: #f0f0e0;
+  opacity: 0.5;
+}
+
+/* New Settings app */
+#qi-settings-app:not(.minimized, .minimizing, .maximizing) {
+  min-width: 660px;
+  min-height: 550px;
+}
+
+#qi-settings-app .window-content {
+  overflow: hidden;
+  padding: 0;
+}
+
+#qi-settings-app form .form-group > label {
+  flex: 3;
+}
+
+#qi-settings-app .filters-tab ul {
+  list-style: none;
+  margin: 0;
+  width: auto;
+}
+
+/* Filter popup */
+.qi-filter-popup-app {
+  background: var(--qiFilterAccent);
+}
+.qi-filter-popup-app .window-content {
+  padding: 0;
+}
+.qi-filter-popup-app .window-header {
+  background: var(--qiFilterAccent);
+}
+.qi-filter-popup-app .qi-filter-editor {
+  border-radius: 0;
+}
+
+/* About App */
+#qi-about-app .window-header {
+  background: none;
+  font-size: 200%;
+  border: none;
+  padding: 30px 1rem;
+  color: var(--color-text-primary);
+}
+#qi-about-app .window-title {
+  text-align: center;
+  color: var(--color-text-primary);
+}
+#qi-about-app .header-control {
+  color: var(--color-text-primary);
+}
+#qi-about-app .window-content {
+  align-items: center;
+  text-align: center;
+}
+
+#qi-about-app img {
+  border: none;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background: #2b202fd9;
+}
+#qi-about-app ul {
+  list-style: none;
+  text-align: center;
+}
+
+/* Integration */
+
+.system-dnd5e #context-menu li.context-group {
+  border-bottom: none;
+}
+
+.dnd5e.sheet.actor .inventory-list .inventory-header {
+  justify-content: flex-end;
+}
+.dnd5e.sheet.actor .inventory-list .item-controls {
+  flex-wrap: nowrap;
+}
+
+.dnd5e.sheet.actor
+  .inventory-list
+  .inventory-header
+  .item-controls
+  a.item-create {
+  flex: 1 0 auto;
+}
+
+.dnd5e.sheet.actor .items-list .item-controls a.quick-insert-link {
+  flex: 0 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dnd5e.sheet.actor .items-list .item-controls a.quick-insert-link i::before {
+  font-size: 14px;
+}
+
+.dnd5e.sheet.actor .inventory-list .item-controls {
+  flex: 0 0 55px;
+}
+.dnd5e.sheet .items-list .item-controls a {
+  white-space: nowrap;
+}
+
+.dnd5e2 .quick-insert-link {
+  position: relative;
+  right: -140%;
+}
+
+.tidy5e.sheet.actor
+  .inventory-list
+  .inventory-header
+  .item-controls
+  a.item-create {
+  padding: 2px 2px 0px;
+}
+
+.tidy5e.sheet.actor .grid-layout .item-list .items-footer {
+  flex: 0 0 75px;
+  display: flex;
+  justify-content: stretch;
+}
+
+.tidy5e.sheet.actor .grid-layout .item-list .items-footer a {
+  flex-grow: 1;
+}
+
+.swade.actor .header-field-add {
+  display: flex;
+}
+
+.swade.actor .header-field-add .quick-insert-link {
+  margin-left: 5px;
+}
+
+.swade-official .section-header .quick-insert-link {
+  grid-column: 5;
+  font-size: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.app.window-app.sheet.wfrp4e.actor
+  .tab.skills.active
+  .skill-section
+  .skill-type
+  .inventory-header
+  .item-controls {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.app.window-app.sheet.wfrp4e.actor
+  .tab.religion.active
+  .inventory-header.blessing-header
+  .item-controls,
+.app.window-app.sheet.wfrp4e.actor
+  .tab.religion.active
+  .inventory-header.miracle-header
+  .item-controls,
+.app.window-app.sheet.wfrp4e.actor
+  .tab.combat.active
+  .inventory-header.critical-header
+  .item-controls,
+.app.window-app.sheet.wfrp4e.actor
+  .tab.combat.active
+  .inventory-header.injury-header
+  .item-controls,
+.app.window-app.sheet.wfrp4e.actor
+  .tab.inventory.active
+  .inventory-header.weapons
+  .item-controls,
+.app.window-app.sheet.wfrp4e.actor
+  .tab.inventory.active
+  .inventory-header
+  .item-controls {
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+.sfrpg.sheet.actor.character .item-controls {
+  flex-wrap: nowrap;
+}
+
+.sfrpg.sheet.actor
+  .inventory-list
+  .inventory-header
+  .item-controls
+  a.item-create,
+.sfrpg.sheet.actor .crew-list .inventory-header .item-controls a.item-create,
+.sfrpg.sheet.actor .inventory-list .crew-header .item-controls a.item-create,
+.sfrpg.sheet.actor .crew-list .crew-header .item-controls a.item-create,
+.sfrpg.sheet.actor
+  .inventory-list
+  .inventory-header
+  .item-controls
+  a.modifier-create,
+.sfrpg.sheet.actor
+  .crew-list
+  .inventory-header
+  .item-controls
+  a.modifier-create,
+.sfrpg.sheet.actor
+  .inventory-list
+  .crew-header
+  .item-controls
+  a.modifier-create,
+.sfrpg.sheet.actor .crew-list .crew-header .item-controls a.modifier-create,
+.sfrpg.sheet.actor
+  .inventory-list
+  .inventory-header
+  .crew-controls
+  a.crew-create,
+.sfrpg.sheet.actor .crew-list .inventory-header .crew-controls a.crew-create,
+.sfrpg.sheet.actor .inventory-list .crew-header .crew-controls a.crew-create,
+.sfrpg.sheet.actor .crew-list .crew-header .crew-controls a.crew-create {
+  flex-shrink: 1;
+}
+
+.sfrpg.sheet.actor.character .spellbook .item-controls {
+  flex-basis: 66px;
+}
+
+.demonlord .features .header .edit {
+  width: 36px;
+}
+.demonlord .item-controls .quick-insert-link {
+  margin-left: 2px;
+}

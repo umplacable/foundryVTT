@@ -1,5 +1,11 @@
-2025/12/01-20:29:36.839121 7f84ba7be6c0 Delete type=3 #1
-2025/12/01-20:29:36.840305 7f84b97bc6c0 Level-0 table #5: started
-2025/12/01-20:29:36.841696 7f84b97bc6c0 Level-0 table #5: 76487 bytes OK
-2025/12/01-20:29:36.842237 7f84b97bc6c0 Delete type=0 #3
-2025/12/01-20:29:36.842320 7f84b97bc6c0 Manual compaction at level-0 from '!folders!2Bw096HjE0HyGMwM' @ 72057594037927935 : 1 .. '!items.effects!phbsptStonecunni.SAbuNo2AO3XXtkdv' @ 0 : 0; will stop at (end)
+2025/12/30-20:50:49.352 343c Delete type=3 #1
+2025/12/30-21:24:36.136 5b60 Level-0 table #13: started
+2025/12/30-21:24:36.136 5b60 Level-0 table #13: 0 bytes OK
+2025/12/30-21:24:36.169 5b60 Delete type=0 #11
+2025/12/30-21:24:36.511 5b60 Manual compaction at level-0 from '!folders!2Bw096HjE0HyGMwM' @ 72057594037927935 : 1 .. '!items.effects!phbsptStonecunni.SAbuNo2AO3XXtkdv' @ 0 : 0; will stop at '!items.effects!phbsptStonecunni.SAbuNo2AO3XXtkdv' @ 31 : 1
+2025/12/30-21:24:36.512 5b60 Compacting 1@0 + 0@1 files
+2025/12/30-21:24:36.566 5b60 Generated table #14@0: 75 keys, 76487 bytes
+2025/12/30-21:24:36.566 5b60 Compacted 1@0 + 0@1 files => 76487 bytes
+2025/12/30-21:24:36.594 5b60 compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/12/30-21:24:36.594 5b60 Delete type=2 #5
+2025/12/30-21:24:36.595 5b60 Manual compaction at level-0 from '!items.effects!phbsptStonecunni.SAbuNo2AO3XXtkdv' @ 31 : 1 .. '!items.effects!phbsptStonecunni.SAbuNo2AO3XXtkdv' @ 0 : 0; will stop at (end)

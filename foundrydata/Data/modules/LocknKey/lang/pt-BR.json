@@ -1,0 +1,757 @@
+{
+	"LocknKey" : {
+		"Titles" : {
+			"confirm"					: "confirmar",
+			"abbort"					: "abortar",
+			"LocknKey"					: "Lock & Key",
+			"LocknKeyabbr"				: "L&K",
+			"WorldSettings"				: "Configurações do Mundo (Somente GM)",
+			"ClientSettings"			: "Configurações do Cliente",
+			"GMonly"					: "Somente GM",
+			"LockTokens"				: "Configurações da Tranca",
+			"CharacterTokens"			: "Configurações do Personagem",
+			"KeyItems"					: "Configurações da Chave",
+			"LPItems"					: "Configurações de Manipulação da Tranca",
+			"LockusePasskey"			: "Senha",
+			"Passkey"					: "Senha",
+			"EnterPasskey"				: "Digite a senha:",
+			"ConfirmPasskey"			: "Confirmar",
+			"Lockuse"					: "Uso da Tranca",
+			"LockuseKey"				: "Usar uma chave",
+			"LockusePick"				: "Arrombar tranca",
+			"LockuseBreak"				: "Quebrar tranca",
+			"LockuseFree"				: "Uso livre da tranca",
+			"LockuseCustom"				: "{pCheckName}",
+			"Close"						: "Fechar",
+			"Keycreation"				: "Criação de chave",
+			"Keyname"					: "Nome da chave",
+			"KeyID"						: "ID da Chave (separate IDs with \";\")",
+			"Keyfolder"					: "Pasta de destino da chave",
+			"ConfirmKeycreation"		: "Criar",
+			"Basic"						: "Básico",
+			"Triggers"					: "Gatilhos",
+			"FreeCircumventHUD"			: "Este token pode contornar a próxima tranca, clique para remover",
+			"PickPocket"				: "Furtar",
+			"LockchangePasskey"			: "Alterar senha",
+			"LockuseIdentity"			: "Identidade",
+			"newPasskey"				: "Nova senha:",
+			"addIdentityMessage"		: "O jogador {pPlayerName} quer adicionar estas identidades a uma tranca: {pIdentities}",
+			"IdentifierofType"			: "{pIdentifier} de {pType} {pName}",
+			"ToggleTile"				: "Alternar estado da peça (T&C)"
+		},
+		
+		"Popup" : {
+			"TokenisLocked"				: "{pLockName} está trancado",
+			"DoorisLocked"				: "Esta porta está trancada",
+			"Lockoutofreach"			: "Esta tranca está fora de alcance",
+			"Tokenoutofreach"			: "{pTokenName} está fora de alcance",
+			"lockedDoor"				: "Porta está agora trancada",
+			"lockedToken"				: "{pLockName} está agora trancado",
+			"unlockedDoor"				: "Porta está agora destrancada",
+			"unlockedToken"				: "{pLockName} está agora destrancado",
+			"GamePaused"				: "O jogo está pausado",
+			"noLockPickItem"			: "Sem ferramenta de arrombamento no inventário",
+			"nomatchingKey"				: "Chave não correspondente",
+			"pickLockfailed"			: "Falha ao arrombar a tranca",
+			"cantLock" : {
+				"default"				: "Esta tranca não pode ser trancada",
+				"break"					: "Esta tranca já está aberta"
+			},
+			"breakLockfailed"			: "Falha ao quebrar a tranca",
+			"NotaLock"					: "Não é uma tranca",
+			"WrongPassword"				: "Senha incorreta",
+			"Lockisjammed"				: "Tranca está emperrada",
+			"Lockpickbroke"				: "Ferramenta de arrombamento quebrou",
+			"jammedLock"				: "Tranca emperrada",
+			"cantcircumventFree"		: "Tranca não pode ser contornada",
+			"PickPocketfailed"			: "Falha ao furtar",
+			"customcheckfailed"			: "{pCheckName} falhou",
+			"WrongIdentity"				: "Identidade incorreta",
+			"PasswordChanged"			: "Senha alterada",
+			"NoPasswordLength"			: "Nova senha muito curta",
+			"CantChangePassword"		: "Não é possível alterar a senha",
+			
+			"CantbePicked"				: "Não pode ser arrombada",
+			"CantbeBroken"				: "Não pode ser quebrada",
+			"CantbeCustomChecked"		: "Não é possível usar {pCheckName}",
+			"CantbePickpocketed"		: "Não pode ser furtado"
+		},	
+		
+		"ChatMessage" : {
+			"LockPick"					: "{pName} tentou arrombar uma tranca:",
+			"LockPicksuccess" : {
+				"crit"					: "{pName} conseguiu arrombar a tranca criticamente",
+				"default" 				: "{pName} conseguiu arrombar a tranca"
+			},
+			"LockPickfail" : {
+				"crit"					: "{pName} falhou criticamente ao arrombar a tranca",
+				"default" 				: "{pName} falhou ao arrombar a tranca"
+			},
+			"LockPicksuccessLPName" : {
+				"crit"					: "{pName} conseguiu arrombar a tranca criticamente com {pLPName}",
+				"default" 				: "{pName} conseguiu arrombar a tranca com {pLPName}"
+			},
+			"LockPickfailLPName" : {
+				"crit"					: "{pName} falhou criticamente ao arrombar a tranca com {pLPName}",
+				"default" 				: "{pName} falhou ao arrombar a tranca com {pLPName}"
+			},
+			"LockPickfailLPNameremove" : {
+				"crit"					: "{pName} falhou criticamente ao arrombar a tranca e quebrou {pLPName}"
+			},
+			
+			"LockBreak"					: "{pName} tentou quebrar uma tranca:",
+			"LockBreaksuccess" : {
+				"crit"					: "{pName} conseguiu quebrar a tranca criticamente",
+				"default" 				: "{pName} conseguiu quebrar a tranca"
+			},
+			"LockBreakfail" : {
+				"crit"					: "{pName} falhou criticamente ao quebrar a tranca",
+				"default" 				: "{pName} falhou ao quebrar a tranca"
+			},
+			
+			"CustomCheck"				: "{pName} usou {pCheckName}:",
+			"CustomChecksuccess" : {
+				"crit"					: "{pName} conseguiu criticamente em {pCheckName}",
+				"default" 				: "{pName} conseguiu em {pCheckName}"			
+			},
+			"CustomCheckFail" : {
+				"crit"					: "{pName} falhou criticamente em {pCheckName}",
+				"default" 				: "{pName} falhou em {pCheckName}"
+			},
+			
+			"PickPocket"				: "{pName} tentou furtar:",
+			"PickPocketDetailed"		: "{pName} tentou furtar {pTargetName} com uma DC de {pDC}:",
+			"PickPocketSuccess" : {
+				"crit"					: "{pName} conseguiu criticamente ao furtar",
+				"default" 				: "{pName} conseguiu ao furtar"			
+			},
+			"PickPocketFail" : {
+				"crit"					: "{pName} falhou criticamente ao furtar",
+				"default" 				: "{pName} falhou ao furtar"
+			}
+		},
+		
+		"Settings" : {
+			"useGMquickKeys" : {
+				"name" 					: "Usar controles rápidos do GM",
+				"descrp"				: "Permite que o GM use os controles especiais relacionados ao bloqueio listados na parte inferior (afetados marcados com *)"
+			},
+			
+			"allowLocking" : {
+				"name" 					: "Permitir bloqueio pelo jogador",
+				"descrp"				: "Permite que os jogadores bloqueiem fechaduras se tiverem uma chave correspondente"
+			},
+			"startasLocked" : {
+				"name" 					: "Iniciar como bloqueado",
+				"descrp"				: "Se as fechaduras recém-registradas começam bloqueadas"
+			},
+			"LockDistance" : {
+				"name" 					: "Distância de bloqueio",
+				"descrp"				: "Distância sobre a qual uma fechadura pode ser usada (em unidades do jogo)"		
+			},
+			"DefaultLockSound" : {
+				"name"					: "Som de bloqueio padrão",
+				"descrp"				: "O som padrão aplicado a novas portas e tokens de fechadura"
+			},
+			"UseArmReachDistance": {
+				"name" 					: "Usar distância de \"Alcance dos Braços\"",
+				"descrp"				: "Usa a distância definida em \"Alcance dos Braços\" para a distância de bloqueio"	
+			},
+			"alwaysopenOwned" : {
+				"name" 					: "Sempre abrir possuídos",
+				"descrp"				: "Os jogadores podem sempre abrir tokens possuídos, mesmo que estejam bloqueados"		
+			},
+			"allowallInteractions" : {
+				"name" 					: "Permitir todas as interações",
+				"descrp"				: "Se todas as interações (roubar, quebrar, personalizar, furtar) devem ser permitidas mesmo para DCs impossíveis"					
+			},			
+			"showallLockInteractions" : {
+				"name" 					: "Mostrar todas as interações de bloqueio",
+				"descrp"				: "Sempre mostrar todas as opções de interação para fechaduras (para o GM malvado em você)"					
+			},
+			"preventUseinPause" : {
+				"name" 					: "Prevenir uso de chave durante pausa",
+				"descrp"				: "Impedir que os jogadores usem chaves enquanto o jogo está pausado"		
+			},
+			"autoKeyuse" : {
+				"name" 					: "Uso automático de chave",
+				"descrp"				: "Os jogadores tentarão automaticamente usar uma chave correspondente se interagirem com um objeto bloqueado"		
+			},
+			"KeyItemtype" : {
+				"name" 					: "Tipo de itens de chave",
+				"descrp"				: "O tipo de item que o módulo usará para novas chaves, deixe em branco para usar o tipo padrão (você pode obter uma lista de tipos válidos digitando \"game.items.documentClass.TYPES\" no console F12)"		
+			},
+	
+			"LnKSettingTypes" : {
+				"name" 					: "Definindo tipos de itens",
+				"descrp"				: "Os tipos de itens para os quais as configurações de Lock & Key são exibidas (separados por \";\", \"all\" para todos os tipos)"		
+			},
+			
+			"LnKSettingsubTypes" : {
+				"name" 					: "Definindo subtipos de itens",
+				"descrp"				: "Os subtipos de itens para os quais as configurações de Lock & Key são exibidas (separados por \";\", \"all\" para todos os subtipos)"		
+			},
+			
+			"KeyitemCreationPopup" : {
+				"name" 					: "Menu de criação de chave",
+				"descrp"				: "Se um menu deve ser exibido para a chave recém-gerada para alterar seu nome e pasta"		
+			},	
+			
+			"KeyitemCreationIDOption" : {
+				"name" 					: "Opção de ID de criação de chave",
+				"descrp"				: "Se uma opção para inserir um ID de chave personalizado deve ser exibida no menu de criação de chave"		
+			},	
+			
+			"DefaultKeyFolder" : {
+				"name"					: "Pasta de chave padrão",
+				"descrp"				: "O nome das pastas padrão usadas no menu de criação de chave"
+			},
+			
+			"LimitKeyFolders" : {
+				"name"					: "Filtrar pastas de chave",
+				"descrp"				: "Se apenas a pasta de chave padrão e suas subpastas devem ser exibidas no menu de criação de chave"
+			},
+	
+			"UseKeynameasID" : {
+				"name" 					: "Nome da chave como ID",
+				"descrp"				: "Se o nome de uma chave deve ser considerado como um ID adicional para o propósito de abrir fechaduras"		
+			},	
+			
+			"usePf2eSystem" : {
+				"name" 					: "Usar rolagens do sistema",
+				"descrp"				: "Usar as regras de rolagem do sistema (desativa as fórmulas de rolagem personalizadas de Lock & Key e configurações de crítico em favor das regras de rolagem do sistema)"						
+			},
+			
+			"CritMethod" : {
+				"name" 					: "Sistema de crítico",
+				"descrp"				: "A maneira como as rolagens críticas são determinadas",
+				"options" : {
+					"noCrit"			: "Sem críticos",
+					"natCrit"			: "Nat 1/20",
+					"natCritpm10"		: "Nat 1/20 & +-10 do DC [por exemplo, Pf2e]",
+					"d100WFRP4"			: "d100 Nat1/100 [por exemplo, WFRP4e]",
+					"d100WFRP4Doubles"	: "d100 Nat1/100 & duplas [por exemplo, WFRP4e]",
+					"d100CoC7e"			: "d100 faixas de dificuldade [por exemplo, CoC7e]",
+					"d10poolCoD2e"		: "d10 pool >=8 e rerrolar em 10 [por exemplo, CoD2e]",
+					"3d20DSA"			: "3d20 DSA"
+				}
+			},
+			
+			"LockPickItem" : {
+				"name" 					: "Itens de arrombamento",
+				"descrp"				: "Nomes ou IDs de compêndio (recomendado) de itens de arrombamento, \"-\" se nenhum item for necessário (separados por \";\")"		
+			},
+			
+			"MentionLockPickItem" : {
+				"name" 					: "Mencionar item de arrombamento",
+				"descrp"				: "Se o item de arrombamento usado deve ser mencionado no chat"		
+			},
+			
+			"RemoveLPoncritFail" : {
+				"name" 					: "Remover item de arrombamento em falha crítica",
+				"descrp"				: "Se o item de arrombamento usado é removido em uma falha crítica (ou se a pilha é reduzida em 1)"		
+			},	
+			
+			"JamLockonLPcritFail" : {
+				"name" 					: "Travamento de porta em falha crítica de arrombamento",
+				"descrp"				: "Portas ficam travadas em falhas críticas de arrombamento e não podem mais ser arrombadas"		
+			},
+			
+			"JamedLockKeyunusable" : {
+				"name" 					: "Chaves não podem ser usadas em fechaduras travadas",
+				"descrp"				: "Fechaduras travadas não aceitarão mais chaves correspondentes"		
+			},
+			
+			"defaultLPAttempts" : {
+				"name"					: "Tentativas de arrombamento padrão",
+				"descrp"				: "A quantidade padrão de tentativas de arrombamento antes que a fechadura se torne inarrombável (-1 para tentativas ilimitadas)"
+			},
+			
+			"LockPickFormula" : {
+				"name" 					: "Fórmula de rolagem de arrombamento",
+				"descrp"				: "A fórmula que é usada para rolagens de dados ao arrombar uma fechadura (por exemplo, \"1d20 + @actor.skills.thievery.mod\", ajuda pode ser encontrada na página do Github deste módulo)"				
+			},
+					
+			"DefaultPickDC" : {
+				"name" 					: "DC padrão de arrombamento",
+				"descrp"				: "O valor padrão para DCs de arrombamento"				
+			},
+			
+			"LockBreakFormula" : {
+				"name" 					: "Fórmula de rolagem para quebrar fechadura",
+				"descrp"				: "A fórmula que é usada para rolagens de dados ao quebrar uma fechadura (por exemplo, \"1d20 + @actor.skills.athletics.mod - 2\", ajuda pode ser encontrada na página do Github deste módulo)"				
+			},
+			
+			"DefaultBreakDC" : {
+				"name" 					: "DC padrão para quebrar fechadura",
+				"descrp"				: "O valor padrão para DCs de quebra de fechadura"				
+			},
+			
+			"CustomCircumventName" : {
+				"name" 					: "Nome de verificação personalizada",
+				"descrp"				: "O nome da terceira verificação personalizada opcional para contornar fechaduras (por exemplo, \"Hacking\" ou \"Magic rune\", deixe em branco para desativar)"				
+			},
+			
+			"CustomCircumventFormula" : {
+				"name" 					: "Fórmula de verificação personalizada",
+				"descrp"				: "A fórmula que é usada para rolagens de dados ao usar a verificação personalizada acima"				
+			},
+			
+			"CustomCircumventDefaultDC" : {
+				"name" 					: "DC padrão de verificação personalizada",
+				"descrp"				: "O valor padrão para DCs de verificação personalizada"				
+			},
+			
+			"LockBreakunlockable" : {
+				"name" 					: "Tornar fechaduras quebradas desbloqueáveis",
+				"descrp"				: "Torna as fechaduras que foram quebradas desbloqueáveis"				
+			},
+			
+			"onlyCombatMultiSuccess" : {
+				"name" 					: "Sucesso múltiplo apenas durante o combate",
+				"descrp"				: "Ignora as sucessos de arrombamento necessários fora do combate"				
+			},
+			
+			"LockCircumventName" : {
+				"name" 					: "Palavras-chave para contornar fechadura",
+				"descrp"				: "Palavras-chave para identificar efeitos (por exemplo, o feitiço \"Knock\") que permitem que os jogadores contornem fechaduras (separados por \";\")"				
+			},
+			
+			"AutoAcceptIdentityAddition" : {
+				"name" 					: "Aceitar automaticamente adições de identidade",
+				"descrp"				: "Se as adições de identidade devem ser aceitas automaticamente (não recomendado)"				
+			},
+			
+			"PickPocketFormula" : {
+				"name" 					: "Fórmula de furto",
+				"descrp"				: "A fórmula que é usada para rolagens de dados ao furtar (por exemplo, \"1d20 + @actor.skills.thievery.mod\", ajuda pode ser encontrada na página do Github deste módulo)"				
+			},
+			
+			"PickPocketDefaultDC" : {
+				"name" 					: "DC padrão de furto",
+				"descrp"				: "O valor padrão para DCs de furto"				
+			},
+			
+			"PickPocketDefaultDCFormula" : {
+				"name" 					: "Fórmula de DC padrão de furto",
+				"descrp"				: "A fórmula padrão usada para calcular o DC de furto (substitui outros padrões)"				
+			},
+			
+			"AutoUpdatePickPocketDC" : {
+				"name" 					: "Atualizar automaticamente DC de furto",
+				"descrp"				: "Se o DC de furto deve ser atualizado automaticamente quando uma verificação de percepção é feita"				
+			},
+			
+			"MentionPickpocketDetails" : {
+				"name" 					: "Mencionar detalhes do furto",
+				"descrp"				: "Se o nome do alvo e o DC devem ser mencionados na mensagem de furto"				
+			},
+			
+			"deadActorsLootable" : {
+				"name"					: "Tokens mortos saqueáveis",
+				"descrp"				: "Se tokens mortos devem ser saqueáveis/furtáveis sem rolagem"	
+			},
+			
+			"PerceptionKeyWord" : {
+				"name"					: "Palavra-chave de percepção",
+				"descrp"				: "Palavra-chave para reconhecer rolagens de percepção (uma string presente no texto de sabor das rolagens de percepção)"		
+			},
+			
+			"ControlSceme" : {
+				"name" 					: "Esquema de controle",
+				"descrp"				: "Esquema usado para os controles de jogo (clique direito + teclas é descrito com mais detalhes abaixo em \"Controles do jogador\"",	
+				"options" : {
+					"rightKeys"			: "clique direito + tecla",
+					"rightPopups"		: "menu popup de clique direito"
+				}
+			},			
+			
+			"MessagePopUps" : {
+				"name" 					: "Pop-ups de mensagem",
+				"descrp"				: "Habilita vários pop-ups ao realizar ações como bloquear ou desbloquear uma fechadura"		
+			},
+			
+			"PlayLockSounds" : {
+				"name" 					: "Tocar sons de bloqueio",
+				"descrp"				: "Tocar um som quando uma fechadura é bloqueada/desbloqueada"		
+			},
+			
+			"FreeCircumventButtonPosition" : {
+				"name" 					: "Posição do indicador de contorno de fechadura",
+				"descrp"				: "A posição do indicador que mostra que um token pode contornar a próxima fechadura no HUD do token",
+				"options" : {
+					"none"				: "nenhum lugar",
+					"left"				: "esquerda",
+					"right"				: "direita"
+				}
+			}
+		},
+		"Keys" : {
+			"ToggleLock" : {
+				"name"					: "Alternar bloqueio"
+			},
+			
+			"CopyLock" : {
+				"name"					: "Copiar IDs de bloqueio"
+			},
+			
+			"PasteLock" : {
+				"name"					: "Colar IDs de bloqueio"
+			},
+			
+			"CreatenewKey" : {
+				"name"					: "Criar nova chave"
+			},
+			
+			"UseKey" : {
+				"name"					: "Usar chave"
+			},
+			
+			"PickLock" : {
+				"name"					: "Arrombar fechadura"
+			},
+			
+			"BreakLock" : {
+				"name"					: "Quebrar fechadura"
+			},
+			
+			"CustomCheck" : {
+				"name"					: "Verificação personalizada (pergunte ao GM, a menos que você seja o GM)"
+			},
+			
+			"PickPocket" : {
+				"name"					: "Bolsaço"
+			},
+		
+			"ChangePassword" : {
+				"name"					: "Alterar senha"
+			}
+		},
+		"SheetSettings" : {
+			"OpenImageFlag" : {
+				"name"					: "Imagem Aberta",
+				"descrp"				: "Imagem usada para o estado aberto"
+			},
+			
+			"ClosedImageFlag" : {
+				"name"					: "Imagem Fechada",
+				"descrp"				: "Imagem usada para o estado fechado"
+			},
+			
+			"LockableFlag" : {
+				"name" 					: "Pode ser trancado",
+				"descrp"				: "Se este objeto pode ser trancado"					
+			},
+			
+			"LockonCloseFlag" : {
+				"name" 					: "Trancar ao fechar",
+				"descrp"				: "Se esta porta deve ser trancada quando fechada"					
+			},
+			
+			"LockedFlag" : {
+				"name" 					: "Trancado",
+				"descrp"				: "Se este objeto está trancado"					
+			},
+			
+			"IDKeysFlag" : {
+				"name" 					: "Chaves de IDs",
+				"descrp" : {
+					"lock" 				: "IDs que podem trancar/destrancar este objeto (separados por \";\")",
+					"key" 				: "IDs que esta chave pode trancar/destrancar (separados por \";\")"
+				}
+			},
+			
+			"PasskeysFlag" : {
+				"name"					: "Senhas",
+				"descrp"				: "Senhas que podem destrancar este objeto (separadas por \";\")"
+			},
+			
+			"PasskeyChangeableFlag" : {
+				"name"					: "Senha pode ser alterada",
+				"descrp"				: "Se a senha pode ser alterada pelos jogadores (requer senha correta)"
+			},
+			
+			"IdentityKeyFlag" : {
+				"name"					: "Identidades",
+				"descrp"				: "Identidades que podem destrancar este objeto (separadas por \";\", IDs/Nomes de Token/Ator/Usuário)"
+			},
+			
+			"LockjammedFlag" : {
+				"name"					: "Trancado com defeito",
+				"descrp"				: "Se este trinco está com defeito (ver configurações do mundo)"				
+			},
+			
+			"RemoveKeyonUseFlag" : {
+				"name" 					: "Remover chave ao usar",
+				"descrp"				: "Se esta chave é removida ao usar (ou a pilha é reduzida em um)"
+			},			
+			
+			"LockDCFlag" : {
+				"name" 					: "CD de Trinco",
+				"descrp"				: "A classe de dificuldade deste trinco, usada para abrir com lockpicking (-1 para impedir lockpicking)"
+			},
+			
+			"SpecialLPFlag" : {
+				"name" 					: "Lockpick Especial",
+				"descrp"				: "Lockpick especial necessário para abrir este trinco (ID ou nome, entradas múltiplas separadas por \";\")"					
+			},
+			
+			"LockBreakDCFlag" : {
+				"name" 					: "CD de Quebrar Trinco",
+				"descrp"				: "A classe de dificuldade para quebrar este trinco (-1 para impedir quebrar)"
+			},
+			
+			"LockCCDCFlag" : {
+				"name" 					: "{pCheckName} CD",
+				"descrp"				: "A classe de dificuldade para usar {pCheckName} neste trinco (-1 para impedir)"
+			},
+			
+			"requiredLPsuccessFlag" : {
+				"name" 					: "Sucessos de Lockpicking Requeridos",
+				"descrp"				: "Quantos sucessos de Lockpicking são necessários para este trinco (e quantos já foram adicionados) (críticos contam como 2)"
+			},
+			
+			"LPAttemptsFlag" : {
+				"name" 					: "Tentativas de Lockpicking Restantes",
+				"descrp"				: "Quantas tentativas de Lockpicking restam (-1 para ilimitado)"
+			},
+			
+			"canbeCircumventedFreeFlag" : {
+				"name" 					: "Pode ser contornado",
+				"descrp"				: "Se este trinco pode ser contornado por efeitos (por exemplo, o feitiço \"Knock\")"
+			},
+			
+			"CustomPopupsFlag" : {
+				"openButtonname"		: "Popups Personalizados",
+				"Title"					: "Popups Personalizados",
+				"name"					: "Definir popups personalizados para interações de jogadores específicas:",
+				"LockLocked" : {
+					"name"				: "Trinco está trancado:"
+				},
+				"LocknotPickable" : {
+					"name"				: "Trinco não pode ser arrombado:"
+				},
+				"LocknotBreakable" : {
+					"name"				: "Trinco não pode ser quebrado:"
+				},
+				"LockPasskeyTitle" : {
+					"name"				: "Prompt do diálogo de senha:"
+				},
+				"LocknotCustom" : {
+					"name"				: "Trinco não pode ser usado com verificação personalizada:"
+				},
+				"CharacternotPickpocketable" : {
+					"name"				: "Personagem não pode ser furtado:"
+				},
+				"confirmButtonname"     : "Confirmar Popups"
+			},
+			
+			"SoundVariantFlag" : {
+				"name"					: "Som do Trinco",
+				"descrp"				: "Definir o conjunto de sons usado para ações com esta porta",
+				"options" : {
+					"off"				: "desligado",
+					"futuristic"		: "Futurista",
+					"industrial"		: "Industrial",
+					"jail"				: "Prisão",
+					"metal"				: "Metal 🤘",
+					"shutter"			: "Persiana",
+					"sliding"			: "Deslizante",
+					"stone"				: "Pedra",
+					"wood"				: "Madeira"
+				}
+			},
+			
+			"LPFormulaFlag" : {
+				"name" 					: "Fórmula de Lockpicking",
+				"descrp" : {
+					"token" 			: "A fórmula adicionada aos rolamentos de Lockpicking que este token faz",
+					"item"				: "A fórmula adicionada aos rolamentos de Lockpicking que o proprietário deste item faz (apenas o melhor no inventário é usado)"
+				}			
+			},
+			
+			"LPFormulaOverrideFlag" : {
+				"name" 					: "Substituir Fórmula de Lockpicking",
+				"descrp" : {
+					"token" 			: "Se a fórmula de Lockpicking deste token substitui a fórmula do mundo",
+					"item"				: "Se a fórmula de Lockpicking deste item substitui a fórmula do token/mundo"
+				}				
+			},
+			
+			"LBFormulaFlag" : {
+				"name" 					: "Fórmula de Quebra de Trinco",
+				"descrp" : {
+					"token" 			: "A fórmula adicionada aos rolamentos de Quebra de Trinco que este token faz",
+					"item"				: "A fórmula adicionada aos rolamentos de Quebra de Trinco que o proprietário deste item faz (apenas o melhor no inventário é usado)"
+				}					
+			},
+			
+			"LBFormulaOverrideFlag" : {
+				"name" 					: "Substituir Fórmula de Quebra de Trinco",
+				"descrp" : {
+					"token" 			: "Se a fórmula de Quebra de Trinco deste token substitui a fórmula do mundo",
+					"item"				: "Se a fórmula de Quebra de Trinco deste item substitui a fórmula do token/mundo"
+				}				
+			},
+			"CCFormulaFlag" : {
+				"name" 					: "Fórmula de {pCheckName}",
+				"descrp" : {
+					"token" 			: "A fórmula adicionada aos rolamentos de {pCheckName} que este token faz",
+					"item"				: "A fórmula adicionada aos rolamentos de {pCheckName} que o proprietário deste item faz (apenas o melhor no inventário é usado)"
+				}					
+			},
+			
+			"CCFormulaOverrideFlag" : {
+				"name" 					: "Substituir Fórmula de {pCheckName}",
+				"descrp" : {
+					"token" 			: "Se a fórmula de {pCheckName} deste token substitui a fórmula do mundo",
+					"item"				: "Se a fórmula de {pCheckName} deste item substitui a fórmula do token/mundo"
+				}				
+			},
+			
+			"PickPocketFormulaFlag" : {
+				"name" 					: "Fórmula de Furto",
+				"descrp" : {
+					"token" 			: "A fórmula adicionada aos rolamentos de Furto que este token faz",
+					"item"				: "A fórmula adicionada aos rolamentos de Furto que o proprietário deste item faz (apenas o melhor no inventário é usado)"
+				}					
+			},
+			
+			"PickPocketFormulaOverrideFlag" : {
+				"name" 					: "Substituir Fórmula de Furto",
+				"descrp" : {
+					"token" 			: "Se a fórmula de Furto deste token substitui a fórmula do mundo",
+					"item"				: "Se a fórmula de Furto deste item substitui a fórmula do token/mundo"
+				}				
+			},
+			
+			"PickPocketDCFlag" : {
+				"name" 					: "DC de Furto",
+				"descrp"  				: "A classe de dificuldade para usar Furto neste personagem (-1 para impossível)"			
+			},
+			
+			"ReplacementItemFlag" : {
+				"name" 					: "Itens de Substituição",
+				"descrp" 				: "Itens que são consumidos em vez deste item quando um rolamento falha (ID ou nome, entradas múltiplas separadas por \";\")"			
+			},
+		
+			"MATTTriggerTileFlag" : {
+				"name" 					: "ID de Tile Acionado",
+				"descrp"				: "O ID do tile acionado pelas ações de Trinco & Chave abaixo (você pode usar aterragens diferentes)"
+			},
+			
+			"MATTTriggerConditionsFlag" : {
+				"LockuseKey.name"		: "No uso da chave",
+				"LockusePasskey.name"	: "No uso da senha",
+				"LockusePick.name"		: "Ao arrombar",
+				"LockuseBreak.name"		: "Ao quebrar o trinco",
+				"LockuseFree.name"		: "Ao contornar o trinco",
+				"UsePickPocket.name"	: "Ao furtar",
+				"options" : {
+					"never"				: "nunca",
+					"always"			: "sempre",
+					"failure"			: "falha",
+					"critfailure"		: "falha crítica",
+					"success"			: "sucesso"
+				}
+			},
+			
+			"RollOptionsFlag" : {
+				"LockusePick" : {
+					"d10CritLimit" : {
+						"name"			: "Limite crítico d10 de Arrombamento",
+						"descrp"		: "O valor mínimo crítico para os rolamentos de arrombamento d10"
+					}
+				},
+				"LockuseBreak" : {
+					"d10CritLimit" : {
+						"name"			: "Limite crítico d10 de Quebra de Trinco",
+						"descrp"		: "O valor mínimo crítico para os rolamentos de quebra de trinco d10"
+					}					
+				}
+			}
+		},
+		"Context" : {
+			"KeyCopy"					: "Copiar IDs da chave",
+			"KeyPaste"					: "Colar IDs na chave"
+		},
+		
+		"Words" : {
+			"Key"						: "Chave"
+		},
+		
+		"Text" : {
+			"GMControls" : {
+				"line0"					: "Controles do Mestre:",
+				"line1" 				: "• Shift + clique direito para criar uma nova chave para o trinco",
+				"line2" 				: "• Alt + clique direito para alternar o trinco do token (*)",
+				"line3" 				: "• Ctrl + clique direito para copiar os IDs das chaves (*)",
+				"line4" 				: "• Ctrl + clique esquerdo para colar os IDs das chaves no trinco (*)"
+			},
+			
+			"PlayerControls" : {
+				"line0"					: "Controles do Jogador:",
+				"line1" 				: "• Clique direito para tentar usar uma chave em um trinco",
+				"line2" 				: "• Shift + clique direito para tentar arrombar um trinco",
+				"line3" 				: "• Alt + clique direito para tentar quebrar um trinco"
+			}
+		},
+		
+		"take-inventory-window" : {
+			"titles" : {
+				"inventory"				: "Inventário"
+			},
+			"header" : {
+				"title"					: "<h> Pegar do inventário de <b>{pOwnerName}</b> (vai para o inventário de <b>{pTakerName}</b>): </h>"
+			},
+			"buttons" : {
+				"take" : {
+					"name"				: "Selecionar"
+				}
+			}
+		},
+		
+		"monks-active-tiles" : {
+			"filters" : {
+				"name"						: "Filtro",
+				
+				"filter-by-lock-state" : {
+					"name"					: "Filtrar por estado do trinco",
+					"settings" : {
+						"filterCondition" : {
+							"name"			: "Condição do estado do trinco",
+							"options" : {
+								"locked"	: "está trancado",
+								"unlocked"	: "está destrancado"
+							}
+						}
+					}
+				}
+			},
+			
+			"actions" : {
+				"lock" : {
+					"name"					: "Trancar"
+				},
+				
+				"unlock" : {
+					"name"					: "Destrancar"
+				},
+				
+				"toggle-lock" : {
+					"name"					: "Alternar trinco"
+				},
+				
+				"loot-inventory" : {
+					"name"					: "Pilhar inventário",
+					"descrp"				: "<span class=\"logic-style\">{pname}</span> de <span class=\"entity-style\">{pEntities}</span>, oferece a <span class=\"details-style\">{pOfferto}</span>",
+					"settings" : {
+						"offerto" : {
+							"name"			: "Oferecer para"
+						}
+					}	
+				}
+			}
+		}
+	}
+}

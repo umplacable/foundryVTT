@@ -1,0 +1,1010 @@
+{
+	"perceptive" : {
+		"Titles" : {
+			"perceptive"				: "Perceptive",
+			"LockPeekSettings"			: "Schloss-durchschau Einstellungen",
+			"DoorMoveSettings"			: "Tür-Bewegung Einstellungen",
+			"SpottingSettings"			: "Unsichtbares Aufdecken Einstellungen",
+			"ClientSettings"			: "Spieler Einstellungen",
+			"PeekLock"					: "Durchschaue Schloss",
+			"Basic"						: "Basis",
+			"SpottingInfos"	: {
+				"Title"					: "Aufdecken Infos",
+				"PP"					: "Berechnete passive Wahrnehmung: {pValue}",
+				"Spottedby"				: "Aufgedeckt von: {pNames}",
+				"LightModifier"			: "Wahrnehmungs DC Veränderung durch Lichtstufe: {pValue}",	
+				"LightRollBehaviour"	: "Wahrnehmungs Wurfverhalten durch Lichtstufe: {pBehaviour}",
+				"VisionLevel" : {
+					"name"				: "Sicht Stufe: {pLevel}",
+					"value0"			: "Normale Sicht",
+					"value1"			: "Gedimmtes-Licht Sicht",
+					"value2"			: "Dunkelsicht",
+					"value3"			: "Dunkelsicht (Total)"
+				},
+				"LightLevel" : {
+					"name"				: "Beleuchtungs Stufe: {pLevel}",
+					"value0"		    : "Dunkel",
+					"value1"			: "Düster",
+					"value2"			: "Hell"
+				},
+				"LingeringAP"			: "Verbleibende aktive Wahrnehmung",
+				"PassiveDC"				: "Passiver Wahrnehmungs SG",
+				"ActiveDC"				: "Aktiver Wahrnehmungs "
+			},
+			"SpottingConfirm" : {
+				"name"					: "Aufdecken bestätigen",
+				"content"				: "Spieler <b>{pPlayer}</b> hat eine <b>{pResult}</b> bei einem {pSkillName}-wurf gewürfelt, was <b>{pSpotters}</b> in Scene <b>{pScene}</b> erlaubt <b>{pDoors}</b> geheime Türen und folgende Figuren aufzudecken: <br>",
+				"defaultSkill"			: "Wahrnehmungs",
+				"forcecontent"			: "Spieler <b>{pPlayer}</b> hat angefragt mit <b>{pSpotters}</b> in Scene <b>{pScene}</b> <b>{pDoors}</b> geheime Türen und folgende Figuren aufzudecken <b>ohne</b> einen Wahrnehmungswurf zu machen: <br>",
+				"Behaviour"				: "mit einem <b>{pBehaviour}</b> Wurf und Resultat <b>{pResult}</b>"
+			},
+			"StartStealthing"			: "Verstecken",
+			"StopStealthing"			: "Aufdecken",
+			"GMuiandcontrol"			: "SL UI & Steuerung",
+			"SightRange"				: "Sichtreichweite",
+			"RulesAutomation"			: "Regeln & Automationen",
+			"RollFormulas"				: "Würfe & Formeln",
+			"Effects"					: "Effekte",
+			"Illumination"				: "Beleuchtung",
+			"Sound"						: "Geräusche",
+			"SoundnImages"				: "Geräusche & Bilder",
+			"Tile"						: "Fliese",
+			"Triggers"					: "Triggers",
+			"ResetSpottedby"			: "Resette \"Aufgedeckt von\"",
+			"with"						: "mit",
+			"VisionChannels"			: "Vision Channels",
+			"OpenVCMenu"				: "Öffne Sicht Kanal Menü"
+		},
+		
+		"ChatMessage" : {
+			"SpottingReport" : {
+				"content"				: "Du hast es geschafft <b>{pDoors}</b> geheime Türen and folgende Figuren aufzudecken:",
+				"unknown"				: "???"
+			},
+			"LostLingeringAP" 			: "{pName} hat bleibende aktive Wahrnehmung verloren",
+			"Peeking"					: "{pName} hat versucht ein Schloss zu durchschauen",
+			"PeekingSuccess" : {
+				"default"				: "{pName} hatte einen Erfolg beim durchschauen eines Schlosses",
+				"crit"					: "{pName} hatte einen kritischen Erfolg beim durchschauen eines Schlosses"
+			},
+			"PeekingFail" : {
+				"default"				: "{pName} hatte einen Misserfolg beim durchschauen eines Schlosses",
+				"crit"					: "{pName} hatte einen kritischen Misserfolg beim durchschauen eines Schlosses"
+			}
+		},
+		
+		"Warnings" : {
+			"MacroSeekDeactivatet" 		: "Dieses Macro ist momentan nicht verfügbar, siehe Einstellung \"Wahrnehmungs Macros Verhalten\""
+		},
+		
+		"Popups" : {
+			"GamePaused"				: "Spiel ist pausiert",
+			"OutofRange"				: "Außer Reichweite",
+			"CantbePeeked"				: "Kann nicht durchschaut werden",
+			"DoorisLocked"				: "Verschlossen",
+			"CantbeMoved"				: "Kann nicht bewegt werden",
+			"GainedLingeringAP"			: "Bleibende aktive Wahrnehmung erhalten",
+			"RemovedLingeringAP"		: "Bleibende aktive Wahrnehmung verloren"
+		},
+		
+		"Settings" : {
+			"SplitInteractionDistances" : {
+				"name"					: "Trenne Interaktionsdistanz",
+				"descrp"				: "Ob die Interaktionsdistanz for Schloss durchschauen und Tür bewegen getrennt sein soll"
+			},
+			
+			"InteractionDistance" : {
+				"name"					: "Maximale Interaktionsdistanz",
+				"descrp"				: "Maximale Distanz über welche Spieler mit Türen interagieren können (-1 für unbeschränkt)"
+			},
+			
+			"UseArmsreachDistance" : {
+				"name"					: "Nutze Arms Reach Distanz",
+				"descrp"				: "Nutze die Arms Reach distance für die maximale Interaktionsdistanz"
+			},
+			
+			"DFredsEffectsIntegration" : {
+				"name"					: "DFreds Convenient Effects Integration",
+				"descrp"				: "Nutze DFreds convenient effects"
+			},
+			
+			"CPREffectsIntegration" : {
+				"name"					: "Chris's Premades Integration",
+				"descrp"				: "Nutze Chris's Premades effects"
+			},
+			
+			"Vision5eIntegration" : {
+				"name"					: "Vision 5e Integration",
+				"descrp"				: "Anpassung an die Vision 5e Regeln"
+			},
+			
+			"StealthyIntegration" : {
+				"name"					: "Stealthy Integration",
+				"descrp"				: "Versteck SGs wercen zwischen Perceptive und Stealthy synchronisiert"
+			},
+			
+			"Peekablebydefault" : {
+				"name" 					: "Schlösser standardmäßig durchschaubar",
+				"descrp" 				: "Ob Schlösser standardmäßig durchschaut werden können"
+			}, 
+			
+			"LockpeekstandardSize" : {
+				"name" 					: "Standard Größe von Schlüssellöchern",
+				"descrp" 				: "Die standard Größe von Schlüssellöchern relativ zur Tür Größe (0-1)"
+			}, 
+			
+			"LockpeekstandardPosition" : {
+				"name" 					: "Standard Position von Schlüssellöchern",
+				"descrp" 				: "Die standard Position von Schlüssellöchern relativ zur Tür Größe (0-1)"
+			},  
+			
+			"StopPeekonMove" : {
+				"name" 					: "Stope Schloss-durchschauen bei Bewegung",
+				"descrp" 				: "Stops das Schloss-durchschauen von Figuren sobald sie sich bewegen, selbst wenn sie sich noch in der Interaktionsdistanz befinden"
+			}, 
+			
+			"PeekingDistance" : {
+				"name" 					: "Schloss-durchschauen Distanz",
+				"descrp" 				: "Maximale Distanz über welche Spieler Schlösser durchschauen können (-1 für unbeschränkt)"
+			}, 
+			
+			"GMConfirmPeeking" : {
+				"name"					: "SL bestätigt Durchschauen",
+				"descrp"				: "Ob die SL jede Durchschauen aktion bestätigen soll"
+			},
+			
+			"PeekingFormula" : {
+				"name"					: "Durchschauen Formel",
+				"descrp"				: "Formel welche für das durchschauen von Schlössern benutzt wird (frei lassen um es zu deaktivieren)"
+			},
+			
+			"PeekingDefaultDC" : {
+				"name"					: "Durchschauen standard SG",
+				"descrp"				: "Die standard Schwierigkeit für das durchschauen von neuen Wänden"
+			},
+			
+			"DoorstandardMove" : {
+				"name" 					: "Standard Tür Bewegung",
+				"descrp" 				: "Die standard Bewegungsart von Türen",
+				"options" : {
+					"none"				: "Keine Bewegung (normale Tür)",
+					"swing"				: "Schwing-Tür",
+					"slide"				: "Schiebe-Tür"
+				}
+			}, 
+			
+			"PreventNormalOpenbydefault" : {
+				"name" 					: "Verhindere normales öffnen als Standard",
+				"descrp" 				: "Die standard Einstellung ob bewegbare Türen noch per links click geöffnet werden können"
+			}, 
+			
+			"DoorstandardHinge" : {
+				"name" 					: "Türangel standard Position",
+				"descrp" 				: "Die standard Position von Türangeln",
+				"options" : {
+					"0"					: "Links",
+					"1"					: "Rechts",
+					"2"					: "Mitte"
+				}
+			}, 
+			
+			"DoorstandardSwingSpeed" : {
+				"name" 					: "Standard Tür Schwing-Geschwindigkeit",
+				"descrp" 				: "Die standard Tür Schwing-Geschwindigkeit in Grad°"
+			},
+
+			"DoorStandardSwingRange" : {
+				"name" 					: "Standard Tür Schwing-Bereich",
+				"descrp" 				: "Der standard Tür Schwing-Bereich in Grad({min}:{max} leer lassen für unbegrenzt)"
+			}, 	
+			
+			"DoorstandardSlideSpeed" : {
+				"name" 					: "Standard Tür Schiebe-Geschwindigkeit",
+				"descrp" 				: "Die standard Tür Schiebe-Geschwindigkeit relativ zur Tür Größe (0-1)"
+			},
+			
+			"MovingDistance" : {
+				"name" 					: "Tür Bewegungs distanz",
+				"descrp" 				: "Maximale Distanz über welche Spieler Türen bewegen können (-1 für unbeschränkt)"
+			}, 
+			
+			"ActivateSpotting" : {
+				"name"					: "Aktiviere Aufdecken Funktionalität",
+				"descrp"				: "Ob die Aufdecken Funktionalität aktiviert werden soll (ausstellen um Leistung zu verbessern)"
+			},
+			
+			"SpottingRange" : {
+				"name"					: "Aufdecken Reichweite",
+				"descrp"				: "Maximale Reichweite über welche Figuren und Türen aufgedeckt werden können (-1 für unbeschränkt)"
+			},
+			
+			"ApplyRange" : {
+				"name"					: "Recihweiten Anwenden",
+				"descrp"				: "Für welche Fälle die gesetzten Reichweiten angewandt werden sollen",
+				"options" : {
+					"never"				: "niemals",
+					"always"			: "immer",
+					"activeonly"		: "Nur aktive Vergleiche",
+					"passiveonly"		: "Nur passive Vergleiche",
+					"incombatonly"		: "Nur in Kämpfen (beide Vergleiche)",
+					"outcombatonly"		: "Nur außerhalb von Kämpfen (beide Vergleiche)"
+				}
+			},	
+
+			"UseBordertoBorderRange" : {
+				"name"					: "Nutze Rand zu Rand Reichweite",
+				"descrp"				: "Ob die Sichtreichweiten von Figuren von ihren Rändern anstatt ihren Mitten berechnet werden sollen"
+			},
+			
+			"StandardVisionDirection" : {
+				"name"					: "Standart Sicht Richtung",
+				"descrp"				: "Die Richtung welche für Sichtkegel benutzt wird, an nicht rotierten Figuren gemessen",
+				"options" : {
+					"bottom"			: "unten",
+					"left"				: "links",
+					"top"				: "oben",
+					"right"				: "rechts"
+				}
+			},
+			
+			"SpottingConeRange" : {
+				"name"					: "Aufdecken Kegel-Reichweite",
+				"descrp"				: "Eine zusätzliche Aufdeck Reichweite angewandt in einem 90° Kegel vor Figuren (0 um Leistung zu verbessern)"
+			},
+			
+			"RangePDCModifier" : {
+				"name"					: "Abstands basierte Wahrnehmungs SG veränderung",
+				"descrp"				: "Wahrnehmungs SG veränderung basiredn auf Distanz zu aufdeckbarem Objekt (SGInkrement/DistanzInkrement, 0/0 um es aus zu stellen)"
+			},
+			
+			"Range3DCalculation" : {
+				"name"					: "Reichweiten 3D Berechnung",
+				"descrp"				: "Ob die Sichtreichweite in 3D berechnet werden soll (anstatt 2D)"
+			},
+			
+			"UsePf2eRules" : {
+				"name"					: "Nutze Pf2e Regeln",
+				"descrp"				: "Ob die Pf2e Regeln genutzt werden sollen, einschließlich des Unterschiedes zwischen verstecken und schleichen"
+			},
+			
+			"AutoRerollPPDConMove" : {
+				"name"					: "Automatisch den Schleichen SG neu würfeln",
+				"descrp"				: "Ob der schleichen SG bei Figur bewegungen neu gewürfelt werden soll (kann pro Figur gesperrt werden)"
+			},
+			
+			"AutomateTokenSpottable" : {
+				"name"					: "Automatisiere Figure Kann aufgedeckt werden",
+				"descrp"				: "Die Kann aufgedeckt werden Einstellung von Figuren wird automatisch umgestellt wenn eine Verstecken Änderung erkannt wird"
+			},
+			
+			"CritMethod" : {
+				"name" 					: "Krit System",
+				"descrp"				: "Die Art und Weise auf welche kritische Würfe bestimmt werden",
+				"options" : {
+					"noCrit"			: "Keine Krits",
+					"natCrit"			: "Nat 1/20",
+					"natCritpm10"		: "Nat 1/20 & +-10 von SG [z.b. Pf2e]"
+				}
+			},
+			
+			"SimulatePlayerVision" : {
+				"name"					: "Spieler Sicht",
+				"descrp"				: "Ob SLs den gleichen Aufdeck-Regeln unterliegen wie Spieler (nur bezüglich Figuren)"
+			},
+			
+			"PassivePerceptionFormula" : {
+				"name"					: "Passive-Wahrnehmung Formel",
+				"descrp"				: "Passive-Wahrnehmung Formel des Systems (z.B. \"10 + @actor.system.abilities.wis.mod + @actor.system.skills.prc.value\", hilfe can auf der Git Hub Seite des Moduls gefunden werden)"
+			},
+			
+			"PassivePerceptionProficiencyPath" : {
+				"name"					: "Passive Wahrnehmung Trainingspfad",
+				"descrp"				: "Pfad zum Trainingslevel der passiven Wahrnehmung (Standard sollte ausreichen)"
+			},
+			
+			"ActivePerceptionProficiencyPath" : {
+				"name"					: "Aktive Wahrnehmung Trainingspfad",
+				"descrp"				: "Pfad zum Trainingslevel der aktiven Wahrnehmung (Standard sollte ausreichen)"
+			},
+
+			"PerceptionKeyWord" : {
+				"name"					: "Wahrnehmungs Stichwort",
+				"descrp"				: "Stichwort welches benutzt wird um Wahrnehmungswürfe zu identifizieren (ein String/Wort welches im Text des Wahrnehmungswurf vorhanden ist)"
+			},  
+			
+			"StealthKeyWord" : {
+				"name"					: "Verstecken Stichwort",
+				"descrp"				: "Stichwort welches benutzt wird um Versteckenwürfe zu identifizieren (ein String/Wort welches im Text des Versteckenwurfs vorhanden ist)"
+			}, 
+			
+			"AutoStealthDCbehaviour" : {
+				"name" 					: "Auto verstecken Verhalten",
+				"descrp"				: "Was passieren soll wenn ein Versteckenswurf gewürfelt wird",
+				"options" : {
+					"off"				: "nichts",
+					"both"				: "Setze Aktiven- und Passiven-Wahrnehmungs SG",
+					"activeonly"		: "Setze nur Aktiven-Wahrnehmungs SG"
+				}
+			},
+			
+			"applySystemStealthEffect" : {
+				"name"					: "Nutze System Verstecken Effekt",
+				"descrp"				: "Ob Systemabhängige Versteckens Effekte bei Versteckenwürfen angewandt werden sollen"				
+			},
+			
+			"usePerceptiveStealthEffect" : {
+				"name"					: "Nutze Perceptive verstecken",
+				"descrp"				: "Ob Perceptives eigener Verstecken \"Effekt\" genutzt werden soll"				
+			},
+			
+			"PerceptiveStealthFriendliesvisible" : {
+				"name"					: "Perceptive versteckte Verbündete sichtbar",
+				"descrp"				: "Verbündete Figuren sind sichtbar, selbst wenn sie durch Perceptive versteckt sind"				
+			},
+			
+			"syncEffectswithPerceptiveStealth" : {
+				"name"					: "Synchronisiere Perceptive versteckens Entfernung",
+				"descrp"				: "Wird der Perceptive verstecken effekt entfernt werden auch alle anderen Verstecken Effekte entfernt und anders herum"				
+			},
+			
+			"customStealthEffects" : {
+				"name"					: "Eigene Verstecken Effekte",
+				"descrp"				: "Weitere Effekte welche bei einem Versteckenwurf angewandt werden (Namen oder IDs, getrennt mit \";\")"				
+			},
+			
+			"customPerceptionEffect" : {
+				"name"					: "Eigene Wahrnehmungs Effekte",
+				"descrp"				: "Weitere Effekte welche bei einem Wahrnehmungswurf angewandt werden (Namen oder IDs, getrennt mit \";\")"				
+			},
+			
+			"resetSpottedbyMovedefault" : {
+				"name"					: "Setze Entdeckt bei Figurbewegung standardmäßig zurück",
+				"descrp"				: "Ob die aktiven Beobachter einer Figur bei ihrer Bewegung zurück gesetzt wird"
+			}, 
+			
+			"IlluminationPDCModifier" : {
+				"name"					: "Beleuchtung Wahrnehmungs SG Einfluss",
+				"descrp"				: "Einfluss der Beleuchtung auf den SG von Wahrnehmungs SGs (Dunkelheit, schwaches Licht, helles Licht , \"0,0,0\" für keinen Einfluss)"
+			}, 
+			
+			"UseIlluminationPDCModifierforAP" : {
+				"name"					: "Nutze Beleuchtung Wahrnehmungs SG Einfluss für actike Wahrnehmung",
+				"descrp"				: "Ob aktive Wahrnehmungswürfe Beleuchtungs SG Einfluss benutzen sollen"
+			},
+			
+			"IlluminationAPDCBehaviour" : {
+				"name"					: "Beleuchtung Wahrnehmungs Verhalten",
+				"descrp"				: "Einfluss der Beleuchtung auf Wahrnehmungswürfe (Schwacheslicht,Helleslicht , \"=,=\" für keinen Einfluss, valide Wörter: advantage, adv, +, normal, =, disadvantage, disadv, -)"
+			},
+			
+			"Light3Dcalc" : {
+				"name"					: "Beleuchtungs 3D Berechnung",
+				"descrp"				: "Ob die Figure Beleuchtung in 3D berechnet werden soll (anstatt 2D)"
+			},
+			
+			"GMSpotconfirmDialog" : {
+				"name"					: "SL Aufdecken bestätigen",
+				"descrp"				: "Ob bei Wahrnehmungswürfen ein Dialog angezeigt werden soll in welchem die SL den Wurf bestätigen muss"
+			}, 
+			
+			"GMSpotconfirmDialogbehaviour" : {
+				"name"					: "SL Aufdecken bestätigen Verhalten",
+				"descrp"				: "Für welche Nutzer bei Wahrnehmungswürfen ein Dialog angezeigt werden soll in welchem die SL den Wurf bestätigen muss",
+				"options" : {
+					"off"				: "aus",
+					"playersonly"		: "nur Spieler",
+					"always"			: "für Alle"
+				}
+			}, 
+			
+			"ShowfailuresinGMconfirm" : {
+				"name"					: "Zeige Fehlschläge in SL bestätigungs Dialog",
+				"descrp"				: "Liste Figuren gegen welche der Wahrnehmunsgwurf missglückt ist als hackenlose Einträge im Dialog"
+			},
+			
+			"MakeSpottedTokensVisible" : {
+				"name"					: "Aufgedeckte Figuren sichtbar machen",
+				"descrp"				: "Ob aktiv oder passiv aufgedeckte Figuren für alle sichtbar gemacht werden sollen",
+				"options" : {
+					"never"				: "niemals",
+					"always"			: "immer",
+					"incombatonly"		: "Nur in Kämpfen",
+					"outcombatonly"		: "Nur außerhalb von Kämpfen"
+				}
+			},
+			
+			"RevealAllies" : {
+				"name"					: "Aufgedeckte verbündete Figuren sichtbar machen",
+				"descrp"				: "Ob aktiv oder passiv aufgedeckte verbündete Figuren für alle sichtbar gemacht werden sollen (nur wenn obere EInstellung aktiv ist)",
+				"options" : {
+					"never"				: "niemals",
+					"always"			: "immer",
+					"incombatonly"		: "Nur in Kämpfen",
+					"outcombatonly"		: "Nur außerhalb von Kämpfen"
+				}
+			},
+
+			"LingeringAP" : {
+				"name"					: "Aktive Wahrnehmung verleibt",
+				"descrp"				: "Ob die gewürfelte Wahrnehmung verbleibt bis sie manuell entfernt wird",
+				"options" : {
+					"off"				: "aus",
+					"always"			: "immer",
+					"outofcombatonly"	: "außerhalb von Kämpfen"
+				}
+			}, 		
+
+			"LingeringAPRadius" : {
+				"name"					: "Verbleibende Aktive-Wahrnehmungs Radius",
+				"descrp"				: "Der Radius gemessen vom Punkt des verursachenden Wurfes in welchem die Aktive-Wahrnehmungs verbleibt (-1 für unbegrenzt)"
+			},	
+
+			"LingeringAPDuration" : {
+				"name"					: "Verbleibende Aktive-Wahrnehmungs Dauer",
+				"descrp"				: "Die Dauer für welche die Aktive-Wahrnehmungs verbleibt in Sekunden (-1 für unbegrenzt)"
+			},				
+			
+			"RevealSpottedDooronClick" : {
+				"name"					: "Audgedeckte Türen beim anklicken sichtbar machen",
+				"descrp"				: "Ob aufgedeckte Geheimtüren beim anklicken zu normalen Türen werden sollen"
+			},
+			
+			"disableSpottableMATTTiles" : {
+				"name"					: "Unsichtbare MATT Fliesen deaktivieren",
+				"descrp"				: "Ob aufdeckbare Fliesen welche nicht entdeckt wurden für MATT Zwecke deaktiviert werden sollen"
+			},
+			
+			"ForceInvertIgnoreRollKey" : {
+				"name" 					: "Erzwinge \"Wurf Ignorieren\" Tasten invertierung",
+				"descrp" 				: "Invertiere die \"Wurf Ignorieren\" Taste für alle Spieler und entferne die Spieler Einstellung"				
+			},
+			
+			"GMReciveInformationWhisper" : {
+				"name"					: "SL erhält Info Nachrichten",
+				"descrp"				: "Ob die SL geflüsterte Chat nachrichten zu Spieler Aktualisierungen erhält" 
+			},
+			
+			"onlyMacroSeek" : {
+				"name" 					: "Wahrnehmung nur mit Macros",
+				"descrp" 				: "Ob nur Wahrnehmungswürfe mit den Perceptive Macros gewertet werden sollen"				
+			},
+			
+			"MacroSeekBehaviour" : {
+				"name"					: "Wahrnehmungs Macros Verhalten",
+				"descrp"				: "Unter wlechen Bedingungen nur Wahrnehmungswürfe welche mit den Perceptive Macros gemacht werden beachtet werden",
+				"options" : {
+					"never"				: "Niemals",
+					"incombatonly"		: "Nur in Kämpfen",
+					"always"			: "Immer"
+				}
+			},
+			
+			"SpottedSound" : {
+				"name"					: "Aufgedeckt Geräusch",
+				"descrp"				: "Geräusch welches abgespielt wird, wenn eine kontrollierte Figur aufgedeckt wird (Pfad zur Datei)"
+			},	
+			
+			"SpottedSoundVolume" : {
+				"name"					: "Aufgedeckt Geräusch Lautstärke",
+				"descrp"				: "Lautstärke des aufgedeckt geräusches"
+			},	
+
+			"SpotterImagePing" : {
+				"name"					: "Beobachter ping Bild",
+				"descrp"				: "Das Bild mit welchem Figuren welche versteckte Objekte aufdecken gepingt werden"
+			},		
+
+			"SpotterImagePingDuration" : {
+				"name"					: "Beobachter ping Bild Dauer",
+				"descrp"				: "Die dauer für welche das Beobachter ping Bild sichtbar bleibt (in Sekunden)"
+			},
+
+			"ActivateVCs" : {
+				"name" 					: "Aktiviere Vision Channels",
+				"descrp" 				: "Ob Sicht Kanäle aktiviert werden sollen"
+			},	
+
+			"SimulateVCPlayerVision" : {
+				"name" 					: "Simuliere Spieler Sicht",
+				"descrp" 				: "Ob die Vision Channels basierende Sicht der ausgewählten Figur simuliert werden soll"
+			},		
+			
+			"VCRange3DCalc" : {
+				"name" 					: "Sicht Kanäle 3D berechnung",
+				"descrp" 				: "Ob die Reichweite von Sicht Kanälen in 3D berechnet werden soll"
+			},	
+
+			"vRequiredOrBehaviour" : {
+				"name"					: "Nutze logische ODER",
+				"descrp"				: "Ob benötigte Sicht Kanäle ein logisches ODER anstatt eines logischen UND benutzen sollen"
+			},		
+
+			"ShowVCIDs" : {
+				"name" 					: "Zeige Sicht Kanal IDs",
+				"descrp" 				: "Ob die internen Sicht Kanal IDs im Menü angezeigt werden sollen"
+			},	
+			
+			"showPerceptiveWalls" : {
+				"name" 					: "Zeige Perceptive Wände [DEBUG]",
+				"descrp" 				: "Ob Perceptive Wände in der Wandebene angezeigt werden sollen (für debuggen)"
+			},
+			
+			"recreatePerceptiveWalls" : {
+				"name" 					: "Erzeuge Perceptive Wände bei laden neu [DEBUG]",
+				"descrp" 				: "Ob Perceptive Wände beim laden von Scenen neu erzeugt werden sollen (für debuggen)"
+			},
+			
+			"followTokens" : {
+				"name" 					: "Folge Figuren",
+				"descrp" 				: "Ob die Kamera den ausgewählten Figuren bei Bewegungen folgen soll"
+			},
+			
+			"followonControl" : {
+				"name" 					: "Bei Kontrolle folgen",
+				"descrp" 				: "Ob die Kamera im Moment der Kontrolle bewegt werden soll"
+			},
+			
+			"MessagePopUps" : {
+				"name" 					: "Popups Meldungen",
+				"descrp" 				: "Ob Popup Meldungen für Tür Bewegungen und Schloss durschauen angezeigt werden sollen"
+			},
+			
+			"moveDoorControls" : {
+				"name" 					: "Bewege Tür Kontrollen",
+				"descrp" 				: "Ob die Tür Kontrollen mit der bewegten Tür versetzt werden sollen"
+			},
+			
+			"SpeedDoorMovefactor" : {
+				"name" 					: "Schnell-Türbewegungs-Faktor",
+				"descrp" 				: "Geschwindigkeits Faktor wenn Türen mit alt+Mausras bewegt werden"
+			},
+			
+			"IlluminationIconPosition" : {
+				"name" 					: "Positions des Beleuchtungsindikators",
+				"descrp" 				: "Wo im Figur HUD der Beleuchtungsindikator angezeigt wird",
+				"options" : {
+					"none"				: "garnicht",
+					"left"				: "links",
+					"right"				: "rechts"
+				}
+			},
+			
+			"LingeringAPIconPosition" : {
+				"name" 					: "Positions des Indikators für aktive Wahrnehmung",
+				"descrp" 				: "Wo im Figur HUD der Indikator für andauernde aktive Wahrnehmung angezeigt wird",
+				"options" : {
+					"none"				: "garnicht",
+					"left"				: "links",
+					"right"				: "rechts"
+				}
+			},
+			
+			"PDCInputPosition" : {
+				"name" 					: "Positions des Indikators für Wahrnehmungs SG",
+				"descrp" 				: "Wo im Figur HUD der Indikator für Wahrnehmungs SG angezeigt wird",
+				"options" : {
+					"none"				: "garnicht",
+					"left"				: "links",
+					"right"				: "rechts"
+				}
+			},
+			
+			"SpottingPingDuration" : {
+				"name" 					: "Aufdecken Ping Dauer",
+				"descrp" 				: "Wie lange Objekte welche durch einen Wahrnehmungswurf aufgedeckt werden gepingt werden sollen (in Sekunden, 0 um die Pings auszuschalten)"
+			},
+			
+			"WhisperPerceptionResult" : {
+				"name" 					: "Zeihe Wahrnehmungs Resultat",
+				"descrp" 				: "Ob das Resultat von eigenen Wahrnehmungswürfen im Chat angezeigt werden soll"
+			},
+			
+			"WhisperLingeringAPremoval" : {
+				"name" 					: "Notify on lingering AP removal",
+				"descrp" 				: "If a notification should be shown in the chat, when the lingering active perception is removed"
+			},
+
+			"InvertIgnoreRollKey" : {
+				"name" 					: "Invertiere \"Wurf Ignorieren\" Taste",
+				"descrp" 				: "Ob Würfe nur erkannt werden sollen WENN die Taste gedrückt wird"
+			},
+			
+			"SpottedTokenTransparency" : {
+				"name" 					: "Versteckte Figur Transparenz",
+				"descrp" 				: "Die Transparenz von versteckten Figuren"
+			}
+		},
+		
+		"Keys" : {
+			"PeekLock" : {
+				"name" 					: "Durchschaue Schloss"
+			},
+
+			"MoveDoorLeft" : {
+				"name" 					: "Bewege Tür nach links"
+			},
+			
+			"MoveDoorRight" : {
+				"name" 					: "Bewege Tür nach rechts"
+			},
+			
+			"ToggleTokenFollowing" : {
+				"name" 					: "Folge Figuren umschalten"
+			},
+			
+			"IgnoreRoll" : {
+				"name" 					: "Wurf Ignorieren",
+				"descrp"				: "Wird diese Taste während eines Wurfs gehalten, wird dieser von Perceptive nicht als Versteck- oder Wahrnehmungs-Wurf registriert. (kann invertiert werden)"
+			},
+			
+			"resetStealthSelected" : {
+				"name" 					: "Tarnung der ausgewählten Figuren entfernen",
+				"descrp"				: "Entfernt die Tarnung der ausgewählten Figuren"
+			},
+			
+			"MousePeekLock" : {
+				"name" 					: "Maus Schloss-durchschauen",
+				"descrp"				: "Halte diese Taste und mache einen Rechtsklick um das angeklickte Schloss zu durchschauen"
+			},
+			
+			"MouseMoveDoor" : {
+				"name" 					: "Maus Tür bewegen",
+				"descrp"				: "Halte diese Taste und scrolle um eine Tür zu bewegen (kann leer gelassen werden)"
+			},
+			
+			"MouseMoveDoorFast" : {
+				"name" 					: "Mause Tür schnell bewegen",
+				"descrp"				: "Halte diese Taste und scrolle um eine Tür schnell zu bewegen"
+			},
+			
+			"EditHoveredDoor" : {
+				"name" 					: "Tür schnell editieren",
+				"descrp"				: "Einstellungen der gehoverten Tür öffnen"
+			}
+		},
+		
+		"SheetSettings" : {
+			"canbeLockpeekedFlag" : {
+				"name" 					: "Schloss durchschaubar",
+				"descrp"				: "Ob Spieler durch das Schloss der Tür schauen können"
+			},
+			
+			"PeekingDCFlag" : {
+				"name" 					: "Durschau SG",
+				"descrp"				: "Der Schwierigkeitsgrad um dieses Schloss zu durchschauen (0 um Würfe aus zu stellen)"
+			},
+			
+			"LockPeekSizeFlag" : {
+				"name" 					: "Schlüsselloch Größe",
+				"descrp"				: "Die standard Größe des Schlüssellochs relativ zur Tür Größe (0-1)"
+			},
+			
+			"LockPeekPositionFlag" : {
+				"name" 					: "Schlüsselloch Position",
+				"descrp"				: "Die standard Position des Schlüssellochs relativ zur Tür Größe (0-1)"
+			},
+			
+			"DoorMovementFlag" : {
+				"name" 					: "Tür Bewegung",
+				"descrp"				: "Standard Bewegungsart der Tür",
+				"options" : {
+					"none"				: "Keine Bewegung (normale Tür)",
+					"swing"				: "Schwing-Tür",
+					"slide"				: "Schiebe-Tür"
+				}
+			},
+			
+			"PreventNormalOpenFlag" : {
+				"name" 					: "Verhindere normales öffnen",
+				"descrp"				: "Ob diese Tür mit Links-Click geöffnet werden kann (nur bewegliche Türen)"
+			},
+			
+			"DoorHingePositionFlag" : {
+				"name" 					: "Türangel Position",
+				"descrp"				: "Die Position der Türangel",
+				"options" : {
+					"0"					: "Links",
+					"1"					: "Rechts",
+					"2"					: "Mitte"
+				}
+			},
+			
+			"DoorSwingSpeedFlag" : {
+				"name" 					: "Schwing-Geschwindigkeit",
+				"descrp"				: "Schwing-Geschwindigkeit in Grad°"
+			},		
+			
+			"DoorSwingRangeFlag" : {
+				"name" 					: "Schwing-Bereich",
+				"descrp"				: "Bereich in welchem diese Tür schwingen kann in Grad° (min-max)"
+			},		
+
+			"DoorSlideSpeedFlag" : {
+				"name" 					: "Schiebe-Geschwindigkeit",
+				"descrp"				: "Schiebe-Geschwindigkeit relativ zur Tür Größe (0-1)"
+			},
+
+			"PerceptiveStealthingFlag" : {
+				"name" 					: "Ist Perceptive versteckt",
+				"descrp"				: "Ob diese Figur den Perceptive versteckt \"Effekt\" besitzt"
+			},
+			
+			"canbeSpottedFlag" : {
+				"name" 					: "Kann aufgedeckt werden",
+				"descrp"				: "Ob diese Tür aufgedeckt werden kann (Passiv order Aktiv)"
+			},
+			
+			"RevealwhenSpottedFlag" : {
+				"name" 					: "Aufdecken wenn entdeckt",
+				"descrp"				: "Ob dieses Objekt aufgedeckt werden soll wenn es entdeckt wird (überschreibt Welteinstellungen wenn aktiv)"
+			},
+			
+			"PPDCFlag" : {
+				"name" 					: "Passive Wahrnehmung SG",
+				"descrp"				: "Schwierigkeitsklasse um mit passiver Wahrnehmung aufgedeckt zu werden (-1 wenn unmöglich)"
+			},
+			
+			"PPPLFlag" : {
+				"name" 					: "Passives Wahrnehmungs Trainings Stufe",
+				"descrp" : {
+					"dnd5e"				: "Benötigtes Training um dieses Objekt zu erspähen (Keins: 0, Normal: 1, Halbes: 0.5, Expertise: 2)",
+					"pf2e"				: "Benötigtes Training um dieses Objekt zu erspähen (Untrainiert: 0, Trainiert: 1, Experte: 2, Meister: 3, Legendär: 4)"
+				}
+			},
+			
+			"APDCFlag" : {
+				"name" 					: "Aktive Wahrnehmung SG",
+				"descrp"				: "Schwierigkeitsklasse um mit aktiver Wahrnehmung aufgedeckt zu werden (-1 wenn unmöglich, leerlassen um passiven SG zu nutzen)"
+			},
+			
+			"APPLFlag" : {
+				"name" 					: "Aktive Wahrnehmungs Trainings Stufe",
+				"descrp" : {
+					"dnd5e"				: "Benötigtes Training um dieses Objekt zu erspähen (Keins: 0, Normal: 1, Halbes: 0.5, Expertise: 2)",
+					"pf2e"				: "Benötigtes Training um dieses Objekt zu erspähen (Untrainiert: 0, Trainiert: 1, Experte: 2, Meister: 3, Legendär: 4)"
+				}
+			},
+			
+			"SpottingRangeFlag" : {
+				"name"					: "Aufdecken Reichweite",
+				"descrp"				: "Reichweite über welche dieses Objekt aufgedeckt werden kann (überschreibt Welt standard, -1 um auszustellen)"
+			},
+			
+			"otherSkillADCsFlag" : {
+				"openButtonname"		: "Andere aktive Fähigkeits SGs",
+				"confirmButtonname"		: "Bestätigen",
+				"Title"					: "Andere aktive Fähigkeits SGs",
+				"name"					: "Die aktiven Entdeckungs SGs für andered Fähigkeiten (-1 wenn unmöglich):",
+				"entry"					: "SG für {pSkill} wurf"
+			},
+			
+			"SpottingMessageFlag" : {
+				"name"					: "Entdeckt Nachricht",
+				"descrp"				: "Nachricht welche an den ENtdecker dieses Objekts geflüstert wird"
+			},
+			
+			"LockPPDCFlag" : {
+				"name" 					: "Passive Wahrnehmung SG sperren",
+				"descrp"				: "Um zu verhindern, dass der Passive Wahrnehmung SG dieser Figur bei bewegung neu gewürfelt wird"
+			},
+			
+			"resetSpottedbyMoveFlag" : {
+				"name"					: "Setze Entdeckt bei Figurbewegung zurück",
+				"descrp"				: "Ob die aktiven Beobachter dieser Figur bei ihrer Bewegung zurück gesetzt wird"
+			},
+			
+			"StealthEffectsFlag" : {
+				"name"					: "Verstecken Effekte",
+				"descrp"				: "Weitere EFfkte welche auf diese Figur beim verstecken angewandt werden (Namen oder IDs, getrennt mit \";\")"
+			},
+			
+			"OverrideWorldSEffectsFlag" : {
+				"name"					: "Welt Verstecken Effekte überschreiben",
+				"descrp"				: "Ob die Verstecken Effekte dieser Figur die Welt Effekte überschreiben"
+			},
+
+			"SceneBrightEndFlag" : {
+				"name"					: "Helles Dunkelheits Limit",
+				"descrp"				: "Eine Scenen Dunkelheit unter diesem Wert wird als Hell gewertet"
+			},
+			
+			"SceneDimEndFlag" : {
+				"name"					: "Düsteres Dunkelheits Limit",
+				"descrp"				: "Eine Scenen Dunkelheit unter diesem Wert wird als Düster gewertet"
+			},
+			
+			"TilePerceptiveNameFlag" : {
+				"name"					: "Fliesen Name",
+				"descrp"				: "Name welcher von Perceptive für die Fliese benutzt wird (z.B. Dialoge)"
+			},
+
+			"MATTTriggerTileFlag" : {
+				"name" 					: "Ausgelöste Fliesen ID",
+				"descrp"				: "Die ID der durch Lock & Key Aktionen ausgelösten Fliese (Es ist möglich unterschiedliche Landings zu nutzen)"
+			},
+			
+			"MATTTriggerConditionsFlag" : {
+				"LockuseKey.name"		: "Bei neu aufgedeckt",
+				"options" : {
+					"never"				: "niemals",
+					"always"			: "immer",
+					"failure"			: "aktiv",
+					"critfailure"		: "passiv"
+				}
+			}
+		},
+		
+		"vision-channels-window" : {
+			"buttons" : {
+				"OpenVCMenu" : {
+					"name"				: "Öffne Sicht Kanäle"
+				},
+				"confirm" : {
+					"name"				: "Bestätigen"
+				},
+				"add" : {
+					"name"				: "Kanal hinzufügen"
+				}
+			},
+			"titles" : {
+				"VisionChannels"		: "Sicht Kanäle"
+			},
+			"entries" : {
+				"titles" : {
+					"Name"				: "Name",
+					"RequiredtoSee"		: "Benötigt um zu sehen",
+					"SeethroughWalls"	: "Durch Wände",
+					"Range"				: "Reichweite",
+					"RangeFormula"		: "Reichweiten Formel",
+					"RangeMin"			: "Minimal Reichweite",
+					"Color"				: "Farbe",
+					"EffectFilter" : {
+						"name"			: "Effekt Filter",
+						"options" : {
+							"off"		: "aus",
+							"outline"   : "Umrisse",
+							"outline_waves" : "Umrisse & Wellen",
+							"glow"		: "Leuchten",
+							"TMfog"		: "Nebel",
+							"TMelectric": "Elektrizität",
+							"TMtransform": "Drehen",
+							"TMflood"	: "Flut",
+							"TMadjustment" : "Verblassen",
+							"TMblur"	: "Verwischen"
+						}
+					},
+					"EffectFilterColor" : "Effekt FIlter Farbe",
+					"Transparency"		: "Transparenz",
+					"defaultReceiver"	: "Empfänger Standard",
+					"VCID"				: "Interne ID",
+					"Emits"				: "Sendet",
+					"Receives"			: "Empfängt",
+					"ReceiveFiltered"	: "Empfang Filter",
+					"ReceiveRange"		: "Eigene Reichweite",
+					"CalculatedRange"	: "Errechnete Reichweite",
+					"ReceiveRangeMin"	: "Eigenes Reichweiten Minimum",
+					"Sight"				: "Sicht",
+					"Movement"			: "Bewegung"
+				}
+			}
+		},
+		
+		"PeekingConfirm" : {
+			"name" 						: "Durschauen bestätigen",
+			"descrp" 					: "Nutzer {pUserName} möchte ein Schloss durchschauen, erlauben?"
+		},
+		
+		"monks-active-tiles" : {
+			"filters" : {
+				"name"						: "Filter",
+				
+				"filter-spotted-by" : {
+					"name"					: "Filter Objekte aufgedeckt von",
+					"descrp"				: "<span class=\"filter-style\">Filter</span> <span class=\"entity-style\">{pEntities}</span> {pFilterCondition} von <span class=\"entity-style\">{pSpotters}</span>",
+					"settings" : {
+						"spotters" : {
+							"name" 			: "Aufdecker"
+						},
+						"filterCondition" : {
+							"name"			: "Filtere wenn",
+							"options" : {
+								"spotted"	: "wurde aufgedeckt",
+								"notspotted": "wurde nicht aufgedeckt"
+							}
+						}
+					}
+				},
+				
+				"filter-has-spotted" : {
+					"name"					: "Filter Figuren welche aufgedeckt haben",
+					"descrp"				: "<span class=\"filter-style\">Filter</span> <span class=\"entity-style\">{pEntities}</span> {pFilterCondition} <span class=\"entity-style\">{pSpotted}</span>",
+					"settings" : {
+						"spotted" : {
+							"name" 			: "Aufgedeckt"
+						},
+						"filterCondition" : {
+							"name"			: "Filtere wenn",
+							"options" : {
+								"spotted"	: "hat aufgedeckt",
+								"notspotted": "hat nicht aufgedeckt"
+							}
+						}
+					}
+				}
+			},
+			
+			"actions" : {
+				"spot-object" : {
+					"name"					: "Entdecke Objekt",
+					"descrp"				: "<span class=\"logic-style\">{pname}</span> <span class=\"entity-style\">{pTargets}</span> mit <span class=\"entity-style\">{pEntities}</span>",
+					"settings" : {
+						"target" : {
+							"name"			: "Ziel"
+						}
+					}
+				},
+				
+				"give-VC" : {
+					"name"					: "Gebe Sichtkanal",
+					"descrp"				: "<span class=\"logic-style\">{pname}</span> <span class=\"value-style\">{pChannel}</span> an <span class=\"entity-style\">{pEntities}</span> als <span class=\"value-style\">{pType}</span>",
+					"settings" : {
+						"channelid" : {
+							"name"			: "Kanal"
+						},
+						"type" : {
+							"name"			: "Gebe als",
+							"options" : {
+								"Emits"		: "Sendet",
+								"Receives"	: "Empfängt",
+								"Sight"		: "Sicht (nur Wände)",
+								"Movement"	: "Bewegung (nur Wände)"
+							}
+						}
+					}
+				},
+				
+				"remove-VC" : {
+					"name"					: "Entferne Sichtkanal",
+					"descrp"				: "<span class=\"logic-style\">{pname}</span> <span class=\"value-style\">{pChannel}</span> von <span class=\"entity-style\">{pEntities}</span> als <span class=\"value-style\">{pType}</span>",
+					"settings" : {
+						"channelid" : {
+							"name"			: "Kanal"
+						},
+						"type" : {
+							"name"			: "Entferne als",
+							"options" : {
+								"Emits"		: "Sendet",
+								"Receives"	: "Empfängt",
+								"Sight"		: "Sicht (nur Wände)",
+								"Movement"	: "Bewegung (nur Wände)"
+							}
+						}
+					}
+				},
+				
+				"reset-Spottedby" : {
+					"name"					: "Resette \"Aufgedeckt von\"",
+					"descrp"				: "<span class=\"logic-style\">{pname}</span> bei <span class=\"entity-style\">{pEntities}</span>"
+				},
+				
+				"set-canbeSpotted" : {
+					"name"					: "Setze \"Kann aufgedeckt werden\"",
+					"descrp" : {
+						"value"				: "<span class=\"logic-style\">{pname}</span> von <span class=\"entity-style\">{pEntities}</span> auf <span class=\"value-style\">{pvalue}</span>",
+						"toggle"			: "<span class=\"logic-style\">Schalte \"Kann aufgedeckt werden\"</span> von <span class=\"entity-style\">{pEntities}</span> um"
+					},
+					"settings" : {
+						"setto" : {
+							"name"  		: "Setze auf",
+							"options" : {
+								"true"		: "Wahr",
+								"false"		: "Falsch",
+								"toggle"	: "umschalten"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

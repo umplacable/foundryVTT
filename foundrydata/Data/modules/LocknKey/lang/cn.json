@@ -1,0 +1,676 @@
+{
+  "LocknKey": {
+    "Titles": {
+	"confirm"					: "confirm",
+	"abbort"					: "abbort",
+      "LocknKey": "Lock & Key",
+	  "LocknKeyabbr" : "L&K",
+      "WorldSettings": "世界设置 (仅限GM)",
+      "ClientSettings": "用户设置",
+      "GMonly": "仅限GM",
+      "LockTokens": "锁设置",
+      "CharacterTokens": "角色设置",
+      "KeyItems": "钥匙设置",
+      "LPItems": "锁的操控设置",
+      "LockusePasskey": "密码",
+	  "Passkey"	: "密码",
+      "EnterPasskey": "输入密码:",
+      "ConfirmPasskey": "确定",
+	  "Lockuse"					: "上锁",
+	  "LockuseKey"					: "使用钥匙",
+	  "LockusePick"					: "撬锁",
+	  "LockuseBreak"				: "砸锁",
+	"LockuseFree"				: "Free lock use",
+	"LockuseCustom"				: "{pCheckName}",
+	  "Close"						: "关闭",
+		"Keycreation"				: "创建钥匙",
+		"Keyname"					: "钥匙名字",
+		"KeyID"						: "Key ID (separate IDs with \";\")",
+		"Keyfolder"				: "目标文件夹",
+		"ConfirmKeycreation"			: "创建",
+		"Basic"						: "基本",
+		"Triggers"					: "Triggers",
+		"FreeCircumventHUD"			: "This token can circumvent the next lock, click to remove",
+		"PickPocket"				: "Pick pocket",
+		"LockchangePasskey"			: "Change password",
+		"LockuseIdentity"			: "Identity",
+		"newPasskey"				: "New password:",
+		"addIdentityMessage"		: "Player {pPlayerName} wants to add these identities to a lock:{pIdentities}",
+		"IdentifierofType"			: " {pIdentifier} of {pType} {pName}"
+    },
+    "Popup": {
+      "TokenisLocked": "{pLockName}上锁了",
+      "DoorisLocked": "这扇门上锁了",
+      "Lockoutofreach": "够不到这把锁~",
+	  "Tokenoutofreach"	: "{pTokenName} is out of reach",
+      "lockedDoor": "门现已上锁",
+      "lockedToken": "{pLockName}现已上锁",
+      "unlockedDoor": "门现已解锁",
+      "unlockedToken": "{pLockName}现已解锁",
+      "GamePaused": "游戏被暂停了",
+      "noLockPickItem": "没有撬锁工具",
+	  "nomatchingKey"				: "没有可用的钥匙",
+      "pickLockfailed": "撬锁失败",
+      "cantLock": {
+        "default": "这把锁无法被上锁",
+        "break": "这把锁已经被打开了"
+      },
+      "breakLockfailed": "砸锁失败",
+      "NotaLock": "不是一把锁",
+      "WrongPassword": "密码错误",
+      "Lockisjammed": "锁被堵住了",
+      "Lockpickbroke": "撬锁器损坏了",
+      "jammedLock": "堵住了锁",
+	  "cantcircumventFree": "Lock can't be circumvented",
+	  "PickPocketfailed"			: "Pick pocket failed",
+	  "customcheckfailed"			: "{pCheckName} failed",
+		"WrongIdentity"				: "Wrong identity",
+		"PasswordChanged"			: "Password changed",
+		"NoPasswordLength"			: "New password too short",
+		"CantChangePassword"		: "Can't change password",
+			
+		"CantbePicked"				: "Can't be picked",
+		"CantbeBroken"				: "Can't be broken",
+		"CantbeCustomChecked"		: "Can't use {pCheckName}",
+		"CantbePickpocketed"		: "Can't be pickpocketed"
+    },
+    "ChatMessage": {
+      "LockPick": "{pName}尝试撬锁:",
+      "LockPicksuccess": {
+        "crit": "{pName}撬锁大成功",
+        "default": "{pName}撬锁成功"
+      },
+      "LockPickfail": {
+        "crit": "{pName}撬锁大失败",
+        "default": "{pName}撬锁失败"
+      },
+		"LockPicksuccessLPName" : {
+			"crit"					: "{pName} 撬锁大成功 {pLPName}",
+			"default" 				: "{pName} 撬锁成功 {pLPName}"
+		},
+		"LockPickfailLPName" : {
+			"crit"					: "{pName} 撬锁大失败 {pLPName}",
+			"default" 				: "{pName} 撬锁失败 {pLPName}"
+		},
+		"LockPickfailLPNameremove" : {
+			"crit"					: "{pName} 撬锁大失败并且把锁孔堵住了 {pLPName}"
+		},
+		
+      "LockBreak": "{pName}尝试砸锁:",
+      "LockBreaksuccess": {
+        "crit": "{pName}砸锁大成功",
+        "default": "{pName}砸锁成功"
+      },
+      "LockBreakfail": {
+        "crit": "{pName}砸锁大失败",
+        "default": "{pName}砸锁失败"
+      },		
+			"CustomCheck"				: "{pName} used {pCheckName}:",
+			"CustomChecksuccess" : {
+				"crit"					: "{pName} critically succeeded at {pCheckName}",
+				"default" 				: "{pName} succeeded at {pCheckName}"			
+			},
+			"CustomCheckFail" : {
+				"crit"					: "{pName} critically failed at {pCheckName}",
+				"default" 				: "{pName} failed at {pCheckName}"
+			},
+			
+			"PickPocket"				: "{pName} tried to pick pocket:",
+			"PickPocketSuccess" : {
+				"crit"					: "{pName} critically succeeded at pick pocketing",
+				"default" 				: "{pName} succeeded at pick pocketing"			
+			},
+			"PickPocketFail" : {
+				"crit"					: "{pName} critically failed at pick pocketing",
+				"default" 				: "{pName} failed at pick pocketing"
+			}
+    },
+    "Settings": {
+      "useGMquickKeys": {
+        "name": "启用GM操控",
+        "descrp": "允许GM使用底部列出的快捷键（影响带*的项目）"
+      },
+      "allowLocking": {
+        "name": "允许PL上锁",
+        "descrp": "如果PL有对应的钥匙，允许PL上锁"
+      },
+      "startasLocked": {
+        "name": "初始即上锁",
+        "descrp": "新注册的锁默认上锁"
+      },
+      "LockDistance": {
+        "name": "锁的距离",
+        "descrp": "可以与锁互动的距离（使用游戏内单位）"
+      },
+		"DefaultLockSound" : {
+			"name"					: "Default lock sound",
+			"descrp"				: "The default sound applied to new doors a lock tokens"
+		},
+      "UseArmReachDistance": {
+        "name": "使用 \"Arms Reach\" 距离",
+        "descrp": "使用模组 \"Arms Reach\" 内的距离来设置与锁互动的距离"
+      },
+      "alwaysopenOwned": {
+        "name": "打开自己拥有的锁",
+        "descrp": "PL总是可以打开自己拥有的的token，不论是否上锁了"
+      },	
+		"allowallInteractions" : {
+			"name" 					: "Allow all interactions",
+			"descrp"				: "If all interactions (pick, break, custom, pickpocket) should be allows even for impossible DCs"					
+		},		  
+		"showallLockInteractions" : {
+			"name" 					: "显示所有锁的交互功能",
+			"descrp"				: "永远显示所有锁的功能，无论这个功能用不用得了 (混乱邪恶GM推荐)"					
+		},
+      "preventUseinPause": {
+        "name": "阻止暂停时使用钥匙",
+        "descrp": "阻止PL在暂停时使用钥匙"
+      },
+      "autoKeyuse": {
+        "name": "自动使用钥匙",
+        "descrp": "PL在与锁互动时会自动使用对应的钥匙"
+      },
+      "KeyItemtype": {
+        "name": "钥匙物品类型",
+        "descrp": "模组生成新钥匙时使用的物品类型，留空则使用默认类型(在F12 - Console 中输入 \"game.items.documentClass.TYPES\" 来列出可用的类型)"
+      },
+		"LnKSettingTypes" : {
+			"name" 					: "Setting item types",
+			"descrp"				: "The item types for which the Lock & Key settings are displayed (seperated with \";\", \"all\" for all types)"		
+		},
+		"LnKSettingsubTypes" : {
+			"name" 					: "Setting item subtypes",
+			"descrp"				: "The item subtypes for which the Lock & Key settings are displayed (seperated with \";\", \"all\" for all subtypes)"		
+		},
+		"KeyitemCreationPopup" : {
+			"name" 					: "钥匙创建菜单",
+			"descrp"				: "创建钥匙时是否让设置菜单弹出"		
+		},	
+		"KeyitemCreationIDOption" : {
+			"name" 					: "Key creation id option",
+			"descrp"				: "If an option to enter a custom key id should be displayed in the key creation menu"		
+		},	
+		"DefaultKeyFolder" : {
+			"name"					: "Default key folder",
+			"descrp"				: "The name of the default folders used in the key creation menu"
+		},
+		
+		"LimitKeyFolders" : {
+			"name"					: "Filter key folders",
+			"descrp"				: "If only the default key folder and its subfolders should be shown in the key creation menu"
+		},
+		"UseKeynameasID" : {
+			"name" 					: "钥匙名则是ID",
+			"descrp"				: "在开锁时，是否应将钥匙名称视为ID"		
+		},	
+		"usePf2eSystem" : {
+			"name" 					: "Use system rolls",
+			"descrp"				: "Use the systems roll rules (disables Lock & Key custom roll formulas and crit settings in favor of the systems rolls rules)"						
+		},
+      "CritMethod": {
+        "name": "大成功/大失败",
+        "descrp": "如何界定大成功与大失败",
+        "options": {
+          "noCrit": "没有大成功与大失败",
+          "natCrit": "掷出1或20",
+          "natCritpm10": "掷出1或20 或是 ±10DC [譬如Pf2e]",
+		  "d100WFRP4"			: "d100 Nat1/100 [e.g. WFRP4e]",
+		  "d100WFRP4Doubles"	: "d100 Nat1/100 & doubles [e.g. WFRP4e]",
+		  "d100CoC7e"			: "d100 difficulty ranges [e.g. CoC7e]",
+		  "d10poolCoD2e"		: "d10 pool >=8 and reroll on 10 [e.g. CoD2e]",
+		  "3d20DSA": "3d20 DSA"
+        }
+      },
+      "LockPickItem": {
+        "name": "撬锁物品",
+        "descrp": "撬锁物品的名字或者合集IDs (推荐), 如果不需要特定物品就可以撬锁请填\"-\"  (多个物品请以\";\"分隔) （译注：拖动物品到聊天框可以快速得到物品id）"
+      },
+		"MentionLockPickItem" : {
+			"name" 					: "撬锁时提起撬锁工具",
+			"descrp"				: "是否应在聊天栏中提及使用过的开锁工具"		
+		},
+      "RemoveLPoncritFail": {
+        "name": "大失败时移除撬锁物品",
+        "descrp": "在大失败时移除撬锁物品(或者将物品数量减1)"
+      },
+      "JamLockonLPcritFail": {
+        "name": "在大失败时堵住锁",
+        "descrp": "在大失败时堵住锁,使得它不能再被撬锁。"
+      },
+      "JamedLockKeyunusable": {
+        "name": "堵住的锁不可以使用钥匙",
+        "descrp": "堵住的锁不再被对应的钥匙打开"
+      },
+		"defaultLPAttempts" : {
+			"name"					: "Default Lock pick attempts",
+			"descrp"				: "The default amount of Lock pick attempts before the lock becomes unpickable (-1 for unlimited attempts)"
+		},
+      "LockPickFormula": {
+        "name": "撬锁掷骰公式",
+        "descrp": "撬锁时的掷骰公式(例：\"1d20 + @actor.skills.thievery.mod\", 本模组的Github页面上有帮助页)"
+      },
+		"DefaultPickDC" : {
+			"name" 					: "Default lock DC",
+			"descrp"				: "The default value for lock DCs"				
+		},
+      "LockBreakFormula": {
+        "name": "砸锁掷骰公式",
+        "descrp": "砸锁时的掷骰公式(例：\"1d20 + @actor.skills.athletics.mod - 2\", 本模组的Github页面上有帮助页)"
+      },
+		"DefaultBreakDC" : {
+			"name" 					: "Default lock break DC",
+			"descrp"				: "The default value for lock break DCs"				
+		},
+		
+		"CustomCircumventName" : {
+			"name" 					: "Custom check formula",
+			"descrp"				: "The name of the third optional custom check to circumvent locks (e.g. \"Hacking\" or \"Magic rune\", leave empty to deactivate)"				
+		},
+		
+		"CustomCircumventFormula" : {
+			"name" 					: "Custom check name",
+			"descrp"				: "The formula which is used for dice rolls when using the custom check above"				
+		},
+		
+		"CustomCircumventDefaultDC" : {
+			"name" 					: "Custom check default DC",
+			"descrp"				: "The default value for custom check DCs"				
+		},
+      "LockBreakunlockable": {
+        "name": "损坏的锁可被解锁",
+        "descrp": "让已经损坏的锁可以被解锁"
+      },
+      "onlyCombatMultiSuccess": {
+        "name": "仅在战斗中需要多次解锁",
+        "descrp": "非战斗状态忽略设定的多次解锁设置"
+      },
+	"LockCircumventName" : {
+		"name" 					: "Lock circumvention keywords",
+		"descrp"				: "Keywords to identify effects (e.g. the \"Knock\" spell)  that allow players to circumvent locks (seperated with \";\")"				
+	},
+	"AutoAcceptIdentityAddition" : {
+		"name" 					: "Automatically accept identity additions",
+		"descrp"				: "If identity addtions should be accepted automatically (not recommended)"				
+	},
+	"PickPocketFormula" : {
+		"name" 					: "Pick pocket formula",
+		"descrp"				: "The formula which is used for dice rolls when pick pocketing (e.g. \"1d20 + @actor.skills.thievery.mod\", help can be found on the Github page of this module)"				
+	},
+	"PickPocketDefaultDC" : {
+		"name" 					: "Pick pocket default DC",
+		"descrp"				: "The default value for pick pocket DCs"				
+	},
+	"PickPocketDefaultDCFormula" : {
+		"name" 					: "Pick pocket default DC formula",
+		"descrp"				: "The default formula used to calculate the Pick Pocket DC (overrides other defaults)"				
+	},
+	
+	"AutoUpdatePickPocketDC" : {
+		"name" 					: "Auto update Pick Pocket DC",
+		"descrp"				: "If the Pick Pocket DC should get automatically updated when a perception check is rolled"				
+	},
+	
+	"PerceptionKeyWord" : {
+		"name"					: "Perception key-word",
+		"descrp"				: "Key word to recognise perception rolls (a string present in the flavour text of perception rolls)"		
+	},
+	"ControlSceme" : {
+		"name" 					: "控制方案",
+		"descrp"				: "用于游戏控制的模式 (right-click+keys is described in more detail below under \"Player controls\"",	
+		"options" : {
+			"rightKeys"			: "左键 + 按键",
+			"rightPopups"		: "左键弹出菜单"
+		}
+	},	
+      "MessagePopUps": {
+        "name": "弹出消息",
+        "descrp": "上锁与开锁时弹出多条消息"
+      },
+      "PlayLockSounds": {
+        "name": "播放锁的音效",
+        "descrp": "上锁/开锁时播放音效"
+      },
+			
+	"FreeCircumventButtonPosition" : {
+		"name" 					: "Lock circumvention indicator position",
+		"descrp"				: "The position of the indicator that shows that a token can circumvent the next lock on the token HUD",
+		"options" : {
+			"none"				: "nowhere",
+			"left"				: "left",
+			"right"				: "right"
+		}
+	}
+    },
+	"Keys" : {
+		"ToggleLock" : {
+			"name"					: "上锁"
+		},
+		
+		"CopyLock" : {
+			"name"					: "复制锁ID"
+		},
+		
+		"PasteLock" : {
+			"name"					: "黏贴锁ID"
+		},
+		
+		"CreatenewKey" : {
+			"name"					: "创造新钥匙"
+		},
+		
+		"UseKey" : {
+			"name"					: "使用钥匙"
+		},
+		
+		"PickLock" : {
+			"name"					: "撬锁"
+		},
+		
+		"BreakLock" : {
+			"name"					: "砸锁"
+		},
+			
+		"CustomCheck" : {
+			"name"					: "Custom Check (ask GM (unless you are the GM))"
+		},
+		
+		"PickPocket" : {
+			"name"					: "Pick pocket"
+		},
+		
+		"ChangePassword" : {
+			"name"					: "Change password"
+		}
+	},
+    "SheetSettings": {
+      "LockableFlag": {
+        "name": "可被上锁",
+        "descrp": "这个物体可否被上锁"
+      },
+		"LockonCloseFlag" : {
+			"name" 					: "Lock on close",
+			"descrp"				: "If this door should be locked once it is closed"					
+		},
+      "LockedFlag": {
+        "name": "已上锁",
+        "descrp": "这个物体是否被上锁"
+      },
+      "IDKeysFlag": {
+        "name": "钥匙ID",
+        "descrp": {
+          "lock": "可以给这把锁上锁或开锁的钥匙ID (多个时以\";\"分隔)",
+          "key": "这把钥匙可上锁或开锁的锁ID (多个时以\";\"分隔)"
+        }
+      },
+      "PasskeysFlag": {
+        "name": "密码",
+        "descrp": "解锁这把锁的密码 (多个时以\";\"分隔)"
+      },
+		"PasskeyChangeableFlag" : {
+			"name"					: "Password changeable",
+			"descrp"				: "If the password can be changed by players (requires correct password)"
+		},
+		
+		"IdentityKeyFlag" : {
+			"name"					: "Identities",
+			"descrp"				: "Identities that can unlock this lock (seperated with \";\", IDs/Names of Token/Actor/User)"
+		},
+      "LockjammedFlag": {
+        "name": "Jammed",
+        "descrp": "If this lock is jammed (see world settings)"
+      },
+      "RemoveKeyonUseFlag": {
+        "name": "使用时消耗",
+        "descrp": "这把钥匙是否在被使用后消耗(或者物品数量减1)"
+      },
+      "LockDCFlag": {
+        "name": "撬锁DC",
+        "descrp": "开锁的DC, 适用于撬锁 (-1 则不可撬锁)"
+      },
+		"SpecialLPFlag" : {
+			"name" 					: "特殊撬锁",
+			"descrp"				: "开锁需要特定的撬锁工具 (ID or name, multiple entries seperated with \";\")"					
+		},
+      "LockBreakDCFlag": {
+        "name": "砸锁DC",
+        "descrp": "开锁的DC, 适用于砸锁 (-1 则不可砸锁)"
+      },
+	"LockCCDCFlag" : {
+		"name" 					: "{pCheckName} DC",
+		"descrp"				: "The difficulty class to use {pCheckName} on this lock (-1 to prevent breaking)"					
+	},
+      "requiredLPsuccessFlag": {
+        "name": "需要的撬锁成功次数",
+        "descrp": "需要多少次成功的撬锁才能开锁 (以及目前成功了多少次) (大成功视为两次)"
+      },
+			"LPAttemptsFlag" : {
+				"name" 					: "Lockpicking attempts left",
+				"descrp"				: "How many Lockpicking attempts are left (-1 for unlimited)"				
+			},
+			"canbeCircumventedFreeFlag" : {
+				"name" 					: "Can be circumvented",
+				"descrp"				: "If this lock can be circumvented by effects (e.g. the spell \"Knock\")"				
+			},
+      "CustomPopupsFlag": {
+        "openButtonname": "自定义弹出消息",
+        "Title": "自定义弹出消息",
+        "name": "为特定的玩家互动设置弹出消息:",
+        "LockLocked": {
+          "name": "锁被上锁了:"
+        },
+        "LocknotPickable": {
+          "name": "无法撬锁:"
+        },
+        "LocknotBreakable": {
+          "name": "无法砸锁:"
+        },
+        "LockPasskeyTitle": {
+          "name": "密码框文本:"
+        },
+		"LocknotCustom" : {
+			"name"					: "Lock can't be used with custom check:"
+		},
+		"CharacternotPickpocketable" : {
+			"name"					: "Character can't be pick pocketed:"
+		},
+        "confirmButtonname": "确定弹出消息"
+      },
+      "SoundVariantFlag": {
+        "name": "锁的声音",
+        "descrp": "设置与这扇门互动时的声音集",
+        "options": {
+		  "off": "off",
+          "futuristic": "未来",
+          "industrial": "工业",
+          "jail": "监狱",
+          "metal": "金属",
+          "shutter": "窗户",
+          "sliding": "滑动",
+          "stone": "石制",
+          "wood": "木制"
+        }
+      },
+      "LPFormulaFlag": {
+        "name": "撬锁公式",
+        "descrp": {
+          "token": "这个token撬锁时加入到撬锁掷骰的公式",
+          "item": "物品拥有者撬锁时加入到撬锁掷骰的公式(只应用背包中最高的)"
+        }
+      },
+      "LPFormulaOverrideFlag": {
+        "name": "覆盖撬锁公式",
+        "descrp": {
+          "token": "这个token的撬锁公式是否覆盖世界设定",
+          "item": "这个物品的撬锁公式是否覆盖token/世界设定"
+        }
+      },
+      "LBFormulaFlag": {
+        "name": "砸锁公式",
+        "descrp": {
+          "token": "这个token砸锁时加入到砸锁掷骰的公式",
+          "item": "物品拥有者砸锁时加入到砸锁掷骰的公式(只应用背包中最高的)"
+        }
+      },
+      "LBFormulaOverrideFlag": {
+        "name": "覆盖砸锁公式",
+        "descrp": {
+          "token": "这个token的砸锁公式是否覆盖世界设定",
+          "item": "这个物品的砸锁公式是否覆盖token/世界设定"
+        }
+      },	
+		"CCFormulaFlag" : {
+			"name" 					: "{pCheckName} formula",
+			"descrp" : {
+				"token" 			: "The formula added to {pCheckName} rolls this token makes",
+				"item"				: "The formula added to {pCheckName} rolls the owner of this item makes (only best in inventory used)"
+			}					
+		},
+		
+		"CCFormulaOverrideFlag" : {
+			"name" 					: "Override {pCheckName} lock formula",
+			"descrp" : {
+				"token" 			: "If this tokens {pCheckName} formula overrides the world formula",
+				"item"				: "If this items {pCheckName} formula overrides the tokens/worlds formula"
+			}				
+		},
+		
+		"PickPocketFormulaFlag" : {
+			"name" 					: "Pick pocket formula",
+			"descrp" : {
+				"token" 			: "The formula added to Pick pocket rolls this token makes",
+				"item"				: "The formula added to Pick pocket rolls the owner of this item makes (only best in inventory used)"
+			}					
+		},
+		
+		"PickPocketFormulaOverrideFlag" : {
+			"name" 					: "Override Pick pocket lock formula",
+			"descrp" : {
+				"token" 			: "If this tokens Pick pocket formula overrides the world formula",
+				"item"				: "If this items Pick pocket formula overrides the tokens/worlds formula"
+			}				
+		},
+		
+		"PickPocketDCFlag" : {
+			"name" 					: "Pick pocket DC",
+			"descrp"  				: "The difficulty class to use Pick pocket this character (-1 for impossible)"			
+		},	  
+		"ReplacementItemFlag" : {
+			"name" 					: "Replacement Items",
+			"descrp" 				: "Items that get consumed instead of this item when a roll fails (ID or name, multiple entries seperated with \";\")"			
+		},
+		"MATTTriggerTileFlag" : {
+			"name" 					: "Triggered tile ID",
+			"descrp"				: "The ID of the tile triggered by the Lock & Key actions below (you may use different landings)"
+		},
+		
+		"MATTTriggerConditionsFlag" : {
+			"LockuseKey.name"		: "On Key use",
+			"LockusePasskey.name"	: "On Password use",
+			"LockusePick.name"		: "On pick Lock",
+			"LockuseBreak.name"		: "On break Lock",
+			"LockuseFree.name"		: "On lock circumvention",
+			"options" : {
+				"never"				: "never",
+				"always"			: "always",
+				"failure"			: "failure",
+				"critfailure"		: "critical failure",
+				"success"			: "success"
+			}
+		},
+			
+		"RollOptionsFlag" : {
+			"LockusePick" : {
+				"d10CritLimit" : {
+					"name"			: "Lockpick d10 crit limit",
+					"descrp"		: "The minimum crit value for d10 lockpick rolls"
+				}
+			},
+			"LockuseBreak" : {
+				"d10CritLimit" : {
+					"name"			: "Lock break d10 crit limit",
+					"descrp"		: "The minimum crit value for d10 lock break rolls"
+				}					
+			}
+		}
+    },
+    "Context": {
+      "KeyCopy": "复制钥匙ID",
+      "KeyPaste": "粘贴ID进钥匙"
+    },
+    "Words": {
+      "Key": "钥匙"
+    },
+    "Text": {
+      "GMControls": {
+        "line0": "GM操控:",
+        "line1": "•shift+右键 给锁创建一把新的钥匙",
+        "line2": "•alt+右键   切换token上锁状态(*)",
+        "line3": "•ctrl+右键  复制锁的钥匙id(*)",
+        "line4": "•ctrl+左键  粘贴钥匙id到锁中(*)"
+      },
+      "PlayerControls": {
+        "line0": "PL操控:",
+        "line1": "•右键       尝试对锁使用一把钥匙",
+        "line2": "•shift+右键 尝试撬锁",
+        "line3": "•alt+右键   尝试砸锁"
+      }
+    },
+	
+		"take-inventory-window" : {
+			"titles" : {
+				"inventory"				: "Inventory"
+			},
+			"header" : {
+				"title"					: "<h> Take from <b>{pOwnerName}s</b> inventory (lands in <b>{pTakerName}s</b> inventory): </h>"
+			},
+			"buttons" : {
+				"take" : {
+					"name"				: "Take selected"
+				}
+			}
+		},
+		
+		"monks-active-tiles" : {
+			"filters" : {
+				"name"						: "Filter",
+				
+				"filter-by-lock-state" : {
+					"name"					: "Filter by lock state",
+					"settings" : {
+						"filterCondition" : {
+							"name"			: "Lock state condition",
+							"options" : {
+								"locked"	: "is locked",
+								"unlocked"	: "is unlocked"
+							}
+						}
+					}
+				}
+			},
+			
+			"actions" : {
+				"lock" : {
+					"name"					: "Lock"
+				},
+				
+				"unlock" : {
+					"name"					: "Unlock"
+				},
+				
+				"toggle-lock" : {
+					"name"					: "Toggle lock"
+				},
+				
+				"loot-inventory" : {
+					"name"					: "Erbeute Inventar",
+					"descrp"				: "<span class=\"logic-style\">{pname}</span> von <span class=\"entity-style\">{pEntities}</span> Angebot an <span class=\"details-style\">{pOfferto}</span>",
+					"settings" : {
+						"offerto" : {
+							"name"			: "Angebot an"
+						}
+					}	
+				}
+			}
+		}
+  }
+}

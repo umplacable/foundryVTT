@@ -1,0 +1,12 @@
+2025/12/30-20:50:45.741 bb0 Delete type=3 #1
+2025/12/30-21:24:38.916 5b60 Level-0 table #10: started
+2025/12/30-21:24:38.971 5b60 Level-0 table #10: 17554 bytes OK
+2025/12/30-21:24:39.011 5b60 Delete type=0 #8
+2025/12/30-21:24:39.145 5b60 Manual compaction at level-0 from '!scenes!M3w9w0E7U3OC4lcJ' @ 72057594037927935 : 1 .. '!scenes.walls!M3w9w0E7U3OC4lcJ.ym3sTkRy73XZ1vda' @ 0 : 0; will stop at '!scenes.walls!M3w9w0E7U3OC4lcJ.ym3sTkRy73XZ1vda' @ 84 : 1
+2025/12/30-21:24:39.145 5b60 Compacting 2@0 + 0@1 files
+2025/12/30-21:24:39.186 5b60 Generated table #11@0: 30 keys, 4646 bytes
+2025/12/30-21:24:39.186 5b60 Compacted 2@0 + 0@1 files => 4646 bytes
+2025/12/30-21:24:39.228 5b60 compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/12/30-21:24:39.228 5b60 Delete type=2 #5
+2025/12/30-21:24:39.229 5b60 Delete type=2 #10
+2025/12/30-21:24:39.495 5b60 Manual compaction at level-0 from '!scenes.walls!M3w9w0E7U3OC4lcJ.ym3sTkRy73XZ1vda' @ 84 : 1 .. '!scenes.walls!M3w9w0E7U3OC4lcJ.ym3sTkRy73XZ1vda' @ 0 : 0; will stop at (end)

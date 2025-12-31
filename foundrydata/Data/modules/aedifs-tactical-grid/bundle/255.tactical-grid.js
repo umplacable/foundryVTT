@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkaedifs_tactical_grid=self.webpackChunkaedifs_tactical_grid||[]).push([[255],{255:(a,c,l)=>{function t(){TacticalGrid.coverCalculators["simbuls-cover-calculator"].calculateCover=r}function r(a,c){if(globalThis.CoverCalculator){const l=globalThis.CoverCalculator.Cover(a.document?a:a.object,c);return a===c?TacticalGrid.COVER.NO_COVER:3===l?.data?.results.cover?TacticalGrid.COVER.FULL_COVER:-l?.data?.results.value??TacticalGrid.COVER.NO_COVER}}l.r(c),l.d(c,{register:()=>t})}}]);
+//# sourceMappingURL=255.tactical-grid.js.map

@@ -1,0 +1,7 @@
+2025/12/30-21:28:56.665 bb0 Recovering log #2741
+2025/12/30-21:28:56.744 bb0 Delete type=0 #2741
+2025/12/30-21:28:56.744 bb0 Delete type=3 #2740
+2025/12/30-23:08:53.660 5b60 Level-0 table #2745: started
+2025/12/30-23:08:53.660 5b60 Level-0 table #2745: 0 bytes OK
+2025/12/30-23:08:53.696 5b60 Delete type=0 #2743
+2025/12/30-23:08:53.856 5b60 Manual compaction at level-0 from '!macros!5zElsDCnePqaHmQ6' @ 72057594037927935 : 1 .. '!macros!uPDEi0D43DJ8ifBf' @ 0 : 0; will stop at (end)

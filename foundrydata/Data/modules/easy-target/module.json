@@ -1,0 +1,31 @@
+{
+	"id": "easy-target",
+	"name": "easy-target",
+	"title": "Easy Target",
+	"description": "Target tokens with alt+click.",
+	"version": "4.0",
+	"compatibility": {
+		"minimum": 13,
+		"verified": 13
+	},
+	"relationships": {
+		"optional": [{
+			"id": "lib-wrapper",
+			"type": "module"
+		}]
+	},
+	"authors": [{"name": "Kim Mantas"}],
+	"scripts": ["main.js"],
+	"url": "https://bitbucket.org/Fyorl/easy-target",
+	"manifest": "https://bitbucket.org/Fyorl/easy-target/raw/master/module.json",
+	"download": "https://bitbucket.org/Fyorl/easy-target/get/4.0.zip",
+	"languages": [{
+		"lang": "en",
+		"name": "English",
+		"path": "lang/en.json"
+	}, {
+		"lang": "es",
+		"name": "Español",
+		"path": "lang/es.json"
+	}]
+}

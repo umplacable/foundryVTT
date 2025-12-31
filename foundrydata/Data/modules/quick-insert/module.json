@@ -1,0 +1,28 @@
+{
+  "id": "quick-insert",
+  "title": "Quick Insert - Search Widget",
+  "description": "Quickly find actors, items, spells etc. and insert them wherever you need them right now - the map, character sheets, roll tables, journals, you name it. <br> <ul><li>Open with <kbd>Ctrl</kbd> + <kbd>Space</kbd> (default)</li> <li>Hold <kbd>Shift</kbd> to select more than one result</li> <li>Drag and drop directly from the search results</li></ul>",
+  "version": "3.7.2",
+  "authors": [{"name": "Sunspots", "url": "https://gitlab.com/sunspots"}],
+  "esmodules": ["quick-insert.js"],
+  "styles": ["./quick-insert.css"],
+  "packs": [],
+  "languages": [
+    {"lang": "en", "name": "English", "path": "lang/en.json"},
+    {"lang": "es", "name": "Español", "path": "lang/es.json"},
+    {"lang": "fr", "name": "Français", "path": "lang/fr.json"},
+    {"lang": "it", "name": "Italiano", "path": "lang/it.json"},
+    {"lang": "cn", "name": "中文（简体）", "path": "lang/zh_Hans.json"},
+    {"lang": "pt-BR", "name": "Português (Brasil)", "path": "lang/pt_BR.json"},
+    {"lang": "de", "name": "Deutsch", "path": "lang/de.json"},
+    {"lang": "pl", "name": "Polski", "path": "lang/pl.json"}
+  ],
+  "compatibility": {"minimum": "12.324", "verified": "13.350"},
+  "url": "https://gitlab.com/fvtt-modules-lab/quick-insert",
+  "manifest": "https://gitlab.com/fvtt-modules-lab/quick-insert/-/releases/permalink/latest/downloads/module.json",
+  "download": "https://gitlab.com/fvtt-modules-lab/quick-insert/-/releases/3.7.2/downloads/quick-insert-v3.7.2.zip",
+  "license": "MIT",
+  "readme": "https://gitlab.com/fvtt-modules-lab/quick-insert",
+  "bugs": "https://gitlab.com/fvtt-modules-lab/quick-insert/-/issues",
+  "changelog": "https://gitlab.com/fvtt-modules-lab/quick-insert/-/blob/master/CHANGELOG.md"
+}

@@ -1,0 +1,11 @@
+2025/12/30-20:50:46.104 2878 Delete type=3 #1
+2025/12/30-21:24:39.112 5b60 Level-0 table #10: started
+2025/12/30-21:24:39.112 5b60 Level-0 table #10: 0 bytes OK
+2025/12/30-21:24:39.145 5b60 Delete type=0 #8
+2025/12/30-21:24:39.412 5b60 Manual compaction at level-0 from '!users!9yNmTyyxgdWTZjXg' @ 72057594037927935 : 1 .. '!users!P9rGgLfjHtCtlSDM' @ 0 : 0; will stop at '!users!P9rGgLfjHtCtlSDM' @ 3 : 1
+2025/12/30-21:24:39.412 5b60 Compacting 1@0 + 0@1 files
+2025/12/30-21:24:39.451 5b60 Generated table #11@0: 4 keys, 1726 bytes
+2025/12/30-21:24:39.451 5b60 Compacted 1@0 + 0@1 files => 1726 bytes
+2025/12/30-21:24:39.495 5b60 compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/12/30-21:24:39.495 5b60 Delete type=2 #5
+2025/12/30-21:24:39.754 5b60 Manual compaction at level-0 from '!users!P9rGgLfjHtCtlSDM' @ 3 : 1 .. '!users!P9rGgLfjHtCtlSDM' @ 0 : 0; will stop at (end)

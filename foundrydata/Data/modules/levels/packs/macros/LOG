@@ -1,0 +1,7 @@
+2025/12/30-21:28:56.083 2bdc Recovering log #4101
+2025/12/30-21:28:56.158 2bdc Delete type=0 #4101
+2025/12/30-21:28:56.158 2bdc Delete type=3 #4100
+2025/12/30-23:08:52.823 5b60 Level-0 table #4105: started
+2025/12/30-23:08:52.823 5b60 Level-0 table #4105: 0 bytes OK
+2025/12/30-23:08:52.855 5b60 Delete type=0 #4103
+2025/12/30-23:08:52.885 5b60 Manual compaction at level-0 from '!macros!2LfY4Ky5rRDkK7h8' @ 72057594037927935 : 1 .. '!macros!yx7Eb76rfzjh0LEO' @ 0 : 0; will stop at (end)

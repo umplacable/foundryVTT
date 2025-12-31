@@ -1,0 +1,175 @@
+{
+	"POLYGLOT": {
+		"LanguageSettings": "Spracheinstellungen",
+		"ChatSettings": "Chat-Einstellungen",
+		"CustomLanguages.title": "Eigene Sprachen",
+		"CustomLanguages.hint": "Definieren eine Liste von benutzerdefinierten Sprachen, die dem System hinzugefügt werden sollen. Sie müssen durch Kommas oder Semikolons getrennt werden.",
+		"ComprehendLanguages.title": "Allwissende Sprache",
+		"ComprehendLanguages.hint": "Lege eine Sprache fest, deren Sprecher alle anderen Sprachen versteht, die aber nicht gesprochen oder geschrieben werden kann. Ein Akteur kann dann alle Chatnachrichten und Journaltexte lesen.",
+		"Truespeech.title": "Allwissende Sprache",
+		"Truespeech.hint": "Lege eine Sprache fest, deren Sprecher alle gesprochenen Sprachen versteht (kann keine Notizbücher lesen) und die von allen Lebewesen verstanden wird. Ein Akteur wird in der Lage sein, alle Chat-Nachrichten zu lesen und Nachrichten in einer Sprache zu schreiben, die von allen verstanden wird.",
+		"DefaultLanguage.title": "Standardsprache",
+		"DefaultLanguage.hint": "Name der Standard Sprache. Leer lassen, um die Systemvorgaben zu nutzen.",
+		"ReplaceLanguages.title": "Systemsprachen entfernen",
+		"ReplaceLanguages.hint": "Entfernt die Standardsprachen des Systems. Die erste Sprache in der Liste der benutzerdefinierten Sprachen wird zur neuen Standardsprache.",
+		"ScrambleGM.title": "Verschleiere Nachrichten für den SL",
+		"ScrambleGM.hint": "Übersetze den Text für den SL nicht (siehe die Farbe der Weltkugel für das Verständnis des Tokens). Erfordert Neuladen.",
+		"toggleRuneText.title": "Umschalten von Runen Text in Journals",
+		"toggleRuneText.hint": "Schaltet die Sichtbarkeit von \"Runen\" in den Journals um.",
+		"RandomizeRunes.title": "Runen zufällig auswählen",
+		"RandomizeRunes.hint": "Damit wird festgelegt, welche Art von RNG zur Generierung einer Phrase verwendet wird. ⚠️ Die Option \"Keine\" unterstützt nur alphanumerische Zeichen (keine Akzente).",
+		"ExportFonts.title": "Polyglot-Schriften zu Foundry hinzufügen",
+		"ExportFonts.hint": "Fügt die Schriften von Polyglot zu den Funktionen von Foundry hinzu, z. B. Zeichnungen.",
+		"DisplayTranslated.title": "Übersetzungen anzeigen",
+		"DisplayTranslated.hint": "Bei Sprachen, die im Chat-Fenster übersetzt werden, wird der Originaltext und darunter eine Übersetzung angezeigt.",
+		"HideTranslation.title": "Indikatoren vor Spielern verbergen",
+		"HideTranslation.hint": "Versteckt den Globus und den Text „Übersetzt aus“ in Chatnachrichten an Spieler. Nützlich, wenn Sie Spielern nicht zeigen möchten, welche Sprache Sie sprechen",
+		"AllowOOC.title": "Verschlüsseln von verfremdeten Chat-Nachrichten",
+		"AllowOOC.hint": "Erlaubt dem GM den Text zu verschlüsseln wenn Out Of Charakter Nachrichten geschickt werden.",
+		"Translation": "Übersetzung",
+		"TranslatedFrom": "Übersetzt von ",
+		"LanguageLabel": "Sprache",
+		"ToggleRunes": "Runen umschalten",
+		"Runes": "Runen",
+		"Generic": {
+			"Language": "Sprache"
+		},
+		"COC7": {
+			"LanguageOwn": "Sprache",
+			"LanguageAny": "Sprache",
+			"LanguageOther": "Sprache",
+			"LanguageSpec": "Sprache"
+		},
+		"SWADE.LanguageSkills": "Sprache",
+		"WFRP4E.LanguageSkills": "Sprache",
+		"enableAllFonts": {
+			"title": "Schriftarten von Foundry zu Polyglot hinzufügen",
+			"choices": {
+				"0": "keine",
+				"1": "Polyglott Schriftarten",
+				"2": "Zusätzliche Schriftarten von Core",
+				"3": "beide"
+			},
+			"hint": "Ausschalten, um alle Foundry-Schriften aus Polyglot zu entfernen."
+		},
+		"JournalHighlightColor": {
+			"hint": "Bestimmt die Farbe der Hervorhebung von Schriftarten in Notizbüchern.",
+			"title": "Hervorhebungsfarbe"
+		},
+		"languageDataPath": {
+			"title": "Sprache Datenpfad",
+			"hint": "Wenn das Spielsystem über Sprachen verfügt, die in den Akteursdaten festgelegt sind und nicht richtig geladen werden, verwendet es möglicherweise einen anderen Datenpfad. Gebe den Datenpfad für das richtige Attribut ein (z. B. actor.system.languages oder actor.system.speak). Diese Einstellung hat Vorrang vor der Einstellung {setting}. Erfordert Neuladen."
+		},
+		"RandomizeRunesOptions": {
+			"a": "Standard",
+			"b": "Einzigartige Sätze",
+			"c": "Keine ⚠️"
+		},
+		"literacyDataPath": {
+			"hint": "Wie die Einstellung {setting}, aber für das Lesen von Notizbüchern. Diese Einstellung erfordert die Einstellung {setting}. Erfordert Neuladen.",
+			"title": "Alphabetisierung Datenpfad"
+		},
+		"AlphabetLabel": "Alphabet",
+		"DND5E": {
+			"SpecialLanguages.hint": "Name der Sprache, die \"Sprachen\" ersetzt, z. B. \"alle Sprachen, die es im Leben kannte\".",
+			"SpecialLanguages.title": "Ersetzen von speziellen Sprachen",
+			"TargetedParty": {
+				"title": "Zielgruppe",
+				"hint": "Wenn dein Spiel sehr viele Benutzer hat, kann die Sprecheranzeige zu voll werden. Du kannst die Liste filtern, indem du sie auf Benutzer beschränken, die Charaktere besitzen, die Mitglieder der Zielgruppe sind."
+			}
+		},
+		"LatinAlphabet": "Lateinisches Alphabet",
+		"UESRPG.Language": "Sprache",
+		"AllowOOCOptions": {
+			"d": "Niemand",
+			"a": "Alle",
+			"b": "Nur für SL",
+			"c": "Nur für Spieler"
+		},
+		"IgnoreJournalFontSize": {
+			"title": "Normale Schriftgröße verwenden",
+			"hint": "Ignoriert die Größe von Polyglot-Schriften in Notizbüchern, so dass sie die gleiche Größe wie normaler Text haben. Nützlich, wenn die Formatierung der Notizbüchern wichtig ist."
+		},
+		"JournalHighlight": {
+			"hint": "Legt die Deckkraft der Hervorhebung von Schriftarten im Notizbuch fest.",
+			"title": "Hervorhebung Deckkraft (%)"
+		},
+		"LanguageProvider": {
+			"hint": "Wählen aus, wer Sprachinformationen für Alphabete und Sprachen bereitstellt. Weitere Sprachanbieter können über Spielsysteme und installierte Module verfügbar gemacht werden. Die folgenden Optionen sind abhängig von dem hier gewählten Sprachanbieter. ⚠️ Wenn du den Anbieter wechselst, musst du diese Einstellungen speichern und erneut öffnen.",
+			"name": "Anbieter für Spracheinstellungen",
+			"choices": {
+				"module": "[Modul] {name}",
+				"system": "[System] {name}",
+				"native": "Generisch"
+			}
+		},
+		"LanguageRegex": {
+			"title": "Sprache RegEx",
+			"hint": "Damit kann der Suchbegriff für Gegenstände von \"Language\" auf etwas anderes wie \"Tongue\" geändert werden. Diese Einstellung ist vor allem für Nicht-Englischsprachige nützlich."
+		},
+		"logographicalFontToggle.title": "Logografische Schriftarten",
+		"RuneRegex": {
+			"title": "Nur alphanumerische Zeichen randomisieren",
+			"hint": "Bewirkt, dass die Zufallsgenerierung nicht-alphanumerische Zeichen ignoriert (z. B. !,.;:?#$''). Dies kann den unerwünschten Effekt haben, dass einige dieser Zeichen in einigen Schriftarten als Quadrat (□) angezeigt werden."
+		},
+		"logographicalFontToggle.hint": "Halbiert die Größe von Sätzen mit logografischen Schriftarten (z. B. japanisch oder chinesische Schriftzeichen).",
+		"DefaultAlphabet": "Standardalphabet",
+		"Font": "Schriftart",
+		"FontSettings": "Schrift-Einstellungen",
+		"FontSize": "Schriftgröße (%)",
+		"Fonts": "Schriftarten",
+		"Languages.hint": "Ändert das für die Sprachen verwendete Alphabet.",
+		"Languages.title": "Sprachen",
+		"SWADE": {
+			"AdditionalLiterateStat": {
+				"title": "Alphabetisierung 'Stat Key'",
+				"hint": "Es ist möglich, das lesen von Notizbücher durch Hinzufügen einer zusätzlichen Statistik einzuschränken. Du musst den Stat Key eingeben (Groß- und Kleinschreibung beachten). Diese Einstellung ist unabhängig von der Einstellung {Setting}."
+			},
+			"AdditionalLanguageStat": {
+				"title": "Sprache 'Stat Key'",
+				"hint": "Es ist möglich, eine zusätzliche Statistik zu erstellen (die in den SWADE Optionen eingestellt wird). Sie müssen den Stat Key eingeben (Groß- und Kleinschreibung beachten). Beachten Sie, dass diese Einstellung die Einstellung {setting} außer Kraft setzt."
+			}
+		},
+		"GameMasterHasAssignedCharacter": "Du bist der {GM} und hast einen Charakter zugewiesen. Polyglot kann sich in diesem Fall merkwürdig verhalten. Du solltest die Zuordnung zu diesem Charakter aufheben.",
+		"General": "Allgemein",
+		"Omniglot": {
+			"title": "Omniglot Sprache",
+			"hint": "Legen eine Sprache fest, deren Sprecher alle anderen Sprachen versteht und spricht. Ein Akteur kann dann in allen anderen Sprachen lesen und schreiben, sowohl im Chat als auch in den Notizbüchern."
+		},
+		"GeneralSettings": "Allgemeine Einstellungen",
+		"AlphabeticOnly": "Nur Alphabetisch",
+		"Logographical": "Logografische",
+		"KnownLanguages": "Bekannte Sprachen",
+		"UnknownLanguages": "Unbekannte Sprachen",
+		"TOURS": {
+			"Main": {
+				"title": "Erste Schritte mit Polyglot",
+				"Canvas": {
+					"Content": "Diese Tour führt durch die Funktionen, die Polyglot der Benutzeroberfläche hinzufügt und wie sie mit Foundry interagieren, sowie durch einige Hinweise für Neulinge zur Charakterauswahl.",
+					"Title": "Willkommen bei Polyglot"
+				},
+				"LanguageSelector": {
+					"Title": "Sprachauswahl",
+					"Content": "Unter <span class='reference'>Sprachauswahl</span> kann die Sprache gewählt werden, in der gesprochen wird, wobei die gesendeten Nachrichten verschlüsselt werden, solange die Funktion aktiviert ist."
+				},
+				"LanguageSelectorSelect": {
+					"Title": "Dropdown der Sprachauswahl"
+				},
+				"ChatMessage": {
+					"Title": "Chat-Nachrichten",
+					"Content": "So sieht eine Nachricht aus, wenn Polyglot verwendet wird."
+				},
+				"ChatMessageScrambled": {
+					"Title": "Verschlüsselter Text"
+				},
+				"LanguageSelectorCheckbox": {
+					"Title": "Kontrollkästchen für die Sprachauswahl",
+					"Content": "Das <span class='reference'>Kontrollkästchen</span> schaltet die Verschlüsselung ein und aus. Jeder Benutzer, der das Häkchen entfernt, spricht so, als ob das Modul deaktiviert wäre."
+				}
+			}
+		},
+		"DisplayCheckbox": {
+			"hint": "Entfernt das Kontrollkästchen aus dem Chat-Bereich."
+		}
+	}
+}

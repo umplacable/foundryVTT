@@ -1,0 +1,43 @@
+<div>
+    <div class="effects">
+        <header>
+            <div class="code">{{localize 'MonksLittleDetails.Code'}}</div>
+            <div class="name">{{localize 'MonksLittleDetails.Name'}}</div>
+            <div class="filename">{{localize 'MonksLittleDetails.FileName'}}</div>
+
+            <div class="controls">
+                <a data-action="addEffect"><i class="fa-regular fa-square-plus"></i></a>
+            </div>
+        </header>
+
+        <ol class="scrollable effects-list" data-effects>
+            {{#each effects as |effect i|}}
+            <li class="effect" data-index="{{i}}" data-effect-id="{{effect.id}}">
+                <div class="code">
+                    <input type="text" readonly name="{{concat "effects." effect.id ".id"}}" value="{{effect.id}}" />
+                </div>
+
+                <div class="code">
+                    <input type="text" name="{{concat "effects." effect.id ".name"}}" value="{{effect.name}}" data-action="updateEffect"/>
+                </div>
+
+                <div class="filename">
+                    <file-picker data-type="imagevideo" name="{{concat "effects." effect.id ".img"}}" value="{{effect.img}}" data-action="updateEffect" />
+                </div>
+
+                <div class="controls">
+                    <a data-action="deleteEffect" data-tooltip="Delete Effect"><i class="fas fa-trash"></i></a>
+                </div>
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+    <footer class="sheet-footer flexrow" style="flex-grow:0;">
+        <button type="button" name="reset" data-action="reset">
+            <i class="fas fa-undo"></i> {{localize 'MonksLittleDetails.ResetDefaults'}}
+        </button>
+        <button type="submit" name="submit" data-action="submit">
+            <i class="far fa-save"></i> {{localize 'MonksLittleDetails.SaveChanges'}}
+        </button>
+    </footer>
+</div>

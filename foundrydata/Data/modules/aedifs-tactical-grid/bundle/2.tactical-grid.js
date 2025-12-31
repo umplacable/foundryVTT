@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkaedifs_tactical_grid=self.webpackChunkaedifs_tactical_grid||[]).push([[2],{2:(e,t,n)=>{n.r(t),n.d(t,{register:()=>i});var o=n(356);function i(){let e;Hooks.on("renderTokenActionHud",((t,n,o,i)=>{e=canvas.tokens.get(o.hud.tokenId)})),Hooks.on("tokenActionHudSystemActionHoverOn",((t,n)=>{e&&o.c6.rangeHighlight(e,{item:n})})),Hooks.on("tokenActionHudSystemActionHoverOff",((t,n)=>{e&&o.c6.clearRangeHighlight(e)}))}}}]);
+//# sourceMappingURL=2.tactical-grid.js.map

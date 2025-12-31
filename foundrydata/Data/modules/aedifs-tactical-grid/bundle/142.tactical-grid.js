@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkaedifs_tactical_grid=self.webpackChunkaedifs_tactical_grid||[]).push([[142],{142:(a,e,i)=>{function t(){TacticalGrid.coverCalculators["pf2e-visioner"].calculateCover=c}function c(a,e){const i=game.modules.get("pf2e-visioner")?.api.getAutoCoverState(a,e);return"greater"===i?TacticalGrid.COVER.FULL_COVER:"standard"===i?TacticalGrid.COVER.THREE_QUARTERS_COVER:"lesser"===i?TacticalGrid.COVER.HALF_COVER:TacticalGrid.COVER.NO_COVER}i.r(e),i.d(e,{register:()=>t})}}]);
+//# sourceMappingURL=142.tactical-grid.js.map

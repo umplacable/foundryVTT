@@ -1,0 +1,11 @@
+<div class="w-100 h-100 ve-overflow-y-hidden ve-flex-col">
+	{{#if title.show}}
+		<header class="journal-page-header">
+			<h{{ title.level }}>{{ name }}</h{{ title.level }}>
+		</header>
+	{{/if}}
+
+	{{#if document.system.iframe_url}}
+		<iframe src="{{document.system.iframe_url}}" class="w-100 h-100" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{{/if}}
+</div>

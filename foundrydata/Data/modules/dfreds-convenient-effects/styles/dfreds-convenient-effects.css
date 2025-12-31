@@ -1,0 +1,29 @@
+#convenientEffects .ce-inline-control {
+  color: var(--color-text-dark-5);
+}
+#convenientEffects .ce-inline-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+#convenientEffects .ce-inline-control:hover {
+  background-color: var(--color-cool-3);
+}
+#convenientEffects .ce-inline-control[aria-pressed=true] {
+  color: var(--button-text-color);
+  background-color: var(--color-cool-3);
+}
+#convenientEffects .integration-icon {
+  margin-right: 12px;
+  flex: none;
+  align-self: center;
+}
+
+#convenient-effect-config fieldset {
+  margin-bottom: 1rem;
+}
+#convenient-effect-config fieldset:last-child {
+  margin-bottom: 0;
+}
+#convenient-effect-config .hint {
+  margin-bottom: 16px;
+}

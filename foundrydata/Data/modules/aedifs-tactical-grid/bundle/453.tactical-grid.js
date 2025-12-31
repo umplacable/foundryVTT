@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkaedifs_tactical_grid=self.webpackChunkaedifs_tactical_grid||[]).push([[453],{453:(e,t,a)=>{a.r(t),a.d(t,{register:()=>c});var i=a(356);function c(){Hooks.on("action-pack.updateTray",(e=>{e.find(".item-name").on("mouseover",(async e=>{i.c6.rangeHighlightItemUuid($(e.target).closest(".item").data("item-uuid"))})).on("mouseleave",(async e=>{i.c6.clearRangeHighlightItemUuid($(e.target).closest(".item").data("item-uuid"))}))}))}}}]);
+//# sourceMappingURL=453.tactical-grid.js.map

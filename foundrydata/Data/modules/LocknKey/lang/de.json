@@ -1,0 +1,902 @@
+{
+	"LocknKey" : {
+		"Titles" : {
+			"LockSettings"				: "Schloss Einstellungen",
+			"PickpocketSettings"		: "Taschendiebstahl Einstellungen",
+			"confirm"					: "bestätigen",
+			"abbort"					: "abbrechen",
+			"LocknKey"					: "Lock & Key",
+			"LocknKeyabbr"				: "L&K",
+			"WorldSettings"				: "Welteinstellungen (nur SL)",
+			"ClientSettings"			: "Spielereinstellungen",
+			"GMonly"					: "nur SL",
+			"LockTokens"				: "Schlosseinstellungen",
+			"CharacterTokens"			: "Charaktereinstellungen",
+			"KeyItems"					: "Schlüsseleinstellungen",
+			"LPItems"					: "Schlossmanipulationseinstellungen",
+			"LockusePasskey"			: "Passwort",
+			"Passkey"					: "Passwort",
+			"EnterPasskey"				: "Passwort eingeben:",
+			"ConfirmPasskey"			: "Bestätigen",
+			"Lockuse"					: "Schloss benutzen",
+			"LockuseKey"				: "Benutze Schlüssel",
+			"LockusePick"				: "Knacke Schloss",
+			"LockuseBreak"				: "Zerbreche Schloss",
+			"LockuseFree"				: "Freie Schlossnutzung",
+			"LockuseCustom"				: "{pCheckName}",
+			"Close"						: "Schließen",
+			"Keycreation"				: "Schlüssel generieren",
+			"Keyname"					: "Schlüsselname",
+			"KeyID"						: "Schlüssel ID (IDs mit \";\" trennen)",
+			"Keyfolder"					: "Schlüssel Zielordner",
+			"ConfirmKeycreation"		: "Erschaffen",
+			"Basic"						: "Basis",
+			"Triggers"					: "Triggers",
+			"FreeCircumventHUD"			: "Diese Figur kann das nächste Schloss umgehen, zum entfernen Klicken",
+			"PickPocket"				: "Taschendiebstahl",
+			"LockchangePasskey"			: "Passwort ändern",
+			"LockuseIdentity"			: "Identität",
+			"newPasskey"				: "Neues Passwort:",
+			"addIdentityMessage"		: "Spieler {pPlayerName} will folgende Indetitäten zu einem Schloss hinzufügen:{pIdentities}",
+			"IdentifierofType"			: " {pIdentifier} von {pType} {pName}",
+			"ToggleTile"				: "Fliesen Zustand ändern (L&K)",
+			"DC"						: "(SG: {pDC})",
+			"Usekey"					: "Benutze Schlüssel",
+			"Keyuse"					: "Schlüssel Benutzung",
+			"dropKey"					: "Schlüssel hierhin ziehen",
+			"clicktoselectImage"		: "Klicken um Bild auszuwählen"
+		},
+		
+		"Popup" : {
+			"TokenisLocked"				: "{pLockName} ist verschlossen",
+			"DoorisLocked"				: "Diese Tür ist verschlossen",
+			"Lockoutofreach"			: "Dieses Schloss ist außer Reichweite",
+			"Tokenoutofreach"			: "{pTokenName} ist außer Reichweite",
+			"TokenoutofreachAnonymous"	: "Außer Reichweite",
+			"lockedDoor"				: "Die Tür ist nun verschlossen",
+			"lockedToken"				: "{pLockName} ist nun verschlossen",
+			"unlockedDoor"				: "Die Tür ist nun unverschlossen",
+			"unlockedToken"				: "{pLockName} ist nun unverschlossen",
+			"GamePaused"				: "Das Spiel ist pausiert",
+			"noLockPickItem"			: "Kein Dietrich im Inventar",
+			"nomatchingKey"				: "Kein passender Schlüssel",
+			"pickLockfailed"			: "Schlossknacken fehlgeschlagen",
+			"cantLock" : {
+				"default"				: "Schloss kann nicht verschlossen werden",
+				"break"					: "Schloss ist bereits offen"
+			},
+			"breakLockfailed"			: "Schlossaufbrechen fehlgeschlagen",
+			"NotaLock"					: "Kein Schloss",
+			"WrongPassword"				: "Falsches Passwort",
+			"Lockisjammed"				: "Schloss ist verklemmt",
+			"Lockpickbroke"				: "Dietrich ist zerbrochen",
+			"jammedLock"				: "Schloss verklemmt",
+			"cantcircumventFree"		: "Schloss kann nicht umgangen werden",
+			"PickPocketfailed"			: "Taschendiebstahl fehlgeschlagen",
+			"customcheckfailed"			: "{pCheckName} fehlgeschlagen",
+			"WrongIdentity"				: "Falsche Identität",
+			"PasswordChanged"			: "Passwort geändert",
+			"NoPasswordLength"			: "Neues Passwort zu kurz",
+			"CantChangePassword"		: "Kann Passwort nicht ändern",
+			
+			"CantbePicked"				: "Kann nicht geknack werden",
+			"CantbeBroken"				: "Kann nicht gebrochen werden",
+			"CantbeCustomChecked"		: "Kann {pCheckName} nicht nutzen",
+			"CantbePickpocketed"		: "Kann nicht bestohlen werden"
+		},	
+		
+		"ChatMessage" : {
+			"LockPick"					: "{pName} hat versucht ein Schloss zu knacken:",
+			"LockPicksuccess" : {
+				"crit"					: "{pName} hatte beim Schloss knacken kritischen Erfolg",
+				"default" 				: "{pName} hat das Schloss erfolgreich geknackt"
+			},
+			"LockPickfail" : {
+				"crit"					: "{pName} ist beim Schloss knacken kritisch gescheitert",
+				"default" 				: "{pName} hat das Schloss nicht knacken können"
+			},
+			"LockPicksuccessLPName" : {
+				"crit"					: "{pName} hatte beim Schloss knacken mit {pLPName} kritischen Erfolg",
+				"default" 				: "{pName} hat das Schloss erfolgreich mit {pLPName} geknackt"
+			},
+			"LockPickfailLPName" : {
+				"crit"					: "{pName} ist beim Schloss knacken mit {pLPName} kritisch gescheitert",
+				"default" 				: "{pName} hat das Schloss mit {pLPName} nicht knacken können"
+			},
+			"LockPickfailLPNameremove" : {
+				"crit"					: "{pName} ist beim Schloss knacken kritisch gescheitert und hat {pLPName} zerbrochen"
+			},
+			
+			"LockBreak"					: "{pName} hat versucht ein Schloss aufzubrechen:",
+			"LockBreaksuccess" : {
+				"crit"					: "{pName} hatte beim Schloss aufbrechen kritischen Erfolg",
+				"default" 				: "{pName} hat das Schloss erfolgreich aufgebrochen"
+			},
+			"LockBreakfail" : {
+				"crit"					: "{pName} ist beim Schloss aufbrechen kritisch gescheitert",
+				"default" 				: "{pName} hat das Schloss nicht aufbrechen können"
+			},
+			
+			"CustomCheck"				: "{pName} nutze {pCheckName}:",
+			"CustomChecksuccess" : {
+				"crit"					: "{pName} hatte bei {pCheckName} kritischen Erfolg",
+				"default" 				: "{pName} hatte {pCheckName} Erfolg"			
+			},
+			"CustomCheckFail" : {
+				"crit"					: "{pName} ist bei {pCheckName} kritisch Gescheitert",
+				"default" 				: "{pName} ist bei {pCheckName} Gescheitert"
+			},
+			
+			"PickPocket"				: "{pName} hat einen Taschendiebstahl versucht:",
+			"PickPocketDetailed"		: "{pName} hat einen Taschendiebstahl bei {pTargetName} mit einem SG von {pDC} versucht:",
+			"PickPocketSuccess" : {
+				"crit"					: "{pName} hatte beim Taschendiebstahl kritischen Erfolg",
+				"default" 				: "{pName} hat erfolgreich Taschendiebstahl begangen"			
+			},
+			"PickPocketFail" : {
+				"crit"					: "{pName} ist beim Schloss Taschendiebstahl kritisch gescheitert",
+				"default" 				: "{pName} ist beim Taschendiebstahl gescheitert"
+			}
+		},
+		
+		"Settings" : {
+			"useGMquickKeys" : {
+				"name" 					: "Nutze SL schnell Befehle",
+				"descrp"				: "Erlaubt es SLs spezielle Schloss Befehle zu nutzen welche unten aufgeführt sind (Beeinträchtigte mit * markiert)"
+			},
+			
+			"allowTileLocking" : {
+				"name" 					: "Erlaube Fliesen Schlösser",
+				"descrp"				: "Erlaubt es Fliesen als abzuschließbare Objekte zu benutzen"
+			},
+			
+			"allowLocking" : {
+				"name" 					: "Erlaube Spielern zu schließen",
+				"descrp"				: "Erlaubt es Spielern Schlösser zu verschließen für welche sie einen passenden Schlüssel haben"
+			},
+			
+			"startasLocked" : {
+				"name" 					: "Starte verschlossen",
+				"descrp"				: "Ob neu registrierte Schlösser als verschlossen starten"
+			},
+	
+			"LockDistance" : {
+				"name" 					: "Schloss Distanz",
+				"descrp"				: "Distanz in welcher Schlösser genutzt werden können (in Spiel Einheiten)"		
+			},
+			
+			"DefaultLockSound" : {
+				"name"					: "Standard Schloss Geräusche",
+				"descrp"				: "Die standard Geräusche für neu Schlösser"
+			},
+			
+			"UseArmReachDistance": {
+				"name" 					: "Nutze \"Arms Reach\" Distanz",
+				"descrp"				: "Nutzt die Distanz welche in \"Arms Reach\" festgelegt ist für die Schloss Distanz"	
+			},
+			
+			"alwaysopenOwned" : {
+				"name" 					: "Eigene immer öffnen",
+				"descrp"				: "Erlaubt es spielern eigene Marken immer zu öffnen, auch wenn sie verschlossen sind"		
+			},
+			
+			"allowallInteractions" : {
+				"name" 					: "Alle Interaktionen erlauben",
+				"descrp"				: "Ob alle Interaktionen (knacken, brechen, eigene, Taschendiebstahl) erlaubt sein soll, auch bei unmöglichen SGs"					
+			},	
+			
+			"showinteractionDCs" : {
+				"name" 					: "Interaktions SGs anzeigen",
+				"descrp"				: "Ob im Interaktionsmenu die SGs angezeigt werden sollen"					
+			},
+			
+			"showallLockInteractions" : {
+				"name" 					: "Zeige alle Schloss Interaktionen",
+				"descrp"				: "Zeige immer alles Schloss Interaktionen (für die bösen SLs unter euch)"					
+			},
+			
+			"preventUseinPause" : {
+				"name" 					: "Verhindere Schlüssel-Nutzung in Pause",
+				"descrp"				: "Verhindert, dass Spieler Schlüssel benutzen können während das Spiel pausiert ist"		
+			},
+			
+			"useKeyDialogbydefault" : {
+				"name" 					: "Nutze Schlüsselauswahl standardmäßig",
+				"descrp"				: "Ob alle Schlösser standardmäßig die Schlüsselauswahl benutzen sollen"		
+			},
+	
+			"autoKeyuse" : {
+				"name" 					: "Automatische Schlüssel-Nutzung",
+				"descrp"				: "Spieler werden automatisch versuchen passende Schlüssel zu nutzen, wenn sie mit verschlossenen Gegenständen interagieren"		
+			},
+
+			"KeyItemtype" : {
+				"name" 					: "Gegenstandstyp für Schlüssel",
+				"descrp"				: "Der Gegenstandstyp den das Modul für neue Schlüssel benutzt, leer lassen um den standard Typen zu benutzen (Erhalt einer Liste valider Typen durch Eingeben von \"game.items.documentClass.TYPES\" in die F12 Konsole)"		
+			},
+
+			"LnKSettingTypes" : {
+				"name" 					: "Einstellungs Gegenstandstypen",
+				"descrp"				: "Die Gegenstandstypen für welche die Lock & Key Einstellungen angezeigt werden (getrennt mit \";\", \"all\" für alle typen)"		
+			},
+			
+			"LnKSettingsubTypes" : {
+				"name" 					: "Einstellungs Gegenstandssubtypen",
+				"descrp"				: "Die Gegenstandssubtypen für welche die Lock & Key Einstellungen angezeigt werden (getrennt mit \";\", \"all\" für alle subtypen)"		
+			},
+			
+			"DefaultKeyFolder" : {
+				"name"					: "Standard Schlüssel Ordner",
+				"descrp"				: "Der Name des Ordners welcher Standarmäßig beim Schlüssel Erschaffungsmenu benutzt wird"
+			},
+			
+			"LimitKeyFolders" : {
+				"name"					: "Filtere Schlüssel Ordner",
+				"descrp"				: "Ob nur der Standard Schlüssel Ordner und seine Unterordner im Schlüssel Erschaffungsmenu angezeigt werden sollen"
+			},
+			
+			"KeyitemCreationPopup" : {
+				"name" 					: "Schlüssel-Erschaffungsmenu",
+				"descrp"				: "Ob beim generieren eines neuen Schlüssels ein Menu für die Eingabe des Namens und des Ordners angezeigt werden soll"		
+			},	
+			
+			"KeyitemCreationIDOption" : {
+				"name" 					: "Schlüssel-Erschaffungs ID Option",
+				"descrp"				: "Ob eine Option für eine eigene Schlüssel ID im Schlüssel-Erschaffungsmenu angezeigt werden soll"		
+			},	
+
+			"UseKeynameasID" : {
+				"name" 					: "Schlüsselname als ID",
+				"descrp"				: "Ob der Name von Schlüsseln als zusätzliche ID für das öffnen von Schlössern benutzt werden soll"		
+			},			
+			
+			"usePf2eSystem" : {
+				"name" 					: "Nutze System Würfe",
+				"descrp"				: "Nutzt das Würfelsystem des jeweiligen Spielsystems(Deaktiviert Lock & Key Wurfformeln und Kritsystem um anstatt dessen System abhängige Regeln zu benutzen)"						
+			},
+			
+			"CritMethod" : {
+				"name" 					: "Krit System",
+				"descrp"				: "Die Art und Weise auf welche kritische Würfe bestimmt werden",
+				"options" : {
+					"noCrit"			: "Keine Krits",
+					"natCrit"			: "Nat 1/20",
+					"natCritpm10"		: "Nat 1/20 & +-10 von SG [z.B. Pf2e]",
+					"d100WFRP4"			: "d100 Nat1/100 [z.B. WFRP4e]",
+					"d100WFRP4Doubles"	: "d100 Nat1/100 & doubles [z.B. WFRP4e]",
+					"d100CoC7e"			: "d100 Schwierigkeits Bereiche [z.B. CoC7e]",
+					"d10poolCoD2e"		: "d10 Pool >=8 und 10 neu würfeln [z.B. CoD2e]",
+					"3d20DSA": "3d20 DSA"
+				}
+			},
+			
+			"LockPickItem" : {
+				"name" 					: "Dietrichgegenstände",
+				"descrp"				: "Die Namen oder die Kompendium IDs (empfohlen) der Gegenstände welche zum Schlösserknacken benutzt werden können, \"-\" sollte kein Gegenstand gebraucht werden (mit \";\" getrennt)"		
+			},
+			
+			"MentionLockPickItem" : {
+				"name" 					: "Dietrich erwähnen",
+				"descrp"				: "Ob der benutzte Dietrich im Chat erwähnt werden soll"		
+			},
+			
+			"RemoveLP" : {
+				"name" 					: "Dietrich zerstören",
+				"descrp"				: "Ob und wann der Dietrich Gegenstand eines Nutzers entfernt werden soll",
+				"options" : {
+					"never"				: "niemals",
+					"always"			: "immer",
+					"fail"				: "bei Fehlschlägen",
+					"critfail"			: "bei kritischen Fehlschlägen"
+				}
+			},
+			
+			"RemoveLPoncritFail" : {
+				"name" 					: "Verbrauche Dietrich bei kritischem Misserfolg",
+				"descrp"				: "Ob bei einem kritischen Misserfolg der benutze Dietrich entfernt werden soll (bzw. der Stapel um 1 verringert wird)"		
+			},	
+
+			"JamLockonLPcritFail" : {
+				"name" 					: "Schloss bei kritischem Misserfolg verklemmen",
+				"descrp"				: "Verklemmte Schlösser können nicht mehr genkackt werden"		
+			},
+			
+			"JamedLockKeyunusable" : {
+				"name" 					: "Verklemmte Schlösser verweigern Schlüssel",
+				"descrp"				: "Verklemmte Schlösser können nicht mehr mit passenden Schlüsseln geöffnet werden"		
+			},
+			
+			"defaultLPAttempts" : {
+				"name"					: "Standard Schlossknack Versuche",
+				"descrp"				: "Die standard Anzahl an Schlossknack Versuchen bevor das Schloss unknackbar wird (-1 für unbegrenzte Versuche)"
+			},	
+			
+			"autoResetAttempts" : {
+				"name"					: "Auto Schlossknack Versuche zurück setzen",
+				"descrp"				: "Wann Schlossknack Versuche zurück gesetzt werden sollen",
+				"options" : {
+					"off"				: "niemals",
+					"lockchange"		: "bei Schloss Status Änderung",
+					"lpsuccess"			: "bei Schlossknack Erfolg"
+				}
+			},		
+			
+			"LockPickFormula" : {
+				"name" 					: "Schlossknack Wurfformel",
+				"descrp"				: "Die Würfelformel welche für Schlossknack-Würfe verwendet wird (z.B. \"1d20 + @actor.skills.thievery.mod\", hilfe auf der Github-Seite des Moduls zu finden)"				
+			},
+			
+			"DefaultPickDC" : {
+				"name" 					: "Standard Schloss SG",
+				"descrp"				: "Der Standardwert für Schloss SGs"				
+			},
+			
+			"LockBreakFormula" : {
+				"name" 					: "Schlossaufbrechen Wurfformel",
+				"descrp"				: "Die Würfelformel welche für Schloss-aufbrechen-Würfe verwendet wird (e.g. \"1d20 + @actor.skills.athletics.mod - 2\", hilfe auf der Github-Seite des Moduls zu finden)"				
+			},
+		
+			"DefaultBreakDC" : {
+				"name" 					: "Standard Schlossaufbrechen SG",
+				"descrp"				: "Der Standardwert für Schlossaufbrechen SGs"				
+			},
+			
+			"CustomCircumventName" : {
+				"name" 					: "Eigener Wurfname",
+				"descrp"				: "Der Name des dritten einstelbaren Wurfs um Schlösser zu überwinden (z.B. \"Hacken\" oder \"Magische Runde\", leer lassen um auszuschalten)"				
+			},
+			
+			"CustomCircumventFormula" : {
+				"name" 					: "Eigene Wurfformel",
+				"descrp"				: "Die Würfelformel welche für Würfe mit dem oben genannten eigenen Wurf genutzt wird"				
+			},
+			
+			"CustomCircumventDefaultDC" : {
+				"name" 					: "Eigener Wurf standard SG",
+				"descrp"				: "Der Standardwert für eigene Wurf SGs"				
+			},
+			
+			"LockBreakunlockable" : {
+				"name" 					: "Aufgebrochene Schlösser sind unabschließbar",
+				"descrp"				: "Mache Schlösser welche aufgebrochen wurden unabschließbar"				
+			},
+			
+			"onlyCombatMultiSuccess" : {
+				"name" 					: "Mehrere Erfolge nur während Kämpfen",
+				"descrp"				: "Ignoriert die benötigten Erfolge außerhalb von Kämpfen"				
+			},
+			
+			"LockCircumventName" : {
+				"name" 					: "Schloss umgehen Schlagwörter",
+				"descrp"				: "Schlagwörter um Effekte (z.B. der \"Knock\" Zauber) zu identifizieren welche es Spielern erlauben Schlösser zu umgehen (mit \";\" getrennt)"				
+			},
+			
+			"AutoAcceptIdentityAddition" : {
+				"name" 					: "Identitäs hinzufügung automatisch bestätigen",
+				"descrp"				: "Ob Identitäts hinzufügungen für Schlösser automatisch bestätigt werden sollen (nicht empfohlen)"				
+			},
+			
+			"EnablePickpocketing" : {
+				"name" 					: "Taschendiebstahl aktivieren",
+				"descrp"				: "Aktiviert Taschendiebstahl und entsprechende Einstellungen"				
+			},
+			
+			"PickPocketFormula" : {
+				"name" 					: "Taschendiebstahl formel",
+				"descrp"				: "Die Würfelformel welche für Taschendiebstahl Würfe verwendet wird (z.B. \"1d20 + @actor.skills.thievery.mod\", hilfe auf der Github-Seite des Moduls zu finden)"				
+			},
+			
+			"PickPocketDefaultDC" : {
+				"name" 					: "Taschendiebstahl standard SG",
+				"descrp"				: "Der Standardwert für Taschendiebstahl SGs"				
+			},
+			
+			"PickPocketDefaultDCFormula" : {
+				"name" 					: "Taschendiebstahl standard SG Formel",
+				"descrp"				: "Die standard formel welche für Taschendiebstahl standard SGs benutzt wird (überschreibt andere Standards)"				
+			},
+			
+			"PickPocketDefaultItemDC" : {
+				"name" 					: "Standard Gegenstand Taschendiebstahl SG",
+				"descrp"				: "Der standard Taschendiebstahl SG für Gegenstände"				
+			},
+			
+			"PickPocketDCCritThreshold" : {
+				"name" 					: "Taschendiebstahl SG Krit-Schwelle",
+				"descrp"				: "Maximaler SG der von kritischen Taschendiebstahlswürfen überkommen werden kann"				
+			},
+			
+			"AutoUpdatePickPocketDC" : {
+				"name" 					: "Taschendiebstahl SG automatisch aktualisieren",
+				"descrp"				: "Ob der Taschendiebstahl SG automatisch aktualisiert werden soll wenn Wahrnehmung gewürfelt wird"				
+			},
+			
+			"PickPocketItemTypes" : {
+				"name" 					: "Stehlbare Gegenstandstypen",
+				"descrp"				: "Gegenstandstypen welche gestohlen werden können (mit \";\" getrennt, \"#currency\" for numerische Währungen)"				
+			},
+			
+			"MaximumPPNumber" : {
+				"name" 					: "Maximum Gegenstände bei Taschendiebstahl",
+				"descrp"				: "Die maximale Anzahl an Gegenständen die ein Nutzer beim Taschendiebstahl nehmen kann (-1 für unbegrenzt)"				
+			},
+			
+			"MaximumPPNumberCrit" : {
+				"name" 					: "Maximum Gegenstände bei kritischem Taschendiebstahl",
+				"descrp"				: "Die maximale Anzahl an Gegenständen die ein Nutzer bei kritischem Taschendiebstahl nehmen kann (-1 für unbegrenzt)"				
+			},
+			
+			"MaximumPPNumberFail" : {
+				"name" 					: "Maximum Gegenstände bei fehlgeschlagenem Taschendiebstahl",
+				"descrp"				: "Die maximale Anzahl an Gegenständen die ein Nutzer bei fehlgeschlagenem Taschendiebstahl nehmen kann (sollte der Gegenstands SG es erlauben, -1 für unbegrenzt)"				
+			},
+			
+			"MaximumPPWeight" : {
+				"name" 					: "Maximum Gegenstandsgewicht bei Taschendiebstahl",
+				"descrp"				: "Das maximale Gegenstandsgewicht (System Einheiten) das ein Nutzer beim Taschendiebstahl nehmen kann (-1 für unbegrenzt)"				
+			},
+			
+			"MaximumPPWeightCrit" : {
+				"name" 					: "Maximum Gegenstandsgewicht bei kritischem Taschendiebstahl",
+				"descrp"				: "Das maximale Gegenstandsgewicht (System Einheiten) das ein Nutzer bei fehlgeschlagenem Taschendiebstahl nehmen kann (-1 für unbegrenzt)"				
+			},
+			
+			"MaximumPPWeightFail" : {
+				"name" 					: "Maximum Gegenstandsgewicht bei fehlgeschlagenem Taschendiebstahl",
+				"descrp"				: "Das maximale Gegenstandsgewicht (System Einheiten) das ein Nutzer bei kritischem Taschendiebstahl nehmen kann (sollte der Gegenstands SG es erlauben, -1 für unbegrenzt)"				
+			},
+			
+			"PickPocketCooldown" : {
+				"name" 					: "Taschendiebstahls Abklingzeit",
+				"descrp"				: "Taschendiebstahls Abklingzeit pro Spieler in Sekunden"				
+			},
+			
+			"deadActorsLootable" : {
+				"name"					: "Tote Figuren lootbar",
+				"descrp"				: "Ob Tote Figuren ohne Wurf lootbar/bestehlbar seien sollen"	
+			},
+			
+			"lootFilter" : {
+				"name"					: "Beute Filter",
+				"descrp"				: "Ob nur Gegenstände welche sich in einer Tasche oder einem Container namens \"Loot\" befinden Stehlbar sein sollen (nur für manche Systeme unterstützt)",
+				"options" : {
+					"off"				: "aus",
+					"ifavailable"		: "wenn loot verfügbar",
+					"always"			: "immer"
+				}
+			},
+			
+			"MentionPickpocketDetails" : {
+				"name" 					: "Erwähne Taschendiebstahl Details",
+				"descrp"				: "Ob der Name des Ziels und der SG bei Taschendiebstahls Nachrichten erwähnt werden soll"				
+			},
+			
+			"PerceptionKeyWord" : {
+				"name"					: "Wahrnehmungs Stichwort",
+				"descrp"				: "Stichwort welches benutzt wird um Wahrnehmungswürfe zu identifizieren (ein String/Wort welches im Text des Wahrnehmungswurf vorhanden ist)"	
+			},
+			
+			"ControlSceme" : {
+				"name" 					: "Kontrollschema",
+				"descrp"				: "Schema welches für die Spiele Ssteuerung benutzt wird (rechts-click + taste ist unten unter \"Spieler Steuerung\" beschrieben",	
+				"options" : {
+					"rightKeys"			: "Rechtsklick + Taste",
+					"rightPopups"		: "Rechtsklick-Popup-Menu"
+				}
+			},	
+			
+			"MessagePopUps" : {
+				"name" 					: "Text-Popups",
+				"descrp"				: "Aktiviert mehrere popups bei Aktionen wie z.B. dem verschließen oder aufschließen von Schlössern"		
+			},
+			
+			"PlayLockSounds" : {
+				"name" 					: "Schlossgeräusche",
+				"descrp"				: "Spiele geräusche ab wenn ein Schloss auf-/abgeschlossen wird"		
+			},
+			
+			"FreeCircumventButtonPosition" : {
+				"name" 					: "Schlossumgehungs Indikator Position",
+				"descrp"				: "Position des Indikators welcher anzeigt, dass eine Figur das nächtse Schloss umgehen kann im Figuren HUD",
+				"options" : {
+					"none"				: "nirgendwo",
+					"left"				: "links",
+					"right"				: "rechts"
+				}
+			},
+			
+			"dblClicktoLoot" : {
+				"name"					: "Doppelklick für Taschendiebstahl",
+				"descrp"				: "Ob eine Figur zu Doppelklicken einen Taschendiebstahl versuchen soll"
+			}
+		},
+		
+		"Keys" : {
+			"ToggleLock" : {
+				"name"					: "Schloss abschließen/aufschließen"
+			},
+			
+			"CopyLock" : {
+				"name"					: "Schloss IDs kopieren"
+			},
+			
+			"PasteLock" : {
+				"name"					: "Schloss IDs einfügen"
+			},
+			
+			"CreatenewKey" : {
+				"name"					: "Neuen Schlüssel erschaffen"
+			},
+			
+			"UseKey" : {
+				"name"					: "Schlüssel nutzen"
+			},
+			
+			"PickLock" : {
+				"name"					: "Schloss knacken"
+			},
+			
+			"BreakLock" : {
+				"name"					: "Schloss aufbrechen"
+			},
+			
+			"CustomCheck" : {
+				"name"					: "Eigener Wurf (frage die SL (außer du bist die SL))"
+			},
+			
+			"PickPocket" : {
+				"name"					: "Taschendiebstahl"
+			},
+		
+			"ChangePassword" : {
+				"name"					: "Passwort ändern"
+			}		
+		},
+		
+		"SheetSettings" : {
+			"OpenImageFlag" : {
+				"name"					: "Offen Bild",
+				"descrp"				: "Bild welches für den offenen Zustand benutzt wird"
+			},
+
+			"ClosedImageFlag" : {
+				"name"					: "Zu Bild",
+				"descrp"				: "Bild welches für den geschlossenen Zustand benutzt wird"
+			},
+
+			"LockableFlag" : {
+				"name" 					: "Abschließbar",
+				"descrp"				: "Ob dieses Objekt abgeschlossen werden kann"					
+			},
+			
+			"LockonCloseFlag" : {
+				"name" 					: "Verschließen bei schließen",
+				"descrp"				: "Ob diese Tür abgeschlossen werden soll, sobald sie geschlossen wird"					
+			},
+			
+			"LockedFlag" : {
+				"name" 					: "Abgeschlossen",
+				"descrp"				: "Ob dieses Objekt abgeschlossen ist"					
+			},
+			
+			"IDKeysFlag" : {
+				"name" 					: "ID Schlüssel",
+				"descrp" : {
+					"lock" 				: "IDs welche dieses Schloss auf-/abschließen können (mit \";\" getrennt, \"&\" für mehrer benötigte Schlüssel)",
+					"key" 				: "IDs welche dieser Schlüssel auf-/abschließen kann (mit \";\" getrennt)"
+				}
+			},
+			
+			"UseKeyDialogFlag" : {
+				"name" 					: "Schlüsselnutzungs Fenster",
+				"descrp"				: "Ob der Benutzer auswählen muss welche Schlüssel verwendet werden"					
+			},
+			
+			"PasskeysFlag" : {
+				"name"					: "Passwörter",
+				"descrp"				: "Passwörter welche dieses Schloss aufschließen können (mit \";\" getrennt)"
+			},
+			
+			"PasskeyChangeableFlag" : {
+				"name"					: "Passwörter änderbar",
+				"descrp"				: "Ob die Passwörter von Spielern geändert werden können (benötigt das Korrekte Passwort)"
+			},
+			
+			"IdentityKeyFlag" : {
+				"name"					: "Identitäten",
+				"descrp"				: "Identitäten welche dieses Schloss aufschließen können (mit \";\" getrennt, IDs/Namens von Figuren/Akteuren/Nutzern)"
+			},
+			
+			"LockjammedFlag" : {
+				"name"					: "Verklemmt",
+				"descrp"				: "Ob dieses Schloss verklemmt ist (siehe Welteinstellungen)"				
+			},
+			
+			"RemoveKeyonUseFlag" : {
+				"name" 					: "Entferne Schlüssel bei benutzung",
+				"descrp"				: "Ob dieser Schlüssel entfernt wird wenn er benutzt wird (order der Stapel um 1 reduziert wird)"					
+			},		
+			
+			"LockDCFlag" : {
+				"name" 					: "Schloss SG",
+				"descrp"				: "Der Schwierigkeitsgrad dieses Schlosses (-1 um das Knacken zu verhindern)"					
+			},
+			
+			"SpecialLPFlag" : {
+				"name" 					: "Spezieller Dietrich",
+				"descrp"				: "Spezieller Dietrich welcher für dieses Schloss benötigt wird (ID oder Name, mehrere Einträge mit \";\" getrennt)"					
+			},
+			
+			"LockBreakDCFlag" : {
+				"name" 					: "Schloss aufbruch SG",
+				"descrp"				: "Der Schwierigkeitsgrad um dieses Schloss aufzubrechen (-1 um aufbrechen zu verhindern)"					
+			},
+			
+			"LockCCDCFlag" : {
+				"name" 					: "{pCheckName} SG",
+				"descrp"				: "Der Schwierigkeitsgrad um {pCheckName} an diesem Schloss zu benutzen (-1 um nutzung zu verhindern)"					
+			},
+			
+			"requiredLPsuccessFlag" : {
+				"name" 					: "Benötigte Schlossknack Erfolge",
+				"descrp"				: "Wie viele Erfolge notwendig sind um dieses Schloss zu knacken (und wie viele bereits erzielt wurden) (Krits zählen als 2)"				
+			},
+			
+			"LPAttemptsFlag" : {
+				"name" 					: "Schlossknack Versuche übrig",
+				"descrp"				: "Wie viele Schlossknack Versuche übrig sind (-1 für unbegrenzt)"				
+			},
+			
+			"canbeCircumventedFreeFlag" : {
+				"name" 					: "Kann umgangen werden",
+				"descrp"				: "Ob dieses Schloss durch gewisse Effekte umgangen werden kann (z.B. der Zauber \"Knock\")"				
+			},
+			
+			"CustomPopupsFlag" : {
+				"openButtonname"			: "Eigene Popups",
+				"Title"						: "Eigene Popups",
+				"name"						: "Setze eigene Popups für gewisse Spieler Interaktionen:",
+				"LockLocked" : {
+					"name"					: "Schloss ist abgeschlossen:"
+				},
+				"LocknotPickable" : {
+					"name"					: "Schloss kann nicht geknackt werden:"
+				},
+				"LocknotBreakable" : {
+					"name"					: "Schloss kann nicht gebrochen werden:"
+				},
+				"LockPasskeyTitle" : {
+					"name"					: "Passwort Eingabe:"
+				},
+				"LocknotCustom" : {
+					"name"					: "Schloss kann nicht mit eigenem Wurf benutzt werden:"
+				},
+				"CharacternotPickpocketable" : {
+					"name"					: "Charakter kann nicht bestohlen werden:"
+				},
+				"confirmButtonname"        	: "Popups bestätigen"
+			},
+			
+			"SoundVariantFlag" : {
+				"name"					: "Schloss Geräusche",
+				"descrp"				: "Das Geräuschset welches für Interaktionen mit diesem Schloss verwendet wird",
+				"options" : {
+					"off"				: "aus",
+					"futuristic"		: "Futuristisch",
+					"industrial"		: "Industriel",
+					"jail"				: "Gefängnis",
+					"metal"				: "Metall 🤘",
+					"shutter"			: "Läden",
+					"sliding"			: "Gleiten",
+					"stone"				: "Stein",
+					"wood"				: "Holz"
+				}
+			},
+			
+			"LPFormulaFlag" : {
+				"name" 					: "Schlossknack Wurfformel",
+				"descrp" : {
+					"token" 			: "Die Formel welche Schlossknack Würfen dieser Figur hinzugefügt wird",
+					"item"				: "Die Formel welche Schlossknack Würfen des Besitzers dieses Gegenstandes hinzugefügt wird (nur das beste im Inventar wird genutzt)"
+				}			
+			},
+			
+			"LPFormulaOverrideFlag" : {
+				"name" 					: "Überschreibe Schlossknack Wurfformel",
+				"descrp" : {
+					"token" 			: "Ob die Schlossknack Wurfformel dieser Figur die Weltformel überschreibt",
+					"item"				: "Ob die Schlossknack Wurfformel dieses Gegenstandes die Welt-/Figurformel überschreibt"
+				}				
+			},
+			
+			"LBFormulaFlag" : {
+				"name" 					: "Schlossaufbrechen Wurfformel",
+				"descrp" : {
+					"token" 			: "Die Formel welche Schloss aufbrech Würfen dieser Figur hinzugefügt wird",
+					"item"				: "Die Formel welche Schloss aufbrech Würfen des Besitzers dieses Gegenstandes hinzugefügt wird (nur das beste im Inventar wird genutzt)"
+				}					
+			},
+			
+			"LBFormulaOverrideFlag" : {
+				"name" 					: "Überschreibe Schlossaufbrechen Wurfformel",
+				"descrp" : {
+					"token" 			: "Ob die Schloss aufbrechen Wurfformel dieser Figur die Weltformel überschreibt",
+					"item"				: "Ob die Schloss aufbrechen Wurfformel dieses Gegenstandes die Welt-/Figurformel überschreibt"
+				}				
+			},
+			
+			"CCFormulaFlag" : {
+				"name" 					: "{pCheckName} Formel",
+				"descrp" : {
+					"token" 			: "Die Formel welche {pCheckName} Würfen dieser Figur hinzugefügt wird",
+					"item"				: "Die Formel welche {pCheckName} Würfen des Besitzers dieses Gegenstandes hinzugefügt wird (nur das beste im Inventar wird genutzt)"
+				}					
+			},
+			
+			"CCFormulaOverrideFlag" : {
+				"name" 					: "Überschreibe {pCheckName} Formel",
+				"descrp" : {
+					"token" 			: "Ob die {pCheckName} Wurfformel dieser Figur die Weltformel überschreibt",
+					"item"				: "Ob die {pCheckName} dieses Gegenstandes die Welt-/Figurformel überschreibt"
+				}				
+			},
+			
+			"PickPocketFormulaFlag" : {
+				"name" 					: "Taschendiebstahl Formel",
+				"descrp" : {
+					"token" 			: "Die Formel welche Taschendiebstahl Würfen dieser Figur hinzugefügt wird",
+					"item"				: "Die Formel welche Taschendiebstahl Würfen des Besitzers dieses Gegenstandes hinzugefügt wird (nur das beste im Inventar wird genutzt)"
+				}					
+			},
+			
+			"PickPocketFormulaOverrideFlag" : {
+				"name" 					: "Überschreibe Taschendiebstahl Wurfformel",
+				"descrp" : {
+					"token" 			: "Ob die Taschendiebstahl Wurfformel dieser Figur die Weltformel überschreibt",
+					"item"				: "Ob die Taschendiebstahl Wurfformel dieses Gegenstandes die Welt-/Figurformel überschreibt"
+				}				
+			},
+			
+			"LootFormulaFlag" : {
+				"name" 					: "Eigene Loot Formel",
+				"descrp"  				: "Ersatz für die Taschendiebstahl Formel, wenn diese Figure bestohlen wird"
+			},
+			
+			"PickPocketDCFlag" : {
+				"name" 					: "Taschendiebstahl SG",
+				"descrp"  				: "Der Schwierigkeitsgrad um diesen Charakter zu bestehlen (-1 für unmöglich)",
+				"item" : {
+					"name"				: "Taschendiebstahl SG modifikator",
+					"descrp"			: "Der Modifikator für den SG wenn dieser Gegenstand gestohlen wird"
+				}	
+			},
+			
+			"ReplacementItemFlag" : {
+				"name" 					: "Ersatzgegenstände",
+				"descrp" 				: "Gegenstände welche anstatt dieses Gegenstandes bei Fehlwürfen konsumiert werden (ID oder Name, mehrere Einträge mit \";\" getrennt)"			
+			},
+
+			"MATTTriggerTileFlag" : {
+				"name" 					: "Ausgelöste Fliesen ID",
+				"descrp"				: "Die ID der durch Lock & Key Aktionen ausgelösten Fliese (Es ist möglich unterschiedliche Landings zu nutzen)"
+			},
+			
+			"MATTTriggerConditionsFlag" : {
+				"LockuseKey.name"		: "Bei Schlüssel nutzung",
+				"LockusePasskey.name"	: "Bei Passwort nutzung",
+				"LockusePick.name"		: "Bei Schloss knacken",
+				"LockuseBreak.name"		: "Bei Schloss auf brechen",
+				"LockuseFree.name"		: "Bei Schloss umgehen",
+				"options" : {
+					"never"				: "niemals",
+					"always"			: "immer",
+					"failure"			: "Misserfolg",
+					"critfailure"		: "kritischer Misserfolg",
+					"success"			: "Erfolg"
+				}
+			},
+			
+			"RollOptionsFlag" : {
+				"LockusePick" : {
+					"d10CritLimit" : {
+						"name"			: "Schlossknack d10 Krit Limit",
+						"descrp"		: "Der minimale Kritwert für d10 Schlassknackwürfe"
+					}
+				},
+				"LockuseBreak" : {
+					"d10CritLimit" : {
+						"name"			: "Schlossaufbrechen d10 Krit Limit",
+						"descrp"		: "Der minimale Kritwert für d10 Schlossaufbrechwürfe"
+					}					
+				}
+			}	
+		},
+		
+		"Context" : {
+			"KeyCopy"					: "Kopiere Schlüssel IDs",
+			"KeyPaste"					: "Füge Schlüssel IDs ein"
+		},
+		
+		"Words" : {
+			"Key"						: "Schlüssel"
+		},
+		
+		"Text" : {
+			"GMControls" : {
+				"line0"					: "SL Steuerung:",
+				"line1" 				: "•Shift+Rechtsklick um einen neuen Schlüssel für ein Schloss zu erschaffen",
+				"line2" 				: "•Alt+Rechtsklick um ein Lock auf-/ab-zuschließen (*)",
+				"line3" 				: "•Strg+Rechtsklick um die Schlüssel IDs des Schlosses zu kopieren (*)",
+				"line4" 				: "•Strg+Linksklick um die Schlüssel IDs in das Schloss einzufügen (*)"
+			},
+			
+			"PlayerControls" : {
+				"line0"					: "Spieler Steuerung:",
+				"line1" 				: "•Rechtsklick um zu versuchen einen Schlüssel mit einem Schloss zu benutzen",
+				"line2" 				: "•Shift+Rechtsklick um zu versuchen ein Schloss zu knacken",
+				"line3" 				: "•Alt+Rechtsklick um zu versuchen ein Schloss aufzubrechen"
+			}
+		},
+		
+		"take-inventory-window" : {
+			"titles" : {
+				"inventory"				: "Inventar"
+			},
+			"header" : {
+				"title"					: "<h> Nehme von <b>{pOwnerName}s</b> Inventar (landet in <b>{pTakerName}s</b> Inventar): </h>"
+			},
+			"displays" : {
+				"NumberDisplay" 		: "Ausgewählte Gegenstände: <b>{pValue}</b>/{pMax}",
+				"WeightDisplay" 		: "Ausgewähltes Gegenstandsgewicht: <b>{pValue}</b>/{pMax}"
+			},
+			"buttons" : {
+				"take" : {
+					"name"				: "Nehme ausgewähltes"
+				}
+			}
+		},
+		
+		"monks-active-tiles" : {
+			"filters" : {
+				"name"						: "Filter",
+				
+				"filter-by-lock-state" : {
+					"name"					: "Filter nach Schlosszustand",
+					"settings" : {
+						"filterCondition" : {
+							"name"			: "Schlosszustand Bedingung",
+							"options" : {
+								"locked"	: "ist abgeschlossen",
+								"unlocked"	: "ist aufgeschlossen"
+							}
+						}
+					}
+				}
+			},
+			
+			"actions" : {
+				"lock" : {
+					"name"					: "Schließe ab"
+				},
+				
+				"unlock" : {
+					"name"					: "Schließe auf"
+				},
+				
+				"toggle-lock" : {
+					"name"					: "Schalte Schloss um"
+				},
+				
+				"loot-inventory" : {
+					"name"					: "Erbeute Inventar",
+					"descrp"				: "<span class=\"logic-style\">{pname}</span> von <span class=\"entity-style\">{pEntities}</span> Angebot an <span class=\"details-style\">{pOfferto}</span>",
+					"settings" : {
+						"offerto" : {
+							"name"			: "Angebot an"
+						}
+					}	
+				}
+			}
+		}
+	}
+}

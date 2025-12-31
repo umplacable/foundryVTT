@@ -1,0 +1,15 @@
+/* Hide the "News/"Featured Content" sidebar */
+#setup-sidebar {
+	display: none !important;
+}
+
+/* Change the background image */
+#main-background {
+	background: url("https://upload.wikimedia.org/wikipedia/commons/e/ef/Face_in_the_Pool-Knight_Fighting_Dragon.jpg") repeat-x center center;
+	background-size: contain;
+}
+
+/* Increase the opacity of the menu overlay */
+#setup-packages {
+	background: rgba(11, 10, 19, 0.7);
+}

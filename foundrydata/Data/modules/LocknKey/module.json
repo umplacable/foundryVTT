@@ -1,0 +1,103 @@
+{
+  "id": "LocknKey",
+  "title": "Lock & Key",
+  "description": "A small module to handle locks and keys. Locks can effect both doors and tokens.",
+  "authors": [
+    {
+    "name": "saibot"
+    }
+  ],
+  "version": "4.1.27",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "13"
+  },
+  "socket": "true",
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json",
+      "flags": {}
+    },
+    {
+      "lang": "cn",
+      "name": "中文",
+      "path": "lang/cn.json",
+      "flags": {}
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json",
+      "flags": {}
+    },
+    {
+      "lang": "pl",
+      "name": "polski",
+      "path": "lang/pl.json",
+      "flags": {}
+    },
+    {
+      "lang": "ru",
+      "name": "Русский",
+      "path": "lang/ru.json",
+      "flags": {}
+    },
+    {
+      "lang": "ja",
+      "name": "日本語",
+      "path": "lang/ja.json",
+      "flags": {}
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json",
+      "flags": {}
+    },
+    {
+      "lang": "it",
+      "name": "Italiano",
+      "path": "lang/it.json",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+	"scripts/utils/LnKutils.js",
+	"scripts/helpers/LnKPopups.js",
+	"scripts/helpers/LnKSound.js",
+	"scripts/LockManager.js",
+	"scripts/KeyManager.js",
+	"scripts/helpers/SocketHandler.js",
+	"scripts/helpers/LnKMouseHandler.js",
+	"scripts/helpers/LnKTakeInventory.js",
+	"scripts/helpers/LnKRollHandler.js",
+	"scripts/settings/LnKSheetSettings.js",
+	"scripts/settings/LnKSettings.js",
+	"scripts/compatibility/LnKCompatibility.js",
+	"scripts/helpers/MacroHooks.js",
+	"scripts/compatibility/APIHandler.js",
+	"scripts/helpers/LnKTilesHandler.js"
+  ],
+  "packs": [
+	{
+	  "name": "lock-and-key",
+	  "label": "Lock & Key",
+	  "path": "packs/lock-and-key.db",
+	  "type": "Macro"
+	}
+  ],
+  "url": "https://github.com/Saibot393/LocknKey",
+  "download": "https://github.com/Saibot393/LocknKey/archive/refs/tags/v4.1.27.zip",
+  "manifest": "https://github.com/Saibot393/LocknKey/releases/latest/download/module.json",
+  "readme": "https://github.com/Saibot393/LocknKey/blob/main/README.md",
+  "changelog": "https://github.com/Saibot393/LocknKey/blob/main/CHANGELOG.md",
+  "bugs": "https://github.com/Saibot393/LocknKey/issues"
+}

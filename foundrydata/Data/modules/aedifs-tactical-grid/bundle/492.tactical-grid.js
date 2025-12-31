@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkaedifs_tactical_grid=self.webpackChunkaedifs_tactical_grid||[]).push([[492],{492:(e,t,i)=>{i.r(t),i.d(t,{register:()=>n});var a=i(356);function n(){Hooks.on("renderCoreHUD",((e,t,i)=>{e.itemButtons.forEach((e=>{$(e.element).on("mouseover",(t=>{a.c6.rangeHighlight(e.token,{item:e.item})})).on("mouseleave",(t=>{a.c6.clearRangeHighlight(e.token)}))}))}))}}}]);
+//# sourceMappingURL=492.tactical-grid.js.map

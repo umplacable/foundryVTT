@@ -1,0 +1,112 @@
+{
+    "id": "autoanimations",
+    "title": "Automated Animations",
+    "description": "This will automatically run most JB2A Animations such as Melee/Ranged Attacks, Spell Attacks, and Instant Spells",
+    "authors": [
+        {
+            "name": "theripper93",
+            "email": "tsplab@gmail.com",
+            "url": "https://www.patreon.com/theripper93"
+        },
+        {
+            "name": "Otigon (Otigon#2010)",
+            "discord": "Otigon#2010"
+        }
+    ],
+    "url": "https://github.com/theripper93/autoanimations",
+    "version": "6.5.2",
+    "compatibility": {
+        "minimum": "13",
+        "verified": "13"
+    },
+    "scripts": [],
+    "esmodules": [
+        "dist/autoanimations.js"
+    ],
+    "styles": [
+        "dist/autoanimations.css"
+    ],
+    "flags": {
+        "hotReload": {
+            "extensions": [
+                "json"
+            ],
+            "paths": [
+                "lang"
+            ]
+        }
+    },
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        },
+        {
+            "lang": "es",
+            "name": "Español",
+            "path": "lang/es.json"
+        },
+        {
+            "lang": "it",
+            "name": "Italiano",
+            "path": "lang/it.json"
+        },
+        {
+            "lang": "ko",
+            "name": "Korean",
+            "path": "lang/ko.json"
+        },
+        {
+            "lang": "ja",
+            "name": "日本語",
+            "path": "lang/ja.json"
+        },
+        {
+            "lang": "fr",
+            "name": "Français",
+            "path": "lang/fr.json"
+        },
+        {
+            "lang": "pt-BR",
+            "name": "Português (Brasil)",
+            "path": "lang/pt-br.json"
+        },
+        {
+            "lang": "de",
+            "name": "Deutsch",
+            "path": "lang/de.json"
+        },
+        {
+            "lang": "zh-tw",
+            "name": "正體中文",
+            "path": "lang/zh-tw.json"
+        },
+        {
+            "lang": "cs",
+            "name": "Čeština",
+            "path": "lang/cs.json"
+        },
+        {
+            "lang": "cn",
+            "name": "中文（简体）",
+            "path": "lang/zh_Hans.json"
+        }
+    ],
+    "relationships": {
+        "requires": [
+            {
+                "id": "sequencer",
+                "type": "module",
+                "manifest": "https://github.com/fantasycalendar/FoundryVTT-Sequencer/releases/latest/download/module.json"
+            },
+            {
+                "id": "socketlib",
+                "type": "module"
+            }
+        ]
+    },
+    "socket": true,
+    "manifest": "https://github.com/theripper93/autoanimations/releases/latest/download/module.json",
+    "download": "https://github.com/theripper93/autoanimations/releases/download/6.5.2/module.zip"
+}

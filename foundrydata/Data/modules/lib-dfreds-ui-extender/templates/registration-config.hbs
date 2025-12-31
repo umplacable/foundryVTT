@@ -1,0 +1,49 @@
+<div>
+    {{#each tabs as |tab|}}
+        <section class="tab {{tab.cssClass}}" data-tab="{{tab.id}}" data-group="{{tab.group}}">
+            {{> "templates/generic/tab-navigation.hbs" tabs=tab.subtabs}}
+
+            {{#with tab.subtabs.hud as |subtab|}}
+                <div class="tab subtab {{subtab.cssClass}}" data-tab="{{subtab.id}}" data-group="{{subtab.group}}">
+                    {{#if subtab.data.items}}
+                        {{#each subtab.data.items as |hudButton|}}
+                            {{> (lookup @root "hudButtonPartial") hudButton=hudButton}}
+                        {{/each}}
+                    {{else}}
+                        <p class="no-items">
+                            {{localize "UiExtender.RegistrationConfig.HudButton.NoHudButtons" moduleId=tab.id}}
+                        </p>
+                    {{/if}}
+                </div>
+            {{/with}}
+
+            {{#with tab.subtabs.sceneControls as |subtab|}}
+                <div class="tab subtab {{subtab.cssClass}}" data-tab="{{subtab.id}}" data-group="{{subtab.group}}">
+                    {{#if subtab.data.items}}
+                        {{#each subtab.data.items as |sceneControl|}}
+                            {{> (lookup @root "sceneControlPartial") sceneControl=sceneControl}}
+                        {{/each}}
+                    {{else}}
+                        <p class="no-items">
+                            {{localize "UiExtender.RegistrationConfig.SceneControl.NoSceneControls" moduleId=tab.id}}
+                        </p>
+                    {{/if}}
+                </div>
+            {{/with}}
+
+            {{#with tab.subtabs.directories as |subtab|}}
+                <div class="tab subtab {{subtab.cssClass}}" data-tab="{{subtab.id}}" data-group="{{subtab.group}}">
+                    {{#if subtab.data.items}}
+                        {{#each subtab.data.items as |directory|}}
+                            {{> (lookup @root "directoryPartial") directory=directory}}
+                        {{/each}}
+                    {{else}}
+                        <p class="no-items">
+                            {{localize "UiExtender.RegistrationConfig.Directory.NoDirectories" moduleId=tab.id}}
+                        </p>
+                    {{/if}}
+                </div>
+            {{/with}}
+        </section>
+    {{/each}}
+</div>

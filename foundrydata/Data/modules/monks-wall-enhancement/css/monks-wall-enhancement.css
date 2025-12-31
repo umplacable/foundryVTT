@@ -1,0 +1,20 @@
+#wall-ctrls {
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 8px;
+    gap: 8px;
+    position: absolute;
+    flex-wrap: nowrap;
+}
+
+#wall-ctrls menu li {
+    display: inline-block;
+}
+
+#scene-controls button[data-tool="walltype"]:hover #wall-ctrls {
+    pointer-events: all;
+    opacity: 1;
+}
